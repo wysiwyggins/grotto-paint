@@ -58,10 +58,6 @@ function draw() {
   hoverX = mouseX / blockWidth;
   hoverY = mouseY / blockHeight;
 
-  let c = sampleImage.get(sampleImage.width-1,0);
-  fill(c);
-  rect(mouseX, mouseY, 30,30);
-
 }
 
 function importImage(){ // NOTE: I'm not using this
@@ -97,16 +93,19 @@ function prepareImage(){
   if(sourceImage.height > height){
     sourceImage.resize(0,height);
   }
-
   // make a copy of it in sampleImage, where 1px = 1 block
 
-  sampleImage = createImage(sourceImage.width/blockWidth, sourceImage.height/blockHeight);
+  sampleImage = createImage(int(sourceImage.width/blockWidth), int(sourceImage.height/blockHeight));
   sampleImage.copy(sourceImage, 0, 0, sourceImage.width, sourceImage.height, 0, 0, sampleImage.width, sampleImage.height);
   //sampleImage.save();
   // now sampleImage contains the original image but scaled down 
+ 
+  // we should talk about this step later cause it's kind of an ugly fix to a problem I found 
+  sourceImage.resize(sampleImage.width * blockWidth, sampleImage.height * blockHeight);
 
-  // create an empy graphics object to render the results to
+  // create an empty graphics object to render the results to
   resultImage = createGraphics(sourceImage.width, sourceImage.height);
+
 }
 
 function processImage(){
@@ -120,12 +119,11 @@ function processImage(){
     for(let y = 0 ; y < sampleImage.height ; y ++){
       let pixelColor = sampleImage.get(x,y);
       let bri = brightness(pixelColor);
-
+      
       // figure out which swatch to use
       let swatchIndex = int(map(bri, 0, 100, 0, swatches.length));
       // make sure I'm within the bounds of the swatches array
       swatchIndex = constrain(swatchIndex, 0, swatches.length-1);
-      console.log(bri);
       // draw selected swatch onto the result graphics object at the correct position
       resultImage.image(swatches[swatchIndex], x * blockWidth, y * blockHeight, blockWidth, blockHeight );
     }
