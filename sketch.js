@@ -1,6 +1,6 @@
 let blockWidth = 10;
 let blockHeight = 10;
-let swatchesPaths = ['assets/Block0.png','assets/Block1.png','assets/Block2.png','assets/Block3.png','assets/Block4.png','assets/Block5.png',];
+let swatchesPaths = ['assets/Block0.png','assets/Block2.png','assets/Block3.png','assets/Block4.png','assets/Block5.png','assets/Block6.png'];
 let swatches = [];
 let activeSwatch = swatches[0];
 let swatchButton0;
@@ -9,6 +9,7 @@ let swatchButton2;
 let swatchButton3;
 let swatchButton4;
 let swatchButton5;
+let swatchButton6;
 let importButton;
 
 let sourceImage; // this is the original photo/image we want to process
@@ -32,7 +33,8 @@ function setup() {
   swatchButton2 = document.getElementById('swatch2-button');
   swatchButton3 = document.getElementById('swatch3-button');
   swatchButton4 = document.getElementById('swatch4-button');
-  swatchButton5 = document.getElementById('swatch4-button');
+  swatchButton5 = document.getElementById('swatch5-button');
+  swatchButton6 = document.getElementById('swatch5-button');
   importButton = document.getElementById('import-button');
   swatchButton0.addEventListener('click', setSwatch(0));
   swatchButton1.addEventListener('click', setSwatch(1));
@@ -40,6 +42,7 @@ function setup() {
   swatchButton3.addEventListener('click', setSwatch(3));
   swatchButton4.addEventListener('click', setSwatch(4));
   swatchButton5.addEventListener('click', setSwatch(5));
+  swatchButton5.addEventListener('click', setSwatch(6));
   importButton.addEventListener('click', importImage);
 
   prepareImage();
@@ -59,7 +62,7 @@ function keyPressed(){
 }
 
 function draw() {
-  background(220);
+  background(255);
   image(resultImage, 0, 0);
   hoverX = mouseX / blockWidth;
   hoverY = mouseY / blockHeight;
