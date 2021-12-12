@@ -49,7 +49,13 @@ function setup() {
 function mouseClicked() {
  // drawImage = swatches[activeSwatch];
  // image(drawImage, hoverX, hoverY);
- save(resultImage, "test.png");
+}
+
+
+function keyPressed(){
+  if(key === 'S' || key === 's'){
+    save(resultImage, "test.png");
+  }
 }
 
 function draw() {
