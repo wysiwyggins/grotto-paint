@@ -1,6 +1,6 @@
-let blockWidth = 10;
-let blockHeight = 10;
-let swatchesPaths = ['assets/Block0.png','assets/Block2.png','assets/Block3.png','assets/Block4.png','assets/Block5.png','assets/Block6.png'];
+let blockWidth = 20;
+let blockHeight = 15;
+let swatchesPaths = ['assets/microblock/Block8.png','assets/microblock/Block1.png','assets/microblock/Block1.png','assets/microblock/Block3.png','assets/microblock/Block4.png','assets/microblock/Block5.png','assets/microblock/Block6.png','assets/microblock/Block7.png','assets/microblock/Block8.png', 'assets/microblock/Block9.png', 'assets/microblock/Block10.png', 'assets/microblock/Block0.png' ];
 let swatches = [];
 let activeSwatch = swatches[0];
 let swatchButton0;
@@ -22,7 +22,7 @@ let hoverY = 0;
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/wiley.png');
+  sourceImage = loadImage('assets/candle/13.png');
 }
 
 function setup() {
