@@ -1,6 +1,6 @@
 let blockWidth = 20;
 let blockHeight = 15;
-let swatchesPaths = ['assets/microblock/Block8.png','assets/microblock/Block1.png','assets/microblock/Block1.png','assets/microblock/Block3.png','assets/microblock/Block4.png','assets/microblock/Block5.png','assets/microblock/Block6.png','assets/microblock/Block7.png','assets/microblock/Block8.png', 'assets/microblock/Block9.png', 'assets/microblock/Block10.png', 'assets/microblock/Block0.png' ];
+let fatbits = true;
 let swatches = [];
 let activeSwatch = swatches[0];
 let swatchButton0;
@@ -16,6 +16,7 @@ let sourceImage; // this is the original photo/image we want to process
 let sampleImage; // this is a resized version of the photo, where 1px = 1 block
 let resultImage; // this is a p5Graphics objects that contains the results of the process
 
+let swatchesPaths = ['assets/macroblock/Block8.png','assets/macroblock/Block1.png','assets/macroblock/Block1.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png', 'assets/macroblock/Block9.png', 'assets/macroblock/Block10.png', 'assets/macroblock/Block0.png' ];
 let hoverX = 0;
 let hoverY = 0;
 
@@ -45,6 +46,9 @@ function setup() {
   swatchButton5.addEventListener('click', setSwatch(6));
   importButton.addEventListener('click', importImage);
 
+  if (fatbits = false) {
+    swatchesPaths = ['assets/microblock/Block8.png','assets/microblock/Block1.png','assets/microblock/Block1.png','assets/microblock/Block3.png','assets/microblock/Block4.png','assets/microblock/Block5.png','assets/microblock/Block6.png','assets/microblock/Block7.png','assets/microblock/Block8.png', 'assets/microblock/Block9.png', 'assets/microblock/Block10.png', 'assets/microblock/Block0.png' ];
+  };
   prepareImage();
   processImage();
 }
