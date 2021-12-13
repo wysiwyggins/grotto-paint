@@ -1,6 +1,6 @@
 let blockWidth = 20;
 let blockHeight = 15;
-let fatbits = true;
+let fatbits = false;
 let swatches = [];
 let activeSwatch = swatches[0];
 let swatchButton0;
@@ -11,12 +11,18 @@ let swatchButton4;
 let swatchButton5;
 let swatchButton6;
 let importButton;
+let canvas;
 
 let sourceImage; // this is the original photo/image we want to process
 let sampleImage; // this is a resized version of the photo, where 1px = 1 block
 let resultImage; // this is a p5Graphics objects that contains the results of the process
 
-let swatchesPaths = ['assets/macroblock/Block8.png','assets/macroblock/Block1.png','assets/macroblock/Block1.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png', 'assets/macroblock/Block9.png', 'assets/macroblock/Block10.png', 'assets/macroblock/Block0.png' ];
+let swatchesPaths;
+if (fatbits == true) {
+  swatchesPaths = ['assets/microblock/Block8.png','assets/microblock/Block1.png','assets/microblock/Block1.png','assets/microblock/Block3.png','assets/microblock/Block4.png','assets/microblock/Block5.png','assets/microblock/Block6.png','assets/microblock/Block7.png','assets/microblock/Block8.png', 'assets/microblock/Block9.png', 'assets/microblock/Block10.png', 'assets/microblock/Block0.png' ];
+} else {
+  swatchesPaths = ['assets/macroblock/Block8.png','assets/macroblock/Block1.png','assets/macroblock/Block1.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png', 'assets/macroblock/Block9.png', 'assets/macroblock/Block10.png', 'assets/macroblock/Block0.png' ];
+};
 let hoverX = 0;
 let hoverY = 0;
 
@@ -27,7 +33,13 @@ function preload(){
 }
 
 function setup() {
-  let canvas = createCanvas(120 * blockWidth, 64 * blockHeight);
+   
+  if (fatbits == true){
+    canvas = createCanvas(30 * blockWidth, 20 * blockHeight);
+  } else {
+    canvas = createCanvas(80 * blockWidth, 60 * blockHeight);
+  }
+  
   canvas.parent('sketch');
   swatchButton0 = document.getElementById('swatch0-button');
   swatchButton1 = document.getElementById('swatch1-button');
@@ -35,8 +47,9 @@ function setup() {
   swatchButton3 = document.getElementById('swatch3-button');
   swatchButton4 = document.getElementById('swatch4-button');
   swatchButton5 = document.getElementById('swatch5-button');
-  swatchButton6 = document.getElementById('swatch5-button');
-  importButton = document.getElementById('import-button');
+  swatchButton6 = document.getElementById('swatch6-button');
+  swatchButton7 = document.getElementById('swatch6-button');
+  swatchButton8 = document.getElementById('swatch6-button');
   swatchButton0.addEventListener('click', setSwatch(0));
   swatchButton1.addEventListener('click', setSwatch(1));
   swatchButton2.addEventListener('click', setSwatch(2));
@@ -44,11 +57,8 @@ function setup() {
   swatchButton4.addEventListener('click', setSwatch(4));
   swatchButton5.addEventListener('click', setSwatch(5));
   swatchButton5.addEventListener('click', setSwatch(6));
-  importButton.addEventListener('click', importImage);
 
-  if (fatbits = false) {
-    swatchesPaths = ['assets/microblock/Block8.png','assets/microblock/Block1.png','assets/microblock/Block1.png','assets/microblock/Block3.png','assets/microblock/Block4.png','assets/microblock/Block5.png','assets/microblock/Block6.png','assets/microblock/Block7.png','assets/microblock/Block8.png', 'assets/microblock/Block9.png', 'assets/microblock/Block10.png', 'assets/microblock/Block0.png' ];
-  };
+  
   prepareImage();
   processImage();
 }
@@ -72,20 +82,14 @@ function draw() {
   hoverY = mouseY / blockHeight;
 
 }
-
-function importImage(){ // NOTE: I'm not using this
-  // browse for an image file
-  //?
-  let totalBrightness = 0;
-  let blockBrightness = 0;
-  for(x = 0 ; x < blockWidth ; x++ ){
-    for(y = 0 ; y < blockHeight ; y++ ){
-      let pixelColor = color(block.get(x,y));
-      let pixelBrightness = brightness(pixelColor);
-      totalBrightness += pixelBrightness;
-    } 
+function handleFile(file) {
+  //print(file);
+  if (file.type === 'image') {
+    sourceImage = createImg(file.data, '');
+    //img.hide();
+  } else {
+    sourceImage = null;
   }
-  //return ?
 }
 
 function setSwatch(swatchNumber) {
