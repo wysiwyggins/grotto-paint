@@ -19,9 +19,9 @@ let resultImage; // this is a p5Graphics objects that contains the results of th
 
 let swatchesPaths;
 if (fatbits == true) {
-  swatchesPaths = ['assets/microblock/Block8.png','assets/microblock/Block1.png','assets/microblock/Block1.png','assets/microblock/Block3.png','assets/microblock/Block4.png','assets/microblock/Block5.png','assets/microblock/Block6.png','assets/microblock/Block7.png','assets/microblock/Block8.png', 'assets/microblock/Block9.png', 'assets/microblock/Block10.png', 'assets/microblock/Block0.png' ];
+  swatchesPaths = ['assets/microblock/Block1.png','assets/microblock/Block2.png','assets/microblock/Block3.png','assets/microblock/Block4.png','assets/microblock/Block5.png','assets/microblock/Block6.png','assets/microblock/Block7.png','assets/microblock/Block8.png','assets/microblock/Block0.png'];
 } else {
-  swatchesPaths = ['assets/macroblock/Block8.png','assets/macroblock/Block1.png','assets/macroblock/Block1.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png', 'assets/macroblock/Block9.png', 'assets/macroblock/Block10.png', 'assets/macroblock/Block0.png' ];
+  swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png'];
 };
 let hoverX = 0;
 let hoverY = 0;
@@ -29,7 +29,7 @@ let hoverY = 0;
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/candle/13.png');
+  sourceImage = loadImage('assets/candle/00.png');
 }
 
 function setup() {
@@ -37,7 +37,7 @@ function setup() {
   if (fatbits == true){
     canvas = createCanvas(30 * blockWidth, 20 * blockHeight);
   } else {
-    canvas = createCanvas(80 * blockWidth, 60 * blockHeight);
+    canvas = createCanvas(50 * blockWidth, 36 * blockHeight);
   }
   
   canvas.parent('sketch');
@@ -80,13 +80,14 @@ function draw() {
   image(resultImage, 0, 0);
   hoverX = mouseX / blockWidth;
   hoverY = mouseY / blockHeight;
-
 }
 function handleFile(file) {
   //print(file);
   if (file.type === 'image') {
     sourceImage = createImg(file.data, '');
     //img.hide();
+    prepareImage();
+    processImage();
   } else {
     sourceImage = null;
   }
