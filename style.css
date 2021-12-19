@@ -22,7 +22,7 @@ button {
   flex-direction: column;
 }
 
-.palette, .tools {
+.palette, .tools, .frames {
   padding: 4px;
   background-color: #ccc;
   border-radius: 4px;

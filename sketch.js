@@ -1,6 +1,6 @@
 let blockWidth = 20;
 let blockHeight = 15;
-let fatbits = false;
+let small = true;
 let swatches = [];
 let activeSwatch = swatches[0];
 let swatchButton0;
@@ -11,33 +11,32 @@ let swatchButton4;
 let swatchButton5;
 let swatchButton6;
 let importButton;
+let frameAdvanceButton;
 let canvas;
+let frameInt=0;
+let frameName= String(frameInt).padStart(2, '0');
 
 let sourceImage; // this is the original photo/image we want to process
 let sampleImage; // this is a resized version of the photo, where 1px = 1 block
 let resultImage; // this is a p5Graphics objects that contains the results of the process
 
 let swatchesPaths;
-if (fatbits == true) {
-  swatchesPaths = ['assets/microblock/Block1.png','assets/microblock/Block2.png','assets/microblock/Block3.png','assets/microblock/Block4.png','assets/microblock/Block5.png','assets/microblock/Block6.png','assets/microblock/Block7.png','assets/microblock/Block8.png','assets/microblock/Block0.png'];
-} else {
-  swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png'];
-};
+swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png'];
 let hoverX = 0;
 let hoverY = 0;
 
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/candle/00.png');
+  sourceImage = loadImage('assets/door.png');
 }
 
 function setup() {
    
-  if (fatbits == true){
-    canvas = createCanvas(30 * blockWidth, 20 * blockHeight);
+  if (small == false){
+    canvas = createCanvas(60 * blockWidth, 30 * blockHeight);
   } else {
-    canvas = createCanvas(50 * blockWidth, 36 * blockHeight);
+    canvas = createCanvas(20 * blockWidth, 18 * blockHeight);
   }
   
   canvas.parent('sketch');
@@ -57,8 +56,8 @@ function setup() {
   swatchButton4.addEventListener('click', setSwatch(4));
   swatchButton5.addEventListener('click', setSwatch(5));
   swatchButton5.addEventListener('click', setSwatch(6));
-
-  
+  frameAdvanceButton = document.getElementById('increment');
+  frameAdvanceButton.addEventListener('click', advanceFrame());
   prepareImage();
   processImage();
 }
@@ -68,10 +67,17 @@ function mouseClicked() {
  // image(drawImage, hoverX, hoverY);
 }
 
+function advanceFrame(){
+  frameInt +=1;
+  frameName = String(frameInt).padStart(2, '0');
+  //sourceImage = loadImage('assets/candle/'+frameName+'.png');
+  //prepareImage();
+  //processImage();
+}
 
 function keyPressed(){
   if(key === 'S' || key === 's'){
-    save(resultImage, "test.png");
+    save(resultImage, "test"+frameName+".png");
   }
 }
 
