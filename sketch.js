@@ -1,6 +1,6 @@
 let blockWidth = 20;
 let blockHeight = 15;
-let small = true;
+let small = false;
 let swatches = [];
 let activeSwatch = swatches[0];
 let swatchButton0;
@@ -28,15 +28,15 @@ let hoverY = 0;
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/door.png');
+  sourceImage = loadImage('assets/vic.png');
 }
 
 function setup() {
    
   if (small == false){
-    canvas = createCanvas(60 * blockWidth, 30 * blockHeight);
+    canvas = createCanvas(60 * blockWidth, 40 * blockHeight);
   } else {
-    canvas = createCanvas(20 * blockWidth, 18 * blockHeight);
+    canvas = createCanvas(10 * blockWidth, 12 * blockHeight);
   }
   
   canvas.parent('sketch');
@@ -63,8 +63,7 @@ function setup() {
 }
 
 function mouseClicked() {
- // drawImage = swatches[activeSwatch];
- // image(drawImage, hoverX, hoverY);
+  resultImage.image(swatches[activeSwatch], mouseX * blockWidth, mouseY * blockHeight, blockWidth, blockHeight )
 }
 
 function advanceFrame(){
