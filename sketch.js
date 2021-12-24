@@ -2,7 +2,7 @@ let blockWidth = 20;
 let blockHeight = 15;
 let small = false;
 let swatches = [];
-let activeSwatch = swatches[0];
+let activeSwatch = 0;
 let swatchButton0;
 let swatchButton1;
 let swatchButton2;
@@ -10,6 +10,9 @@ let swatchButton3;
 let swatchButton4;
 let swatchButton5;
 let swatchButton6;
+let swatchButton7;
+let swatchButton8;
+
 let importButton;
 let frameAdvanceButton;
 let canvas;
@@ -24,6 +27,9 @@ let swatchesPaths;
 swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png'];
 let hoverX = 0;
 let hoverY = 0;
+
+let snapX;
+let snapY;
 
 function preload(){
   // load all the swatches and the image we want to process
@@ -47,15 +53,17 @@ function setup() {
   swatchButton4 = document.getElementById('swatch4-button');
   swatchButton5 = document.getElementById('swatch5-button');
   swatchButton6 = document.getElementById('swatch6-button');
-  swatchButton7 = document.getElementById('swatch6-button');
-  swatchButton8 = document.getElementById('swatch6-button');
+  swatchButton7 = document.getElementById('swatch7-button');
+  swatchButton8 = document.getElementById('swatch8-button');
   swatchButton0.addEventListener('click', setSwatch(0));
   swatchButton1.addEventListener('click', setSwatch(1));
   swatchButton2.addEventListener('click', setSwatch(2));
   swatchButton3.addEventListener('click', setSwatch(3));
   swatchButton4.addEventListener('click', setSwatch(4));
   swatchButton5.addEventListener('click', setSwatch(5));
-  swatchButton5.addEventListener('click', setSwatch(6));
+  swatchButton6.addEventListener('click', setSwatch(6));
+  swatchButton7.addEventListener('click', setSwatch(7));
+  swatchButton8.addEventListener('click', setSwatch(8));
   frameAdvanceButton = document.getElementById('increment');
   frameAdvanceButton.addEventListener('click', advanceFrame());
   prepareImage();
@@ -63,8 +71,13 @@ function setup() {
 }
 
 function mouseClicked() {
-  resultImage.image(swatches[activeSwatch], mouseX * blockWidth, mouseY * blockHeight, blockWidth, blockHeight )
+ // resultImage.image(swatches[activeSwatch], mouseX * blockWidth, mouseY * blockHeight, blockWidth, blockHeight )
+  
+  
 }
+
+
+
 
 function advanceFrame(){
   frameInt +=1;
@@ -77,6 +90,24 @@ function advanceFrame(){
 function keyPressed(){
   if(key === 'S' || key === 's'){
     save(resultImage, "test"+frameName+".png");
+  }else if(keyCode === RIGHT_ARROW) {
+    nextSwatch();
+  }else if(keyCode === LEFT_ARROW) {
+    prevSwatch();
+  }
+}
+
+function nextSwatch(){
+  activeSwatch ++;
+  if(activeSwatch > swatches.length - 1){
+    activeSwatch = 0;
+  }
+}
+
+function prevSwatch(){
+  activeSwatch --;
+  if(activeSwatch < 0){
+    activeSwatch = swatches.length - 1;
   }
 }
 
@@ -85,7 +116,42 @@ function draw() {
   image(resultImage, 0, 0);
   hoverX = mouseX / blockWidth;
   hoverY = mouseY / blockHeight;
+  handleBrush();
+ 
 }
+
+
+function handleBrush(){
+  snapX = int(mouseX / blockWidth) * blockWidth;
+  snapY = int(mouseY / blockHeight) * blockHeight;
+  if(mouseX < resultImage.width && mouseY < resultImage.height){
+
+    if(mouseIsPressed){
+      resultImage.loadPixels();
+      for(let x = 0 ; x < blockWidth ; x++){
+        for(let y = 0 ; y < blockHeight ; y++){
+          resultImage.set(snapX + x, snapY + y, color(0,0,0,0));
+        }
+      }
+      resultImage.updatePixels();
+      resultImage.image(swatches[activeSwatch], snapX, snapY, blockWidth, blockHeight);
+    }else{
+      push();
+      // red rectangle around active tile
+      stroke(255, 0, 0);
+      noFill();
+      rect(snapX, snapY, blockWidth, blockHeight);
+      // white background to preview new tile
+      fill(255);
+      noStroke();
+      rect(snapX, snapY, blockWidth, blockHeight);
+      // new tile preview
+      image(swatches[activeSwatch], snapX, snapY, blockWidth, blockHeight );
+      pop();
+    }
+  }
+}
+
 function handleFile(file) {
   //print(file);
   if (file.type === 'image') {
@@ -100,12 +166,14 @@ function handleFile(file) {
 
 function setSwatch(swatchNumber) {
   activeSwatch = swatchNumber;
+  console.log("new swatch " + swatchNumber  );
 }
 
 function loadSwatches(){
   for(let i = 0 ; i < swatchesPaths.length ; i++){
     swatches[i] = loadImage(swatchesPaths[i]);
   }
+  console.log("LOADED " + swatches.length + " TILES");
 }
 
 function prepareImage(){
