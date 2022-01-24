@@ -34,36 +34,18 @@ let snapY;
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/vic.png');
+  sourceImage = loadImage('assets/incense/00.png');
 }
 
 function setup() {
    
-  if (small == false){
-    canvas = createCanvas(60 * blockWidth, 40 * blockHeight);
-  } else {
+  if (small == true){
     canvas = createCanvas(10 * blockWidth, 12 * blockHeight);
+  } else {
+    canvas = createCanvas(40 * blockWidth, 38 * blockHeight);
   }
   
   canvas.parent('sketch');
-  swatchButton0 = document.getElementById('swatch0-button');
-  swatchButton1 = document.getElementById('swatch1-button');
-  swatchButton2 = document.getElementById('swatch2-button');
-  swatchButton3 = document.getElementById('swatch3-button');
-  swatchButton4 = document.getElementById('swatch4-button');
-  swatchButton5 = document.getElementById('swatch5-button');
-  swatchButton6 = document.getElementById('swatch6-button');
-  swatchButton7 = document.getElementById('swatch7-button');
-  swatchButton8 = document.getElementById('swatch8-button');
-  swatchButton0.addEventListener('click', setSwatch(0));
-  swatchButton1.addEventListener('click', setSwatch(1));
-  swatchButton2.addEventListener('click', setSwatch(2));
-  swatchButton3.addEventListener('click', setSwatch(3));
-  swatchButton4.addEventListener('click', setSwatch(4));
-  swatchButton5.addEventListener('click', setSwatch(5));
-  swatchButton6.addEventListener('click', setSwatch(6));
-  swatchButton7.addEventListener('click', setSwatch(7));
-  swatchButton8.addEventListener('click', setSwatch(8));
   frameAdvanceButton = document.getElementById('increment');
   frameAdvanceButton.addEventListener('click', advanceFrame());
   prepareImage();
