@@ -46,8 +46,6 @@ function setup() {
   }
   
   canvas.parent('sketch');
-  frameAdvanceButton = document.getElementById('increment');
-  frameAdvanceButton.addEventListener('click', advanceFrame());
   prepareImage();
   processImage();
 }
@@ -62,11 +60,12 @@ function mouseClicked() {
 
 
 function advanceFrame(){
+  console.log("I tried to advance a frame to " + String(frameInt).padStart(2, '0'));
   frameInt +=1;
   frameName = String(frameInt).padStart(2, '0');
   //sourceImage = loadImage('assets/candle/'+frameName+'.png');
-  //prepareImage();
-  //processImage();
+  prepareImage();
+  processImage();
 }
 
 function keyPressed(){
