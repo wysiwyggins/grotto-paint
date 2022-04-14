@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+canvas {
+  display: block;
+  /*cursor: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px'><text y='20'>✏️</text></svg>"), crosshair;*/
+}
+button {
+
+}
+
+.ui {
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.palette, .tools, .frames {
+  padding: 4px;
+  background-color: #ccc;
+  border-radius: 4px;
+  margin: 4px;
+  flex-wrap: wrap;
+}
+
+.palette {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+}
+
+
+button.mini{
+  width: 22px;
+  height: 22px;
+  display: block;
+  padding: 0;
+  border-radius: 0;
+  margin: 2px;
+  line-height: 22px;
+  text-align: center;
+}
+
+button.mid {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 0;
+  margin: 2px;
+  font-size: 30px;
+  line-height: 34px;
+  text-align: center;
+}
+
+.row {
+  margin: 5px;
+}

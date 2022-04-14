@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <script src="sketch.js"></script>
+
+    <div id="sketch"></div>
+    <div class="ui" id="ui-panel">
+      tools
+      <div class="tools">
+        <button onclick="setTool(0);" class="mid" id="tool1-button">✏︎</button>
+        <button onclick="setTool(1);" class="mid" id="tool2-button">◻︎</button>
+        <button onclick="setTool(2);" class="mid" id="tool3-button">🔤</button>
+      </div>
+      tile palette
+      <div class="palette">
+        <button onclick="setSwatch(0);" class="mini" id="swatch1-button"><img srcset="/assets/macroblock/block1.png 2x"/></button>
+        <button onclick="setSwatch(1);" class="mini" id="swatch2-button"><img srcset="/assets/macroblock/block2.png 2x"/></button>
+        <button onclick="setSwatch(2);" class="mini" id="swatch3-button"><img srcset="/assets/macroblock/block3.png 2x"/></button>
+        <button onclick="setSwatch(3);" class="mini" id="swatch4-button"><img srcset="/assets/macroblock/block4.png 2x"/></button>
+        <button onclick="setSwatch(4);" class="mini" id="swatch5-button"><img srcset="/assets/macroblock/block5.png 2x"/></button>
+        <button onclick="setSwatch(5);" class="mini" id="swatch6-button"><img srcset="/assets/macroblock/block6.png 2x"/></button>
+        <button onclick="setSwatch(6);" class="mini" id="swatch7-button"><img srcset="/assets/macroblock/block7.png 2x"/></button>
+        <button onclick="setSwatch(7);" class="mini" id="swatch8-button"><img srcset="/assets/macroblock/block8.png 2x"/></button>
+        <button onclick="setSwatch(8);" class="mini" id="swatch0-button"><img srcset="/assets/macroblock/block0.png 2x"/></button>
+      </div>
+      <div class="row">
+        <div id="frames-amount">frames: 100</div>
+        <div id="frames-current">current frame: 1</div>
+      </div>
+      <div class="row">
+        <label for="import-button">import reference image</label>
+        <input type="file" id="import-button"/> 
+      </div>
+      <div class="row">
+        frames:
+        <button onclick="advanceFrame()"; id="decrement">⬅️</button>
+        <button onclick="playFrames()"; id="play">▶️</button>
+        <button onclick="advanceFrame()"; id="increment">➡️</button>
+        <button onclick="addFrame()"; id="add">➕</button>
+      </div>
+      
+      <div class="row">
+        <label for="save-all">save all frames as ascii json</label>
+        <button id="save-all">💾</button>
+      </div>
+    </div>
+
+  </body>
+</html>
