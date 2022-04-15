@@ -74,10 +74,15 @@ function keyPressed(){
   if(key === 'S' || key === 's'){
     save(resultImage, "test"+frameName+".png");
   }else if(keyCode === RIGHT_ARROW) {
-    nextSwatch();
+    //nextSwatch();
+    advanceFrame();
   }else if(keyCode === LEFT_ARROW) {
-    prevSwatch();
+   //prevSwatch();
+   backFrame();
   }
+  else if(keyCode === SPACE) {
+    playFrames();
+   }
 }
 
 function nextSwatch(){
