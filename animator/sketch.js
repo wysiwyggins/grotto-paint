@@ -1,3 +1,5 @@
+let cols = 40;
+let rows = 60;
 let blockWidth = 20;
 let blockHeight = 15;
 let swatches = [];
@@ -11,6 +13,8 @@ let swatchButton5;
 let swatchButton6;
 let swatchButton7;
 let swatchButton8;
+
+let map = [];
 
 let importButton;
 let frameAdvanceButton;
@@ -30,15 +34,23 @@ let hoverY = 0;
 let snapX;
 let snapY;
 
+function array2d(width, height, value = 0) {
+  //this will be for the new tilemap that we will save as frames to json or write to the screen
+  let array = Array.from(Array(width), () => new Array(height).fill(value))
+  array.width = width; array.height = height
+  return array
+}
+
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
   sourceImage = loadImage('assets/graytest.png');
+  map = array2d(cols,rows);
 }
 
 function setup() {
    
-  canvas = createCanvas(40 * blockWidth, 60 * blockHeight);
+  canvas = createCanvas(cols * blockWidth, rows * blockHeight);
   
   
   canvas.parent('sketch');
@@ -164,6 +176,8 @@ function loadSwatches(){
   console.log("LOADED " + swatches.length + " TILES");
 }
 
+
+
 function prepareImage(){
   // resize the source image to fit the canvas
  
@@ -203,8 +217,13 @@ function processImage(){
       let swatchIndex = int(map(bri, 0, 100, 0, swatches.length));
       // make sure I'm within the bounds of the swatches array
       swatchIndex = constrain(swatchIndex, 0, swatches.length-1);
+
+
       // draw selected swatch onto the result graphics object at the correct position
       resultImage.image(swatches[swatchIndex], x * blockWidth, y * blockHeight, blockWidth, blockHeight );
+
+
+
     }
   }
 
