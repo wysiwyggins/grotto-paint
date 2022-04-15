@@ -33,7 +33,7 @@ let snapY;
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/joe.png');
+  sourceImage = loadImage('assets/graytest.png');
 }
 
 function setup() {
@@ -53,12 +53,21 @@ function mouseClicked() {
 }
 
 function advanceFrame(){
-  console.log("I tried to advance a frame to " + String(frameInt).padStart(2, '0'));
-  frameInt +=1;
-  frameName = String(frameInt).padStart(2, '0');
-  //sourceImage = loadImage('assets/candle/'+frameName+'.png');
-  prepareImage();
-  processImage();
+  console.log("this is where next frame would go");
+
+}
+function backFrame(){
+  console.log("this is where last frame would go");
+
+}
+function playFrames(){
+  console.log("this is where play frames would go");
+
+}
+
+function addFrames(){
+  console.log("this is where add frame would go");
+
 }
 
 function keyPressed(){
