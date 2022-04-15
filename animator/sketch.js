@@ -14,7 +14,7 @@ let swatchButton6;
 let swatchButton7;
 let swatchButton8;
 
-let map = [];
+let frameMap = [];
 
 let importButton;
 let frameAdvanceButton;
@@ -45,7 +45,7 @@ function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
   sourceImage = loadImage('assets/graytest.png');
-  map = array2d(cols,rows);
+  frameMap = array2d(cols,rows);
 }
 
 function setup() {
@@ -85,6 +85,10 @@ function addFrames(){
 function keyPressed(){
   if(key === 'S' || key === 's'){
     save(resultImage, "test"+frameName+".png");
+    //and also get the json
+    var output = JSON.stringify(frameMap);
+    save(output, "animation.json");
+
   }else if(keyCode === RIGHT_ARROW) {
     //nextSwatch();
     advanceFrame();
