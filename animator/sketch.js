@@ -14,13 +14,15 @@ let swatchButton6;
 let swatchButton7;
 let swatchButton8;
 
+//frameMap is one frame of all the swatch indexes in an image
 let frameMap = [];
+//frames is all the frames of frameMaps. These would all go into the json output
+let frames = [];
 
 let importButton;
 let frameAdvanceButton;
 let canvas;
-let frameInt=0;
-let frameName= String(frameInt).padStart(2, '0');
+let currentFrame;
 
 let sourceImage; // this is the original photo/image we want to process
 let sampleImage; // this is a resized version of the photo, where 1px = 1 block
@@ -35,9 +37,9 @@ let snapX;
 let snapY;
 
 function array2d(width, height, value = 0) {
-  //this will be for the new tilemap that we will save as frames to json or write to the screen
+  //this was loren's way of filling a 2d array
   let array = Array.from(Array(width), () => new Array(height).fill(value))
-  array.width = width; array.height = height
+  array.width = cols; array.height = rows;
   return array
 }
 
@@ -46,6 +48,8 @@ function preload(){
   loadSwatches();
   sourceImage = loadImage('assets/graytest.png');
   frameMap = array2d(cols,rows);
+  currentFrame = 0;
+  frames[currentFrame] = "frame" + currentFrame +":" + JSON.stringify(frameMap);
 }
 
 function setup() {
@@ -66,11 +70,16 @@ function mouseClicked() {
 
 function advanceFrame(){
   console.log("this is where next frame would go");
-
+  if (currentFrame + 1 <= frames.length){
+    currentFrame +=1;
+  }
 }
+
 function backFrame(){
   console.log("this is where last frame would go");
-
+  if (currentFrame - 1 > 0){
+    currentFrame -=1;
+  }
 }
 function playFrames(){
   console.log("this is where play frames would go");
@@ -79,14 +88,14 @@ function playFrames(){
 
 function addFrames(){
   console.log("this is where add frame would go");
-
+  frames[currentFrame + 1] = frameMap;
 }
 
 function keyPressed(){
   if(key === 'S' || key === 's'){
-    save(resultImage, "test"+frameName+".png");
+    save(resultImage, "test"+currentFrame+".png");
     //and also get the json
-    var output = JSON.stringify(frameMap);
+    var output = JSON.stringify(frames);
     save(output, "animation.json");
 
   }else if(keyCode === RIGHT_ARROW) {
