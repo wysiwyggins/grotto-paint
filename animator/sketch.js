@@ -21,6 +21,10 @@ let frames = [];
 
 let importButton;
 let frameAdvanceButton;
+let frameBackButton;
+let frameAddButton;
+let PlayButton;
+let SaveButton;
 let canvas;
 let currentFrame;
 
@@ -55,9 +59,9 @@ function setup() {
   canvas = createCanvas(cols * blockWidth, rows * blockHeight);
   
   canvas.parent('sketch');
+
   prepareImage();
   processImage();
-  
 
   frameMap = array2d(sampleImage.width,sampleImage.height);
   currentFrame = 0;
@@ -70,38 +74,51 @@ function mouseClicked() {
   
 }
 
+function updateFrame(){
+  console.log("frame" + currentFrame);
+  let frameText = document.getElementById('currentFrameText');
+  frameText.innerHTML = currentFrame;
+}
+
 function advanceFrame(){
-  console.log("this is where next frame would go");
+  console.log("next");
   if (currentFrame + 1 <= frames.length){
     currentFrame +=1;
     frameMap = frames[currentFrame];
   }
+  updateFrame();
 }
 
 function backFrame(){
-  console.log("this is where last frame would go");
+  console.log("back");
   if (currentFrame - 1 > 0){
     currentFrame -=1;
     frameMap = frames[currentFrame];
   }
+  updateFrame();
 }
 function playFrames(){
   console.log("this is where play frames would go");
 
 }
 
-function addFrames(){
-  console.log("this is where add frame would go");
+function addFrame(){
+  console.log("add");
   frames[currentFrame + 1] = frameMap;
   currentFrame +=1;
+  updateFrame()
+}
+
+function save(){
+  save(resultImage, "test"+currentFrame+".png");
+  //and also get the json
+  var output = JSON.stringify(frames);
+  save(output, "animation.json");
 }
 
 function keyPressed(){
   if(key === 'S' || key === 's'){
-    save(resultImage, "test"+currentFrame+".png");
-    //and also get the json
-    var output = JSON.stringify(frames);
-    save(output, "animation.json");
+    save()
 
   }else if(keyCode === RIGHT_ARROW) {
     //nextSwatch();

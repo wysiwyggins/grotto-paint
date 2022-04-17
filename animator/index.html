@@ -49,7 +49,7 @@
       </div>
       <div class="row">
         <div id="frames-amount">frames: 100</div>
-        <div class = "frames">current frame: <span id="currentFrame">1</span></div>
+        <div class = "frames">current frame: <span id="currentFrameText">1</span></div>
       </div>
       <div class="row">
         <label for="import-button">import reference image</label>
@@ -57,15 +57,15 @@
       </div>
       <div class="row">
         frames:
-        <button onclick="advanceFrame()"; id="decrement">⬅️</button>
-        <button onclick="playFrames()"; id="play">▶️</button>
-        <button onclick="backFrame()"; id="increment">➡️</button>
-        <button onclick="addFrame()"; id="add">➕</button>
+        <button onclick="backFrame()"; id="decrementButton">⬅️</button>
+        <button onclick="playFrames()"; id="playButton">▶️</button>
+        <button onclick="advanceFrame()"; id="incrementButton">➡️</button>
+        <button onclick="addFrame()"; id="addButton">➕</button>
       </div>
       
       <div class="row">
         <label for="save-all">save all frames as ascii json</label>
-        <button id="save-all">💾</button>
+        <button onclick="save()"; id="save-all">💾</button>
       </div>
     </div>
 
