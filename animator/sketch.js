@@ -74,10 +74,24 @@ function mouseClicked() {
   
 }
 
+
+function loadFrame(thisFrame){
+
+  for(var i = 0; i < thisFrame.length; i++) {
+    var thisCol = thisFrame[i];
+    for(var j = 0; j < thisCol.length; j++) {
+       //paint a tile here
+    }
+  }
+}
+
 function updateFrame(){
   console.log("frame" + currentFrame);
   let frameText = document.getElementById('currentFrameText');
+  let totalFramesText = document.getElementById('totalFramesText');
   frameText.innerHTML = currentFrame;
+  totalFramesText.innerHTML = frames.length;
+
 }
 
 function advanceFrame(){
