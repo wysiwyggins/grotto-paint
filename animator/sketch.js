@@ -61,7 +61,7 @@ function setup() {
 
   frameMap = array2d(sampleImage.width,sampleImage.height);
   currentFrame = 0;
-  frames[currentFrame] = "frame" + currentFrame +":" + JSON.stringify(frameMap);
+  frames[currentFrame] = frameMap;
 }
 
 function mouseClicked() {
@@ -74,6 +74,7 @@ function advanceFrame(){
   console.log("this is where next frame would go");
   if (currentFrame + 1 <= frames.length){
     currentFrame +=1;
+    frameMap = frames[currentFrame];
   }
 }
 
@@ -81,6 +82,7 @@ function backFrame(){
   console.log("this is where last frame would go");
   if (currentFrame - 1 > 0){
     currentFrame -=1;
+    frameMap = frames[currentFrame];
   }
 }
 function playFrames(){
@@ -91,13 +93,14 @@ function playFrames(){
 function addFrames(){
   console.log("this is where add frame would go");
   frames[currentFrame + 1] = frameMap;
+  currentFrame +=1;
 }
 
 function keyPressed(){
   if(key === 'S' || key === 's'){
     save(resultImage, "test"+currentFrame+".png");
     //and also get the json
-    var output = JSON.stringify(frameMap);
+    var output = JSON.stringify(frames);
     save(output, "animation.json");
 
   }else if(keyCode === RIGHT_ARROW) {
@@ -127,7 +130,7 @@ function prevSwatch(){
 }
 
 function draw() {
-  background(255,0,0);
+  background(255);
   image(resultImage, 0, 0);
   hoverX = mouseX / blockWidth;
   hoverY = mouseY / blockHeight;
@@ -170,6 +173,7 @@ function handleBrush(){
 
 function addTileToArray(swatchIndex, col, row){
   frameMap[col][row]=swatchIndex;
+  frames[currentFrame] = frameMap;
  // console.log("col: " + col);
  // console.log("row: " + row);
  // console.log("index: " + swatchIndex);
