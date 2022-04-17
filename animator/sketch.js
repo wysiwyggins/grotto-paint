@@ -1,5 +1,5 @@
 let cols = 40;
-let rows = 60;
+let rows = 30;
 let blockWidth = 20;
 let blockHeight = 15;
 let swatches = [];
@@ -29,7 +29,7 @@ let sampleImage; // this is a resized version of the photo, where 1px = 1 block
 let resultImage; // this is a p5Graphics objects that contains the results of the process
 
 let swatchesPaths;
-swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png'];
+swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png','assets/macroblock/Block9.png','assets/macroblock/Block10.png', 'assets/macroblock/Block11.png','assets/macroblock/Block12.png','assets/macroblock/Block13.png','assets/macroblock/Block14.png','assets/macroblock/Block15.png','assets/macroblock/Block16.png','assets/macroblock/Block17.png','assets/macroblock/Block18.png','assets/macroblock/Block19.png','assets/macroblock/Block20.png'];
 let hoverX = 0;
 let hoverY = 0;
 
@@ -47,19 +47,21 @@ function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
   sourceImage = loadImage('assets/graytest.png');
-  frameMap = array2d(cols,rows);
-  currentFrame = 0;
-  frames[currentFrame] = "frame" + currentFrame +":" + JSON.stringify(frameMap);
+  
 }
 
 function setup() {
    
   canvas = createCanvas(cols * blockWidth, rows * blockHeight);
   
-  
   canvas.parent('sketch');
   prepareImage();
   processImage();
+  
+
+  frameMap = array2d(sampleImage.width,sampleImage.height);
+  currentFrame = 0;
+  frames[currentFrame] = "frame" + currentFrame +":" + JSON.stringify(frameMap);
 }
 
 function mouseClicked() {
@@ -95,7 +97,7 @@ function keyPressed(){
   if(key === 'S' || key === 's'){
     save(resultImage, "test"+currentFrame+".png");
     //and also get the json
-    var output = JSON.stringify(frames);
+    var output = JSON.stringify(frameMap);
     save(output, "animation.json");
 
   }else if(keyCode === RIGHT_ARROW) {
@@ -105,7 +107,7 @@ function keyPressed(){
    //prevSwatch();
    backFrame();
   }
-  else if(keyCode === SPACE) {
+  else if(key === ' ') {
     playFrames();
    }
 }
@@ -125,7 +127,7 @@ function prevSwatch(){
 }
 
 function draw() {
-  background(255);
+  background(255,0,0);
   image(resultImage, 0, 0);
   hoverX = mouseX / blockWidth;
   hoverY = mouseY / blockHeight;
@@ -148,6 +150,7 @@ function handleBrush(){
       }
       resultImage.updatePixels();
       resultImage.image(swatches[activeSwatch], snapX, snapY, blockWidth, blockHeight);
+      addTileToArray(activeSwatch, (snapX/blockWidth), (snapY/blockHeight));
     }else{
       push();
       // red rectangle around active tile
@@ -163,6 +166,14 @@ function handleBrush(){
       pop();
     }
   }
+}
+
+function addTileToArray(swatchIndex, col, row){
+  frameMap[col][row]=swatchIndex;
+ // console.log("col: " + col);
+ // console.log("row: " + row);
+ // console.log("index: " + swatchIndex);
+  
 }
 
 function handleFile(file) {
@@ -227,7 +238,7 @@ function processImage(){
       let bri = brightness(pixelColor);
       
       // figure out which swatch to use
-      let swatchIndex = int(map(bri, 0, 100, 0, swatches.length));
+      let swatchIndex = int(map(bri, 0, 100, 0, 9));
       // make sure I'm within the bounds of the swatches array
       swatchIndex = constrain(swatchIndex, 0, swatches.length-1);
 
