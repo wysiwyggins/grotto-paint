@@ -81,17 +81,18 @@ function loadFrame(thisFrame){
     var thisCol = thisFrame[i];
     for(var j = 0; j < thisCol.length; j++) {
        //paint a tile here
+       resultImage.image(swatches[thisCol[j]], x * blockWidth, y * blockHeight, blockWidth, blockHeight );
     }
   }
 }
 
-function updateFrame(){
+function updateFrames(){
   console.log("frame" + currentFrame);
   let frameText = document.getElementById('currentFrameText');
   let totalFramesText = document.getElementById('totalFramesText');
   frameText.innerHTML = currentFrame;
   totalFramesText.innerHTML = frames.length;
-
+  
 }
 
 function advanceFrame(){
@@ -99,8 +100,9 @@ function advanceFrame(){
   if (currentFrame + 1 <= frames.length){
     currentFrame +=1;
     frameMap = frames[currentFrame];
+    loadFrame(frameMap);
   }
-  updateFrame();
+  updateFrames();
 }
 
 function backFrame(){
@@ -108,8 +110,9 @@ function backFrame(){
   if (currentFrame - 1 > 0){
     currentFrame -=1;
     frameMap = frames[currentFrame];
+    loadFrame(frameMap);
   }
-  updateFrame();
+  updateFrames();
 }
 function playFrames(){
   console.log("this is where play frames would go");
@@ -120,7 +123,7 @@ function addFrame(){
   console.log("add");
   frames[currentFrame + 1] = frameMap;
   currentFrame +=1;
-  updateFrame()
+  updateFrames()
 }
 
 function save(){
