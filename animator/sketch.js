@@ -4,15 +4,6 @@ let blockWidth = 20;
 let blockHeight = 15;
 let swatches = [];
 let activeSwatch = 0;
-let swatchButton0;
-let swatchButton1;
-let swatchButton2;
-let swatchButton3;
-let swatchButton4;
-let swatchButton5;
-let swatchButton6;
-let swatchButton7;
-let swatchButton8;
 
 //frameMap is one frame of all the swatch indexes in an image
 let frameMap = [];
@@ -33,15 +24,15 @@ let sampleImage; // this is a resized version of the photo, where 1px = 1 block
 let resultImage; // this is a p5Graphics objects that contains the results of the process
 
 let swatchesPaths;
-swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png','assets/macroblock/Block9.png','assets/macroblock/Block10.png', 'assets/macroblock/Block11.png','assets/macroblock/Block12.png','assets/macroblock/Block13.png','assets/macroblock/Block14.png','assets/macroblock/Block15.png','assets/macroblock/Block16.png','assets/macroblock/Block17.png','assets/macroblock/Block18.png','assets/macroblock/Block19.png','assets/macroblock/Block20.png'];
+swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png','assets/macroblock/Block9.png','assets/macroblock/Block10.png', 'assets/macroblock/Block11.png','assets/macroblock/Block12.png','assets/macroblock/Block13.png','assets/macroblock/Block14.png','assets/macroblock/Block15.png','assets/macroblock/Block16.png','assets/macroblock/Block17.png','assets/macroblock/Block18.png','assets/macroblock/Block19.png','assets/macroblock/Block20.png','assets/macroblock/Block21.png','assets/macroblock/Block22.png'];
 let hoverX = 0;
 let hoverY = 0;
 
 let snapX;
 let snapY;
 
-function array2d(width, height, value = 0) {
-  //this was loren's way of filling a 2d array
+function array2d(width, height, value = 8) {
+  //this was loren's way of filling a 2d array, swatch 8 is a white tile
   let array = Array.from(Array(width), () => new Array(height).fill(value))
   array.width = cols; array.height = rows;
   return array
@@ -50,7 +41,7 @@ function array2d(width, height, value = 0) {
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/graytest.png');
+  sourceImage = loadImage('assets/wumpus.png');
   
 }
 
@@ -64,7 +55,7 @@ function setup() {
   processImage();
 
   frameMap = array2d(sampleImage.width,sampleImage.height);
-  currentFrame = 0;
+  currentFrame = 1;
   frames[currentFrame] = frameMap;
 }
 
@@ -76,12 +67,11 @@ function mouseClicked() {
 
 
 function loadFrame(thisFrame){
-
   for(var i = 0; i < thisFrame.length; i++) {
     var thisCol = thisFrame[i];
     for(var j = 0; j < thisCol.length; j++) {
        //paint a tile here
-       resultImage.image(swatches[thisCol[j]], x * blockWidth, y * blockHeight, blockWidth, blockHeight );
+       resultImage.image(swatches[thisCol[j]], i * blockWidth, j * blockHeight, blockWidth, blockHeight );
     }
   }
 }
@@ -91,15 +81,16 @@ function updateFrames(){
   let frameText = document.getElementById('currentFrameText');
   let totalFramesText = document.getElementById('totalFramesText');
   frameText.innerHTML = currentFrame;
-  totalFramesText.innerHTML = frames.length;
+  totalFramesText.innerHTML = frames.length -1;
   
 }
 
 function advanceFrame(){
   console.log("next");
-  if (currentFrame + 1 <= frames.length){
+  if (currentFrame < frames.length -1){
     currentFrame +=1;
     frameMap = frames[currentFrame];
+    console.log(frameMap); //nothin
     loadFrame(frameMap);
   }
   updateFrames();
@@ -107,7 +98,7 @@ function advanceFrame(){
 
 function backFrame(){
   console.log("back");
-  if (currentFrame - 1 > 0){
+  if (currentFrame > 1){
     currentFrame -=1;
     frameMap = frames[currentFrame];
     loadFrame(frameMap);
@@ -125,6 +116,7 @@ function addFrame(){
   currentFrame +=1;
   updateFrames()
 }
+
 
 function save(){
   save(resultImage, "test"+currentFrame+".png");
@@ -276,7 +268,7 @@ function processImage(){
       let bri = brightness(pixelColor);
       
       // figure out which swatch to use
-      let swatchIndex = int(map(bri, 0, 100, 0, 9));
+      let swatchIndex = int(map(bri, 0, 100, 0, 8));
       // make sure I'm within the bounds of the swatches array
       swatchIndex = constrain(swatchIndex, 0, swatches.length-1);
 
