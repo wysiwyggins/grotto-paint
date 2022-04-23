@@ -31,7 +31,7 @@ let hoverY = 0;
 let snapX;
 let snapY;
 
-function array2d(width, height, value = 8) {
+function array2d(width, height, value = 0) {
   //this was loren's way of filling a 2d array, swatch 8 is a white tile
   let array = Array.from(Array(width), () => new Array(height).fill(value))
   array.width = cols; array.height = rows;
@@ -41,7 +41,7 @@ function array2d(width, height, value = 8) {
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/wumpus.png');
+  sourceImage = loadImage('assets/graytest.png');
   
 }
 
@@ -55,7 +55,7 @@ function setup() {
   processImage();
 
   frameMap = array2d(sampleImage.width,sampleImage.height);
-  currentFrame = 1;
+  currentFrame = 0;
   frames[currentFrame] = frameMap;
 }
 
@@ -67,6 +67,7 @@ function mouseClicked() {
 
 
 function loadFrame(thisFrame){
+  resultImage.clear();
   for(var i = 0; i < thisFrame.length; i++) {
     var thisCol = thisFrame[i];
     for(var j = 0; j < thisCol.length; j++) {
@@ -76,34 +77,34 @@ function loadFrame(thisFrame){
   }
 }
 
-function updateFrames(){
+function updateFramesUI(){
   console.log("frame" + currentFrame);
   let frameText = document.getElementById('currentFrameText');
   let totalFramesText = document.getElementById('totalFramesText');
   frameText.innerHTML = currentFrame;
-  totalFramesText.innerHTML = frames.length -1;
+  totalFramesText.innerHTML = frames.length;
   
 }
 
 function advanceFrame(){
   console.log("next");
-  if (currentFrame < frames.length -1){
+  if (currentFrame < frames.length){
     currentFrame +=1;
     frameMap = frames[currentFrame];
-    console.log(frameMap); //nothin
+    console.log(frameMap); 
     loadFrame(frameMap);
   }
-  updateFrames();
+  updateFramesUI();
 }
 
 function backFrame(){
   console.log("back");
-  if (currentFrame > 1){
+  if (currentFrame > 0){
     currentFrame -=1;
     frameMap = frames[currentFrame];
     loadFrame(frameMap);
   }
-  updateFrames();
+  updateFramesUI();
 }
 function playFrames(){
   console.log("this is where play frames would go");
@@ -112,9 +113,10 @@ function playFrames(){
 
 function addFrame(){
   console.log("add");
+  //frames[currentFrame + 1] = array2d(sampleImage.width,sampleImage.height);
   frames[currentFrame + 1] = frameMap;
   currentFrame +=1;
-  updateFrames()
+  updateFramesUI()
 }
 
 
