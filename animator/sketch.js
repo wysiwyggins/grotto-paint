@@ -31,7 +31,7 @@ let hoverY = 0;
 let snapX;
 let snapY;
 
-function array2d(width, height, value = 0) {
+function array2d(width, height, value = 8) {
   //this was loren's way of filling a 2d array, swatch 8 is a white tile
   let array = Array.from(Array(width), () => new Array(height).fill(value))
   array.width = cols; array.height = rows;
@@ -79,6 +79,7 @@ function loadFrame(thisFrame){
 
 function updateFramesUI(){
   console.log("frame" + currentFrame);
+  console.log("total frames" + frames.length);
   let frameText = document.getElementById('currentFrameText');
   let totalFramesText = document.getElementById('totalFramesText');
   frameText.innerHTML = currentFrame;
@@ -114,8 +115,8 @@ function playFrames(){
 function addFrame(){
   console.log("add");
   //frames[currentFrame + 1] = array2d(sampleImage.width,sampleImage.height);
-  frames[currentFrame + 1] = frameMap;
   currentFrame +=1;
+  frames[currentFrame] = frameMap;
   updateFramesUI()
 }
 
