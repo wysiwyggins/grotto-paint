@@ -137,16 +137,18 @@ function playFrames(){
 function addFrame(){
   console.log("add");
   //frames[currentFrame + 1] = array2d(sampleImage.width,sampleImage.height);
-  currentFrame +=1;
+  
   //frames[currentFrame] = frames[currentFrame-1]; // THIS IS THE PROBLEM NOW
-  frames[currentFrame] = array2d(sampleImage.width,sampleImage.height);
+  let tempFrame = array2d(sampleImage.width,sampleImage.height);
   for(let x = 0 ; x < frames[currentFrame].length ; x++){
     for(let y = 0 ; y < frames[currentFrame][x].length ; y++){
-      frames[currentFrame][x][y] = frames[currentFrame-1][x][y];
+      tempFrame[x][y] = frames[currentFrame][x][y];
     }
   }
+  
+  frames.splice(currentFrame+1,0,tempFrame);
 
-
+  currentFrame +=1;
   loadFrame(currentFrame);
   updateFramesUI()
 }
