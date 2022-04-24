@@ -47,6 +47,7 @@ function preload(){
   
 }
 
+
 function setup() {
    
   canvas = createCanvas(cols * blockWidth, rows * blockHeight);
@@ -70,6 +71,14 @@ function mouseClicked() {
   
 }
 
+function loadSourceImage() {
+  const fileInput = document.getElementById('imageInput');
+  fileInput.onchange = () => {
+  const selectedFile = fileInput.files[0];
+  console.log(selectedFile);
+  sourceImage = loadImage(selectedFile);
+  }
+}
 
 function loadFrame(thisFrameIndex){
   let thisFrame = frames[thisFrameIndex];
