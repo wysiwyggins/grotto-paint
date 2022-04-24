@@ -159,7 +159,7 @@ function saveAnim(){
    //why has this stopped working?
   //save(resultImage, "test"+currentFrame+".png");
   var output = JSON.stringify(frames);
-  saveAnim(output, "animation.json");
+  save(output, "animation.json");
 }
 
 function keyPressed(){
