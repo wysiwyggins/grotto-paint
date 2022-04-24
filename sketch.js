@@ -24,7 +24,7 @@ let sampleImage; // this is a resized version of the photo, where 1px = 1 block
 let resultImage; // this is a p5Graphics objects that contains the results of the process
 
 let swatchesPaths;
-swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png','assets/macroblock/Block9.png','assets/macroblock/Block10.png', 'assets/macroblock/Block11.png','assets/macroblock/Block12.png','assets/macroblock/Block13.png','assets/macroblock/Block14.png','assets/macroblock/Block15.png','assets/macroblock/Block16.png','assets/macroblock/Block17.png','assets/macroblock/Block18.png','assets/macroblock/Block19.png','assets/macroblock/Block20.png','assets/macroblock/Block21.png','assets/macroblock/Block22.png'];
+swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png','assets/macroblock/Block9.png','assets/macroblock/Block10.png', 'assets/macroblock/Block11.png','assets/macroblock/Block12.png','assets/macroblock/Block13.png','assets/macroblock/Block14.png','assets/macroblock/Block15.png','assets/macroblock/Block16.png','assets/macroblock/Block17.png','assets/macroblock/Block18.png','assets/macroblock/Block19.png','assets/macroblock/Block20.png','assets/macroblock/Block21.png','assets/macroblock/Block22.png','assets/macroblock/Block23.png','assets/macroblock/Block24.png','assets/macroblock/Block25.png'];
 let hoverX = 0;
 let hoverY = 0;
 
@@ -155,16 +155,19 @@ function addFrame(){
 }
 
 
-function save(){
+function saveFrames(){
+   //why has this stopped working?
   save(resultImage, "test"+currentFrame+".png");
-  //and also get the json
   var output = JSON.stringify(frames);
+  console.log(frames);
+  console.log("test");
+  console.log(output);
   save(output, "animation.json");
 }
 
 function keyPressed(){
   if(key === 'S' || key === 's'){
-    save()
+    saveFrames()
 
   }else if(keyCode === RIGHT_ARROW) {
     //nextSwatch();
