@@ -31,6 +31,8 @@ let hoverY = 0;
 let snapX;
 let snapY;
 
+let frameTimer;
+
 function array2d(width, height, value = 8) {
   //this was loren's way of filling a 2d array, swatch 8 is a white tile
   let array = Array.from(Array(width), () => new Array(height).fill(value))
@@ -55,6 +57,8 @@ function setup() {
   frames[0] = array2d(sampleImage.width,sampleImage.height); // creates an empty array
   processImage();
 
+  frameTimer = new FpsTimer();
+  frameTimer.setFrameRate(12);
   
   
   //frames[currentFrame] = frameMap;
@@ -112,6 +116,8 @@ function backFrame(){
 }
 function playFrames(){
   console.log("this is where play frames would go");
+  frameTimer.play();
+
 
 }
 
@@ -172,6 +178,16 @@ function prevSwatch(){
 
 function draw() {
   background(255);
+
+  frameTimer.update();
+  if(frameTimer.isPlaying()){
+    if(frameTimer.checkChange()){
+      frameTimer.lowerFlag();
+      console.log("new frame");
+      /// advanceOneFrame
+    }
+  }
+
   image(resultImage, 0, 0);
   hoverX = mouseX / blockWidth;
   hoverY = mouseY / blockHeight;
