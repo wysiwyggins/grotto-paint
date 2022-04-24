@@ -101,6 +101,9 @@ function advanceFrame(){
     //frameMap = frames[currentFrame];
     //console.log(frameMap); 
     loadFrame(currentFrame);
+  }else{
+    currentFrame = 0;
+    loadFrame(currentFrame);
   }
   updateFramesUI();
 }
@@ -111,12 +114,22 @@ function backFrame(){
     currentFrame -=1;
    // frameMap = frames[currentFrame];
     loadFrame(currentFrame);
+  }else{
+    currentFrame = frames.length -1;
+    loadFrame(currentFrame);
   }
   updateFramesUI();
 }
+
 function playFrames(){
-  console.log("this is where play frames would go");
-  frameTimer.play();
+  //console.log("this is where play frames would go");
+  // if playing, pause
+  // if not playing, play
+  if(!frameTimer.isPlaying()){
+    frameTimer.play();
+  }else{
+    frameTimer.stop();
+  }
 
 
 }
@@ -183,7 +196,8 @@ function draw() {
   if(frameTimer.isPlaying()){
     if(frameTimer.checkChange()){
       frameTimer.lowerFlag();
-      console.log("new frame");
+      advanceFrame();
+     // console.log("new frame");
       /// advanceOneFrame
     }
   }

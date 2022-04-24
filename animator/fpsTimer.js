@@ -18,6 +18,10 @@ class FpsTimer{
         this.playing = true;
     }
 
+    stop(){
+        this.playing = false;
+    }
+
     update(){
         if(this.playing){
             let currentTime = millis();
