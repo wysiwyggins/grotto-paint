@@ -122,13 +122,14 @@ function backFrame(){
 }
 
 function playFrames(){
-  //console.log("this is where play frames would go");
-  // if playing, pause
-  // if not playing, play
+
+  var playButton = document.getElementById("playButton")
   if(!frameTimer.isPlaying()){
     frameTimer.play();
+    playButton.innerHTML ="⏸";
   }else{
     frameTimer.stop();
+    playButton.innerHTML ="▶️";
   }
 
 
