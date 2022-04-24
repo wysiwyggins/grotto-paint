@@ -6,7 +6,7 @@ let swatches = [];
 let activeSwatch = 0;
 
 //frameMap is one frame of all the swatch indexes in an image
-//let frameMap = [];
+let frameMap = [];
 //frames is all the frames of frameMaps. These would all go into the json output
 let frames = [];
 
@@ -50,13 +50,13 @@ function setup() {
   canvas = createCanvas(cols * blockWidth, rows * blockHeight);
   
   canvas.parent('sketch');
-  currentFrame = 0;
+
   prepareImage();
-  frames[0] = array2d(sampleImage.width,sampleImage.height); // creates an empty array
+  frameMap = array2d(sampleImage.width,sampleImage.height); // creates an empty array
   processImage();
 
   
-  
+  currentFrame = 0;
   //frames[currentFrame] = frameMap;
 }
 
@@ -67,9 +67,8 @@ function mouseClicked() {
 }
 
 
-function loadFrame(thisFrameIndex){
-  let thisFrame = frames[thisFrameIndex];
-  console.log("loadingFrame " + thisFrameIndex);
+function loadFrame(thisFrame){
+  console.log("loadingFrame");
   resultImage.clear();
   for(var i = 0; i < thisFrame.length; i++) {
     var thisCol = thisFrame[i];
@@ -81,7 +80,7 @@ function loadFrame(thisFrameIndex){
 }
 
 function updateFramesUI(){
-  console.log("frame " + (currentFrame ));
+  console.log("frame" + (currentFrame + 1));
   console.log("total frames" + frames.length);
   let frameText = document.getElementById('currentFrameText');
   let totalFramesText = document.getElementById('totalFramesText');
@@ -94,9 +93,9 @@ function advanceFrame(){
   console.log("next");
   if (currentFrame < frames.length-1){
     currentFrame +=1;
-    //frameMap = frames[currentFrame];
-    //console.log(frameMap); 
-    loadFrame(currentFrame);
+    frameMap = frames[currentFrame];
+    console.log(frameMap); 
+    loadFrame(frameMap);
   }
   updateFramesUI();
 }
@@ -105,8 +104,8 @@ function backFrame(){
   console.log("back");
   if (currentFrame > 0){
     currentFrame -=1;
-   // frameMap = frames[currentFrame];
-    loadFrame(currentFrame);
+    frameMap = frames[currentFrame];
+    loadFrame(frameMap);
   }
   updateFramesUI();
 }
@@ -119,16 +118,7 @@ function addFrame(){
   console.log("add");
   //frames[currentFrame + 1] = array2d(sampleImage.width,sampleImage.height);
   currentFrame +=1;
-  //frames[currentFrame] = frames[currentFrame-1]; // THIS IS THE PROBLEM NOW
-  frames[currentFrame] = array2d(sampleImage.width,sampleImage.height);
-  for(let x = 0 ; x < frames[currentFrame].length ; x++){
-    for(let y = 0 ; y < frames[currentFrame][x].length ; y++){
-      frames[currentFrame][x][y] = frames[currentFrame-1][x][y];
-    }
-  }
-
-
-  loadFrame(currentFrame);
+  frames[currentFrame] = frameMap;
   updateFramesUI()
 }
 
@@ -213,8 +203,8 @@ function handleBrush(){
 }
 
 function addTileToArray(swatchIndex, col, row){
-  frames[currentFrame][col][row]=swatchIndex;
-  //frames[currentFrame] = frameMap;
+  frameMap[col][row]=swatchIndex;
+  frames[currentFrame] = frameMap;
  // console.log("col: " + col);
  // console.log("row: " + row);
  // console.log("index: " + swatchIndex);
@@ -293,7 +283,7 @@ function processImage(){
       // figure out what column and row this is
       // store swatchIndex at that position
 
-      frames[currentFrame][x][y]=swatchIndex;
+      frameMap[x][y]=swatchIndex;
 
 
     }
