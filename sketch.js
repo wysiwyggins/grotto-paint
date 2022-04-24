@@ -155,19 +155,16 @@ function addFrame(){
 }
 
 
-function saveFrames(){
+function saveAnim(){
    //why has this stopped working?
-  save(resultImage, "test"+currentFrame+".png");
+  //save(resultImage, "test"+currentFrame+".png");
   var output = JSON.stringify(frames);
-  console.log(frames);
-  console.log("test");
-  console.log(output);
-  save(output, "animation.json");
+  saveAnim(output, "animation.json");
 }
 
 function keyPressed(){
   if(key === 'S' || key === 's'){
-    saveFrames()
+    saveAnim()
 
   }else if(keyCode === RIGHT_ARROW) {
     //nextSwatch();
