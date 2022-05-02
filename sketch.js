@@ -5,6 +5,8 @@ let blockHeight = 15;
 let swatches = [];
 let activeSwatch = 0;
 
+let toolMode;
+
 //frameMap is one frame of all the swatch indexes in an image
 //let frameMap = [];
 //frames is all the frames of frameMaps. These would all go into the json output
@@ -24,7 +26,7 @@ let sampleImage; // this is a resized version of the photo, where 1px = 1 block
 let resultImage; // this is a p5Graphics objects that contains the results of the process
 
 let swatchesPaths;
-swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png','assets/macroblock/Block9.png','assets/macroblock/Block10.png', 'assets/macroblock/Block11.png','assets/macroblock/Block12.png','assets/macroblock/Block13.png','assets/macroblock/Block14.png','assets/macroblock/Block15.png','assets/macroblock/Block16.png','assets/macroblock/Block17.png','assets/macroblock/Block18.png','assets/macroblock/Block19.png','assets/macroblock/Block20.png','assets/macroblock/Block21.png','assets/macroblock/Block22.png','assets/macroblock/Block23.png','assets/macroblock/Block24.png','assets/macroblock/Block25.png'];
+swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png','assets/macroblock/Block9.png','assets/macroblock/Block10.png', 'assets/macroblock/Block11.png','assets/macroblock/Block12.png','assets/macroblock/Block13.png','assets/macroblock/Block14.png','assets/macroblock/Block15.png','assets/macroblock/Block16.png','assets/macroblock/Block17.png','assets/macroblock/Block18.png','assets/macroblock/Block19.png','assets/macroblock/Block20.png','assets/macroblock/Block21.png','assets/macroblock/Block22.png','assets/macroblock/Block23.png','assets/macroblock/Block24.png','assets/macroblock/Block25.png','assets/macroblock/Block26.png'];
 let hoverX = 0;
 let hoverY = 0;
 
@@ -60,7 +62,7 @@ function setup() {
 
   frameTimer = new FpsTimer();
   frameTimer.setFrameRate(12);
-  
+  toolMode = 0;
   
   //frames[currentFrame] = frameMap;
 }
@@ -72,11 +74,12 @@ function mouseClicked() {
 }
 
 function loadSourceImage() {
-  const fileInput = document.getElementById('imageInput');
+  const fileInput = document.getElementById('imageInput'); //the button
   fileInput.onchange = () => {
-  const selectedFile = fileInput.files[0];
-  console.log(selectedFile);
-  sourceImage = loadImage(selectedFile);
+    let selectedFile = fileInput.files[0];
+    console.log(selectedFile);
+    console.log("trying to load a new image");
+    sourceImage = loadImage(selectedFile);
   }
 }
 
@@ -163,6 +166,24 @@ function addFrame(){
   updateFramesUI()
 }
 
+function setTool(toolIndex){
+  const toolButton0 = document.getElementById('tool1-button');
+  const toolButton1 = document.getElementById('tool2-button');
+  
+  toolMode = toolIndex;
+  console.log("toolMode: " + toolMode);
+  if (toolMode == 0) {
+    toolButton0.classList.add("current");
+    toolButton1.classList.remove("current");
+  } else if ( toolMode == 1) {
+    toolButton0.classList.remove("current");
+    toolButton1.classList.add("current");
+  } else if (toolMode > 1) {
+    toolButton0.classList.remove("current");
+    toolButton1.classList.add("current");
+    toolMode =1;
+  }
+}
 
 function saveAnim(){
    //why has this stopped working?

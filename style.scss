@@ -1,19 +1,12 @@
-@charset "UTF-8";
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
   margin: auto;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 canvas {
@@ -22,13 +15,8 @@ canvas {
 }
 
 .ui {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   max-height: 400px;
   border: 2px solid #ccc;
   border-radius: 5px;
@@ -41,18 +29,16 @@ canvas {
   background-color: #ccc;
   border-radius: 4px;
   margin: 4px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .palette {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[10];
-      grid-template-columns: repeat(10, auto);
+  grid-template-columns: repeat(10, auto);
 }
 
-button.mini {
+
+button.mini{
   width: 22px;
   height: 22px;
   display: block;
@@ -61,6 +47,7 @@ button.mini {
   margin: 2px;
   line-height: 22px;
   text-align: center;
+  
 }
 
 button.mid {
@@ -73,14 +60,12 @@ button.mid {
   font-size: 30px;
   line-height: 34px;
   text-align: center;
-}
-
-button.mid:active {
-  background-color: #e1e128;
-}
-
-button.mid.current {
-  background-color: #9eb9bc;
+  &:active {
+    background-color: rgb(225, 225, 40);
+  }
+  &.current {
+    background-color: rgb(158, 185, 188);
+  }
 }
 
 .row {
@@ -88,29 +73,27 @@ button.mid.current {
 }
 
 ul.key {
-  list-style: none;
+  list-style: none; 
   position: relative;
   padding: 6px 0 0 25px;
+  li {
+    line-height: 50px; //adjust this for the font size
+    vertical-align: middle;
+    &:before {
+      background-position: right top, right bottom;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 80%;
+      content:"";
+      width: 20px;
+      height: 30px;
+      position: absolute;
+      left: 0;
+      top: 15px;
+    }
+  }
 }
 
-ul.key li {
-  line-height: 50px;
-  vertical-align: middle;
-}
-
-ul.key li:before {
-  background-position: right top, right bottom;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 80%;
-  content: "";
-  width: 20px;
-  height: 30px;
-  position: absolute;
-  left: 0;
-  top: 15px;
-}
 
 li.arrow:before {
   background-image: url(/assets/macroblock/Block14.png), url(/assets/macroblock/Block19.png);
 }
-/*# sourceMappingURL=style.css.map */
