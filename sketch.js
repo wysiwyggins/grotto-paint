@@ -76,11 +76,16 @@ function mouseClicked() {
 function loadSourceImage() {
   const fileInput = document.getElementById('imageInput'); //the button
   fileInput.onchange = () => {
-    let selectedFile = fileInput.files[0];
-    console.log(selectedFile);
-    console.log("trying to load a new image");
-    sourceImage = loadImage(selectedFile);
+    const myImageFile = fileInput.files[0];
+    let urlOfImageFile = URL.createObjectURL(myImageFile);
+    sourceImage = loadImage(urlOfImageFile, () => {newSourceImage()});
+    
   }
+}
+
+function newSourceImage(){
+  prepareImage(); // creates a scaled image to sample
+  processImage(); // creates the tiled image and also populates de array with the correct swatch
 }
 
 function loadFrame(thisFrameIndex){
