@@ -20,6 +20,7 @@ let PlayButton;
 let SaveButton;
 let canvas;
 let currentFrame;
+let loadData;
 
 let sourceImage; // this is the original photo/image we want to process
 let sampleImage; // this is a resized version of the photo, where 1px = 1 block
@@ -83,14 +84,25 @@ function loadSourceImage() {
   }
 }
 
+
+function loadAnim(){
+  const fileInput = document.getElementById('jsonInput'); //the button
+  
+  fileInput.onchange = () => {
+    const myJsonFile = fileInput.files[0];
+    let urlOfImageFile = URL.createObjectURL(myJsonFile);
+    //load json here
+    
+  }
+}
+
+
+
 function newSourceImage(){
   prepareImage(); // creates a scaled image to sample
   processImage(); // creates the tiled image and also populates de array with the correct swatch
 }
 
-function loadAnim(){
-  //load json here
-}
 
 function loadFrame(thisFrameIndex){
   let thisFrame = frames[thisFrameIndex];
@@ -200,8 +212,21 @@ function saveAnim(){
 }
 
 function saveFrame(){
-
   save(resultImage, "frame-"+currentFrame+".png");
+}
+
+
+//unused
+function handleFile(file) {
+  //print(file);
+  if (file.type === 'image') {
+    sourceImage = createImg(file.data, '');
+    //img.hide();
+    prepareImage(); // creates a scaled image to sample
+    processImage(); // creates the tiled image and also populates de array with the correct swatch
+  } else {
+    sourceImage = null;
+  }
 }
 
 function keyPressed(){
@@ -296,17 +321,6 @@ function addTileToArray(swatchIndex, col, row){
   
 }
 
-function handleFile(file) {
-  //print(file);
-  if (file.type === 'image') {
-    sourceImage = createImg(file.data, '');
-    //img.hide();
-    prepareImage(); // creates a scaled image to sample
-    processImage(); // creates the tiled image and also populates de array with the correct swatch
-  } else {
-    sourceImage = null;
-  }
-}
 
 function setSwatch(swatchNumber) {
   activeSwatch = swatchNumber;

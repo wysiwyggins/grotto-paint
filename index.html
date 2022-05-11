@@ -64,6 +64,10 @@
         <input type="file" id="imageInput" onclick="loadSourceImage()"/> 
       </div>
       <div class="row">
+        <label for="load-all">load json file</label>
+        <input type="file" id="jsonInput" onclick="loadAnim()"/>
+      </div>
+      <div class="row">
         frames:
         <button onclick="backFrame()"; id="decrementButton">⬅️</button>
         <button onclick="playFrames()"; id="playButton">▶️</button>
@@ -78,8 +82,7 @@
         <label for="save-frame">save frame as png</label>
         <button onclick="saveFrame()"; id="save-frame">📸</button>
 
-        <label for="load-all">load json file</label>
-        <button onclick="loadAnim()"; id="load-all">⬆️</button>
+        
       </div>
      
     </div>
