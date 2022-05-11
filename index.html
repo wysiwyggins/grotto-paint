@@ -43,17 +43,17 @@
         <button onclick="setSwatch(13);" class="mini"><img srcset="/assets/macroblock/block13.png 2x"/></button>
         <button onclick="setSwatch(14);" class="mini"><img srcset="/assets/macroblock/block14.png 2x"/></button>
         <button onclick="setSwatch(15);" class="mini"><img srcset="/assets/macroblock/block15.png 2x"/></button>
-        <button onclick="setSwatch(16);" class="mini"><img srcset="/assets/macroblock/block16.png 2x"/></button>
-        <button onclick="setSwatch(17);" class="mini"><img srcset="/assets/macroblock/block17.png 2x"/></button>
-        <button onclick="setSwatch(18);" class="mini"><img srcset="/assets/macroblock/block18.png 2x"/></button>
-        <button onclick="setSwatch(19);" class="mini"><img srcset="/assets/macroblock/block19.png 2x"/></button>
-        <button onclick="setSwatch(20);" class="mini"><img srcset="/assets/macroblock/block20.png 2x"/></button>
-        <button onclick="setSwatch(21);" class="mini"><img srcset="/assets/macroblock/block21.png 2x"/></button>
-        <button onclick="setSwatch(22);" class="mini"><img srcset="/assets/macroblock/block22.png 2x"/></button>
-        <button onclick="setSwatch(23);" class="mini"><img srcset="/assets/macroblock/block23.png 2x"/></button>
-        <button onclick="setSwatch(24);" class="mini"><img srcset="/assets/macroblock/block24.png 2x"/></button>
-        <button onclick="setSwatch(25);" class="mini"><img srcset="/assets/macroblock/block25.png 2x"/></button>
-        <button onclick="setSwatch(26);" class="mini"><img srcset="/assets/macroblock/block26.png 2x"/></button>
+        <button onclick="setSwatch(16);" title="16" class="mini"><img srcset="/assets/macroblock/block16.png 2x"/></button>
+        <button onclick="setSwatch(17);" title="17" class="mini"><img srcset="/assets/macroblock/block17.png 2x"/></button>
+        <button onclick="setSwatch(18);" title="18" class="mini"><img srcset="/assets/macroblock/block18.png 2x"/></button>
+        <button onclick="setSwatch(19);" title="19" class="mini"><img srcset="/assets/macroblock/block19.png 2x"/></button>
+        <button onclick="setSwatch(20);" title="20" class="mini"><img srcset="/assets/macroblock/block20.png 2x"/></button>
+        <button onclick="setSwatch(21);" title="21" class="mini"><img srcset="/assets/macroblock/block21.png 2x"/></button>
+        <button onclick="setSwatch(22);" title="22" class="mini"><img srcset="/assets/macroblock/block22.png 2x"/></button>
+        <button onclick="setSwatch(23);" title="23" class="mini"><img srcset="/assets/macroblock/block23.png 2x"/></button>
+        <button onclick="setSwatch(24);" title="24" class="mini"><img srcset="/assets/macroblock/block24.png 2x"/></button>
+        <button onclick="setSwatch(25);" title="25" class="mini"><img srcset="/assets/macroblock/block25.png 2x"/></button>
+        <button onclick="setSwatch(26);" title="26" class="mini"><img srcset="/assets/macroblock/block26.png 2x"/></button>
       </div>
       <div class="row">
         <div id="frames-amount">frames: <span id="totalFramesText">1</span></div>
@@ -72,11 +72,14 @@
       </div>
       
       <div class="row">
-        <label for="save-all">save frames</label>
+        <label for="save-all">save anim data </label>
         <button onclick="saveAnim()"; id="save-all">💾</button>
 
-        <label for="load-all">load frames</label>
-        <button onclick="load()"; id="load-all">⬆️</button>
+        <label for="save-frame">save frame as png</label>
+        <button onclick="saveFrame()"; id="save-frame">📸</button>
+
+        <label for="load-all">load json file</label>
+        <button onclick="loadAnim()"; id="load-all">⬆️</button>
       </div>
      
     </div>

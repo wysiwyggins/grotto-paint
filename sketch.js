@@ -88,6 +88,10 @@ function newSourceImage(){
   processImage(); // creates the tiled image and also populates de array with the correct swatch
 }
 
+loadAnim(){
+  
+}
+
 function loadFrame(thisFrameIndex){
   let thisFrame = frames[thisFrameIndex];
   console.log("loadingFrame " + thisFrameIndex);
@@ -191,10 +195,13 @@ function setTool(toolIndex){
 }
 
 function saveAnim(){
-   //why has this stopped working?
-  //save(resultImage, "test"+currentFrame+".png");
   var output = JSON.stringify(frames);
   save(output, "animation.json");
+}
+
+function saveFrame(){
+
+  save(resultImage, "frame-"+currentFrame+".png");
 }
 
 function keyPressed(){
