@@ -88,8 +88,8 @@ function newSourceImage(){
   processImage(); // creates the tiled image and also populates de array with the correct swatch
 }
 
-loadAnim(){
-  
+function loadAnim(){
+  //load json here
 }
 
 function loadFrame(thisFrameIndex){
