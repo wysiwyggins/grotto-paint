@@ -46,7 +46,7 @@ function array2d(width, height, value = 8) {
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/graytest.png');
+  sourceImage = loadImage('assets/fightIdle/idle_00.png');
   
 }
 
