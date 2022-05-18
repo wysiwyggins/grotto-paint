@@ -58,7 +58,7 @@ function setup() {
   canvas.parent('sketch');
   currentFrame = 0;
   prepareImage();
-  frames[0] = array2d(sampleImage.width,sampleImage.height); // creates an empty array
+  frames[0] = {frameNumber:currentFrame, frameData:array2d(sampleImage.width,sampleImage.height)}; // creates an empty array
   processImage();
 
   frameTimer = new FpsTimer();
@@ -105,7 +105,7 @@ function newSourceImage(){
 
 
 function loadFrame(thisFrameIndex){
-  let thisFrame = frames[thisFrameIndex];
+  let thisFrame = frames[thisFrameIndex].frameData;
   console.log("loadingFrame " + thisFrameIndex);
   resultImage.clear();
   for(var i = 0; i < thisFrame.length; i++) {
@@ -173,10 +173,10 @@ function addFrame(){
   //frames[currentFrame + 1] = array2d(sampleImage.width,sampleImage.height);
   
   //frames[currentFrame] = frames[currentFrame-1]; // THIS IS THE PROBLEM NOW
-  let tempFrame = array2d(sampleImage.width,sampleImage.height);
-  for(let x = 0 ; x < frames[currentFrame].length ; x++){
-    for(let y = 0 ; y < frames[currentFrame][x].length ; y++){
-      tempFrame[x][y] = frames[currentFrame][x][y];
+  let tempFrame = JSON.stringify({frameNumber:currentFrame, frameData:array2d(sampleImage.width,sampleImage.height)}); 
+  for(let x = 0 ; x < frames[currentFrame].frameData.length ; x++){
+    for(let y = 0 ; y < frames[currentFrame].frameData[x].length ; y++){
+      tempFrame[x][y] = frames[currentFrame].frameData[x][y];
     }
   }
   
@@ -313,7 +313,7 @@ function handleBrush(){
 }
 
 function addTileToArray(swatchIndex, col, row){
-  frames[currentFrame][col][row]=swatchIndex;
+  frames[currentFrame].frameData[col][row]=swatchIndex;
   //frames[currentFrame] = frameMap;
  // console.log("col: " + col);
  // console.log("row: " + row);
@@ -382,7 +382,7 @@ function processImage(){
       // figure out what column and row this is
       // store swatchIndex at that position
 
-      frames[currentFrame][x][y]=swatchIndex;
+      frames[currentFrame].frameData[x][y]=swatchIndex;
 
 
     }
