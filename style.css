@@ -29,14 +29,14 @@ canvas {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-height: 400px;
+  max-height: 80vh;
   border: 2px solid #ccc;
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
 }
 
-.palette, .tools, .frames {
+.palette, .tools, .frames, .transforms {
   padding: 4px;
   background-color: #ccc;
   border-radius: 4px;

@@ -1,5 +1,9 @@
 let cols = 40;
 let rows = 60;
+//view icon is 20x20 I think
+//fight animation is 40x60
+//map is probably 40x30
+//map icon could be 3x3 but most icons would be 1x2 inside that
 let blockWidth = 20;
 let blockHeight = 15;
 let swatches = [];
