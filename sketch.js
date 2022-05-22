@@ -90,12 +90,44 @@ function loadAnim(){
   
   fileInput.onchange = () => {
     const myJsonFile = fileInput.files[0];
-    let urlOfImageFile = URL.createObjectURL(myJsonFile);
+    let urlOfFile = URL.createObjectURL(myJsonFile);
     //load json here
-    
+    console.log("attempting to load");
+   // console.log(urlOfFile);
+   loadJSON(urlOfFile, parseJson, jsonFail);
   }
 }
 
+
+function saveAnim(){   /// JSON SAVING HERE
+  // let testObject = "{"
+  // var output = JSON.stringify(frames);
+  // save(output, "animation.json");
+  let json = {}; // new  JSON Object
+  json.frameRate = 12;
+  json.name = 'Wileys animationnnnnn';
+  json.frameCount = frames.length;
+  json.framesData = frames;
+  saveJSON(json, 'testSave.json');
+}
+
+function parseJson(data){
+  console.log("Json loaded succesfully");
+  console.log("frame rate: " + data.frameRate );
+  console.log("name: " + data.name );
+  console.log("number of frames: " + data.frameCount);
+  console.log("data: " + data.framesData);
+  frames = [];
+  frames = data.framesData;
+  currentFrame = 0;
+  loadFrame(currentFrame);
+  updateFramesUI();
+
+}
+
+function jsonFail(){
+  console.log("problem loading json");
+}
 
 
 function newSourceImage(){
@@ -206,10 +238,7 @@ function setTool(toolIndex){
   }
 }
 
-function saveAnim(){
-  var output = JSON.stringify(frames);
-  save(output, "animation.json");
-}
+
 
 function saveFrame(){
   save(resultImage, "frame-"+currentFrame+".png");
