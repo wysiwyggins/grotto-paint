@@ -30,6 +30,7 @@ canvas {
       -ms-flex-direction: column;
           flex-direction: column;
   max-height: 80vh;
+  min-height: 550px;
   border: 2px solid #ccc;
   border-radius: 5px;
   margin: 10px;

@@ -1,5 +1,5 @@
-let cols = 40;
-let rows = 60;
+let cols = 60;
+let rows = 40;
 //view icon is 20x20 I think
 //fight animation is 40x60
 //map is probably 40x30
@@ -50,7 +50,7 @@ function array2d(width, height, value = 8) {
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/fightIdle/idle_00.png');
+  sourceImage = loadImage('assets/graytest.png');
   
 }
 
@@ -140,6 +140,8 @@ function newSourceImage(){
 }
 
 
+
+
 function loadFrame(thisFrameIndex){
   let thisFrame = frames[thisFrameIndex];
   console.log("loadingFrame " + thisFrameIndex);
@@ -161,6 +163,11 @@ function updateFramesUI(){
   frameText.innerHTML = (currentFrame + 1);
   totalFramesText.innerHTML = frames.length;
   
+}
+
+function flipFrameHorizontal(){
+  console.log("flip frame");
+
 }
 
 function advanceFrame(){
@@ -267,10 +274,10 @@ function keyPressed(){
     saveAnim()
 
   }else if(keyCode === RIGHT_ARROW) {
-    //nextSwatch();
+
     advanceFrame();
   }else if(keyCode === LEFT_ARROW) {
-   //prevSwatch();
+
    backFrame();
   }
   else if(key === ' ') {
