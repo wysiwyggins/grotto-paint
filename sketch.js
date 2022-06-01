@@ -1,5 +1,5 @@
 let cols = 60;
-let rows = 40;
+let rows = 60;
 //view icon is 20x20 I think
 //fight animation is 40x60
 //map is probably 40x30
@@ -50,7 +50,7 @@ function array2d(width, height, value = 8) {
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/graytest.png');
+  sourceImage = loadImage('assets/bard/bard_01.png');
   
 }
 
@@ -168,6 +168,21 @@ function updateFramesUI(){
 function flipFrameHorizontal(){
   console.log("flip frame");
 
+}
+
+function cyclePalette(){
+  addFrame();
+  for(var i = 0; i < currentFrame.length; i++) {
+    var thisCol = currentFrame[i];
+    for(var j = 0; j < thisCol.length; j++) {
+      var thisFrameTile = frames[currentFrame][thisCol][j];
+      if(thisFrameTile < swatches.length){
+        frames[currentFrame][thisCol][j] +=1;
+      } else {
+        frames[currentFrame][thisCol][j] = 0;
+      }
+    }
+  }
 }
 
 function advanceFrame(){
