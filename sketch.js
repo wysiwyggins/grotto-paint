@@ -1,5 +1,5 @@
-let cols = 60;
-let rows = 60;
+let cols = 40;
+let rows = 60; //this ought to be in, and set by the json saves
 //view icon is 20x20 I think
 //fight animation is 40x60
 //map is probably 40x30
@@ -31,7 +31,7 @@ let sampleImage; // this is a resized version of the photo, where 1px = 1 block
 let resultImage; // this is a p5Graphics objects that contains the results of the process
 
 let swatchesPaths;
-swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png','assets/macroblock/Block9.png','assets/macroblock/Block10.png', 'assets/macroblock/Block11.png','assets/macroblock/Block12.png','assets/macroblock/Block13.png','assets/macroblock/Block14.png','assets/macroblock/Block15.png','assets/macroblock/Block16.png','assets/macroblock/Block17.png','assets/macroblock/Block18.png','assets/macroblock/Block19.png','assets/macroblock/Block20.png','assets/macroblock/Block21.png','assets/macroblock/Block22.png','assets/macroblock/Block23.png','assets/macroblock/Block24.png','assets/macroblock/Block25.png','assets/macroblock/Block26.png'];
+swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png','assets/macroblock/Block9.png','assets/macroblock/Block10.png', 'assets/macroblock/Block11.png','assets/macroblock/Block12.png','assets/macroblock/Block13.png','assets/macroblock/Block14.png','assets/macroblock/Block15.png','assets/macroblock/Block16.png','assets/macroblock/Block17.png','assets/macroblock/Block18.png','assets/macroblock/Block19.png','assets/macroblock/Block20.png','assets/macroblock/Block21.png','assets/macroblock/Block22.png','assets/macroblock/Block23.png','assets/macroblock/Block24.png','assets/macroblock/Block25.png','assets/macroblock/Block26.png','assets/macroblock/Block27.png','assets/macroblock/Block28.png','assets/macroblock/Block29.png'];
 let hoverX = 0;
 let hoverY = 0;
 
@@ -171,18 +171,21 @@ function flipFrameHorizontal(){
 }
 
 function cyclePalette(){
-  addFrame();
+  //addFrame();
   for(var i = 0; i < currentFrame.length; i++) {
     var thisCol = currentFrame[i];
     for(var j = 0; j < thisCol.length; j++) {
       var thisFrameTile = frames[currentFrame][thisCol][j];
       if(thisFrameTile < swatches.length){
-        frames[currentFrame][thisCol][j] +=1;
+        //frames[currentFrame][thisCol][j] +=1; 
+        addTileToArray(thisFrameTile + 1, (thisCol), (j));
       } else {
-        frames[currentFrame][thisCol][j] = 0;
+        //frames[currentFrame][thisCol][j] = 0;
+        addTileToArray(0, (thisCol), (j));
       }
     }
   }
+  loadFrame(currentFrame);
 }
 
 function advanceFrame(){
@@ -246,6 +249,7 @@ function addFrame(){
 }
 
 function setTool(toolIndex){
+  //there's not really any tools yet other than draw, but when there is this'll pick em
   const toolButton0 = document.getElementById('tool1-button');
   const toolButton1 = document.getElementById('tool2-button');
   
