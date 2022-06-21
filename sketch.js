@@ -1,5 +1,5 @@
 let cols = 40;
-let rows = 60; //this ought to be in, and set by the json saves
+let rows = 30; //this ought to be set by the json save files probably
 //view icon is 20x20 I think
 //fight animation is 40x60
 //map is probably 40x30
@@ -50,7 +50,7 @@ function array2d(width, height, value = 8) {
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/bard/bard_01.png');
+  sourceImage = loadImage('assets/blank.png');
   
 }
 
@@ -165,9 +165,33 @@ function updateFramesUI(){
   
 }
 
-function flipFrameHorizontal(){
-  console.log("flip frame");
+function drawroom(exits, roomColor){
+  //the simplest version of this would draw a square big enough to have the right number of exit paths
+  //see https://wileywiggins.com//images/grotto/smallroom.png for an example
+  //we probably need three layers going forward, the background tiles, color blocks under that, and a sprite layer on top?
+  var wallTopTile = 7;
+  var wallInnerFrontTile = 3;
+  var wallOuterFrontTile = 0;
+  var floorTile = 18;
+  var doorTopTile = 21;
+  var doorBottomTile = 22;
 
+  //* figure out how many doors per side, and how long each side is
+  var doorsPerSide = Math.ceil(doorsPerSide);
+  var wallLength = (doorsPerSide *2)+1;
+
+  //* figure out what the center column and row are
+  var originX = cols/2;
+  var originY = rows/2;
+  
+  //* space the doors apart from one another
+  var gapValue = wallLength/(doorsPerSide +1)
+
+  //try drawing
+  //* begin drawing in the top left corner of the room, half of x subtracted from the center col
+
+
+  console.log("drew a room");
 }
 
 function cyclePalette(){
@@ -186,6 +210,12 @@ function cyclePalette(){
     }
   }
   loadFrame(currentFrame);
+}
+
+
+function flipFrameHorizontal(){
+  console.log("flip frame");
+  //it will probably be useful to have a horizontal flip function for animation
 }
 
 function advanceFrame(){
