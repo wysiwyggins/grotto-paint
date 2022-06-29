@@ -50,7 +50,7 @@ function array2d(width, height, value = 8) {
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/blank.png');
+  sourceImage = loadImage('assets/graytest.png');
   
 }
 
@@ -196,6 +196,8 @@ function drawroom(exits, roomColor){
 
 function cyclePalette(){
   //addFrame();
+  // I don't know why this isn't working yet and hopefully fixing it will lead to a more
+  // usable add tile function that I need for room drawing etc.
   for(var i = 0; i < currentFrame.length; i++) {
     var thisCol = currentFrame[i];
     for(var j = 0; j < thisCol.length; j++) {
@@ -203,9 +205,11 @@ function cyclePalette(){
       if(thisFrameTile < swatches.length){
         //frames[currentFrame][thisCol][j] +=1; 
         addTileToArray(thisFrameTile + 1, (thisCol), (j));
+        resultImage.updatePixels();
       } else {
         //frames[currentFrame][thisCol][j] = 0;
         addTileToArray(0, (thisCol), (j));
+        resultImage.updatePixels();
       }
     }
   }
