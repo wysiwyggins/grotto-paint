@@ -48,7 +48,7 @@
          "name":"Tile Layer 1",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":60,
          "x":0,
          "y":0
@@ -99,7 +99,7 @@
          "name":"Tile Layer 2",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":60,
          "x":0,
          "y":0
@@ -623,7 +623,7 @@
  "tilesets":[
         {
          "firstgid":1,
-         "source":"grotto2x.tsx"
+         "source":"tiles2x.tsj"
         }],
  "tilewidth":40,
  "type":"map",
