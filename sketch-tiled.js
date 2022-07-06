@@ -61,15 +61,11 @@ function generateMap() {
   renderMap();
 }
 
-function bitTest(num, bit) {
-  return (num >> bit) % 2 != 0;
-}
-
 function renderMap() {
   for (var i = 0; i < _tileSprites.length; i++) {
     var tileIndex = _tileMap.layers[_frameIndex].data[i];
-    var tileFlipX = bitTest(tileIndex, 31);
-    var tileFlipY = bitTest(tileIndex, 30);
+    var tileFlipX = tileIndex & 0x80000000;
+    var tileFlipY = tileIndex & 0x40000000;
 
     var rotateMode = 0;
     tileIndex &= 0xffff;
@@ -97,9 +93,9 @@ function renderMap() {
 
       var tileTexture = new PIXI.Texture(
         app.loader.resources["assets/tiles2x.png"].texture,
-        blitRectangle,
-        rotateMode
+        blitRectangle
       );
+      tileTexture.rotate = rotateMode;
       _tileSprites[i].texture = tileTexture;
 
       // console.log(`[${i}] ${tileIndex} ${tileSourceX},${tileSourceY}`);
@@ -126,6 +122,7 @@ function rainbowEffect(t) {
     var b = Math.sin(frequency * i + 4 + p + t) * w + c;
 
     _tileSprites[i].tint = rgbToColor(0, g, b);
+    // _tileSprites[i].position.x = g*4; // cool twist from call with WW
   }
 }
 
