@@ -36,6 +36,29 @@ function setup() {
 
 function generateMap() {
   for (var i = 0; i < _tileMap.layers[_frameIndex].data.length; i++) {
+    var canvasX = parseInt(i % _tileMap.width) * _tileMap.tilewidth;
+    var canvasY = parseInt(i / _tileMap.width) * _tileMap.tileheight;
+
+    // texture blit area
+    var tileTexture = new PIXI.Texture(
+      app.loader.resources["assets/tiles2x.png"].texture
+    );
+
+    var tileSprite = PIXI.Sprite.from(tileTexture);
+    tileSprite.position.x = canvasX;
+    tileSprite.position.y = canvasY;
+    tileSprite.width = _tileMap.tilewidth;
+    tileSprite.height = _tileMap.tileheight;
+    // tileSprite.tint = 0xff0000;
+    app.stage.addChild(tileSprite);
+    _tileSprites.push(tileSprite);
+  }
+
+  renderMap();
+}
+
+function renderMap() {
+  for (var i = 0; i < _tileSprites.length; i++) {
     var tileIndex = _tileMap.layers[_frameIndex].data[i];
     var tileFlipX = tileIndex && 1 << 30;
     var tileFlipY = tileIndex && 1 << 31;
@@ -56,8 +79,6 @@ function generateMap() {
       tileIndex -= 1;
       var tileSourceX = parseInt(tileIndex % 10) * _tileMap.tilewidth;
       var tileSourceY = parseInt(tileIndex / 10) * _tileMap.tileheight;
-      var canvasX = parseInt(i % _tileMap.width) * _tileMap.tilewidth;
-      var canvasY = parseInt(i / _tileMap.width) * _tileMap.tileheight;
       var blitRectangle = new PIXI.Rectangle(
         tileSourceX,
         tileSourceY,
@@ -70,35 +91,27 @@ function generateMap() {
         blitRectangle,
         rotateMode
       );
+      _tileSprites[i].texture = tileTexture;
 
-      // texture blit area
-      var tileSprite = PIXI.Sprite.from(tileTexture);
-      tileSprite.position.x = canvasX;
-      tileSprite.position.y = canvasY;
-      tileSprite.width = _tileMap.tilewidth;
-      tileSprite.height = _tileMap.tileheight;
-      // tileSprite.tint = 0xff0000;
-      app.stage.addChild(tileSprite);
-      _tileSprites.push(tileSprite);
       console.log(`[${i}] ${tileIndex} ${tileSourceX},${tileSourceY}`);
     }
   }
 }
+
 function rgbToColor(r, g, b) {
-  return ((r << 24) || (g << 16) || (b));
+  return r << 24 || g << 16 || b;
 }
 
 function randomColor() {
+  var frequency = 0.3;
   for (var i = 0; i < _tileSprites.length; i++) {
-    _tileSprites[i].tint = rgbToColor(127,0,255);
+    var r = Math.sin(frequency * i + 0) * 127 + 128;
+    var g = Math.sin(frequency * i + 2) * 127 + 128;
+    var b = Math.sin(frequency * i + 4) * 127 + 128;
+    _tileSprites[i].tint = rgbToColor(r, g, b);
   }
 }
 
-function renderMap() {
-  for (var i = 0; i < _tileSprites.length; i++) {
-    // _tileSprites[i].tint = 0xFF00FF;
-  }
-}
 async function loadMap(url) {
   // var tileTexture = PIXI.utils.TextureCache["assets/tiles2x.png"];
   const response = await fetch(url);
