@@ -61,11 +61,16 @@ function generateMap() {
   renderMap();
 }
 
+function bitTest(num, bit) {
+  return (num >> bit) % 2 != 0;
+}
+
 function renderMap() {
   for (var i = 0; i < _tileSprites.length; i++) {
     var tileIndex = _tileMap.layers[_frameIndex].data[i];
-    var tileFlipX = tileIndex & ~(1 << 30);
-    var tileFlipY = tileIndex & ~(1 << 31);
+    var tileFlipX = bitTest(tileIndex, 31);
+    var tileFlipY = bitTest(tileIndex, 30);
+
     var rotateMode = 0;
     tileIndex &= 0xffff;
 
