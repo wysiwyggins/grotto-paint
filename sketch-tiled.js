@@ -107,7 +107,7 @@ function rgbToColor(r, g, b) {
 }
 
 function rainbowEffect(t) {
-  var frequency = 0.3;
+  var frequency = 0.7;
   for (var i = 0; i < _tileSprites.length; i++) {
     var w = 127;
     var c = 128;
