@@ -2,6 +2,7 @@ let _tileMap;
 let _tileTextures = [];
 let _tileSprites = [];
 let _frameIndex = 0;
+let _rainbowEffect = false;
 
 let app = new PIXI.Application({
   width: 4096,
@@ -14,19 +15,22 @@ app.loader.add(["assets/tiles2x.png"]).load(setup);
 
 function onKeyDown(key) {
   if (key.keyCode === 65) {
+    // A
     _frameIndex--;
     if (_frameIndex < 0) {
       _frameIndex = _tileMap.layers.length - 1;
     }
     renderMap();
   } else if (key.keyCode === 68) {
+    // D
     _frameIndex++;
-    _frameIndex %= _tileMap.layers.length;
+    if (_frameIndex == _tileMap.layers.length) {
+      _frameIndex = 0;
+    }
     renderMap();
   } else if (key.keyCode === 83) {
-    _frameIndex++;
-    _frameIndex %= _tileMap.layers.length;
-    randomColor();
+    // S
+    _rainbowEffect = !_rainbowEffect;
   }
 }
 
@@ -60,8 +64,8 @@ function generateMap() {
 function renderMap() {
   for (var i = 0; i < _tileSprites.length; i++) {
     var tileIndex = _tileMap.layers[_frameIndex].data[i];
-    var tileFlipX = tileIndex && 1 << 30;
-    var tileFlipY = tileIndex && 1 << 31;
+    var tileFlipX = tileIndex & ~(1 << 30);
+    var tileFlipY = tileIndex & ~(1 << 31);
     var rotateMode = 0;
     tileIndex &= 0xffff;
 
@@ -93,22 +97,30 @@ function renderMap() {
       );
       _tileSprites[i].texture = tileTexture;
 
-      console.log(`[${i}] ${tileIndex} ${tileSourceX},${tileSourceY}`);
+      // console.log(`[${i}] ${tileIndex} ${tileSourceX},${tileSourceY}`);
     }
   }
 }
 
 function rgbToColor(r, g, b) {
-  return r << 24 || g << 16 || b;
+  return (r << 16) + (g << 8) + b;
 }
 
-function randomColor() {
+function rainbowEffect(t) {
   var frequency = 0.3;
   for (var i = 0; i < _tileSprites.length; i++) {
-    var r = Math.sin(frequency * i + 0) * 127 + 128;
-    var g = Math.sin(frequency * i + 2) * 127 + 128;
-    var b = Math.sin(frequency * i + 4) * 127 + 128;
-    _tileSprites[i].tint = rgbToColor(r, g, b);
+    var w = 127;
+    var c = 128;
+    var p = 0;
+    // var r = Math.sin(frequency * i + 0 + t) * w + c;
+    // var g = Math.sin(frequency * i + 2) * w + c;
+    // var b = Math.sin(frequency * i + 4 + t) * w + c;
+
+    var r = Math.sin(frequency * i + 0 + p + t) * w + c;
+    var g = Math.sin(frequency * i + 2 + p + t) * w + c;
+    var b = Math.sin(frequency * i + 4 + p + t) * w + c;
+
+    _tileSprites[i].tint = rgbToColor(0, g, b);
   }
 }
 
@@ -118,3 +130,12 @@ async function loadMap(url) {
   _tileMap = await response.json();
   generateMap();
 }
+
+const ticker = new PIXI.Ticker();
+ticker.stop();
+ticker.add((deltaTime) => {
+  if (_rainbowEffect) {
+    rainbowEffect(ticker.lastTime / 1024);
+  }
+});
+ticker.start();
