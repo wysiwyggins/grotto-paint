@@ -27,22 +27,19 @@ class ScratchBeam {
   // https://www.html5gamedevs.com/topic/39373-loader-is-async-right-so-not-sure-how-youd-structure-this/
   loadTextures = async () => {
     return new Promise((resolve, reject) => {
-      this.app.loader
-        .add('assets/tiles2x.png')
-        .load();
-  
+      this.app.loader.add("assets/tiles2x.png").load();
+
       this.app.loader.onComplete.add(() => {
         resolve();
       });
-  
+
       this.app.loader.onError.add(() => {
         reject();
       });
     });
   };
 
-  createElement() {
-  }
+  createElement() {}
 
   getEffects() {
     return this.effects;
@@ -93,7 +90,7 @@ class ScratchBeam {
         );
 
         var tileTexture = new PIXI.Texture(
-          this.app.loader.resources['assets/tiles2x.png'].texture,
+          this.app.loader.resources["assets/tiles2x.png"].texture,
           blitRectangle
         );
         tileTexture.rotate = rotateMode;
@@ -114,19 +111,21 @@ class ScratchBeam {
     //   loadMap('assets/maps/exitAction2x.tmj');
     // _tileMap = await response.json();
     // console.log(`fetching tilemap from url ${url}`);
-    window
+    var json = await window
       .fetch(url)
       .then(function (response) {
         return response.json();
       })
       .then(function (json) {
-        this.tileMap = json;
+        return json;
       });
+    this.generateTileSprites(json)
   }
 
   // pre-cache all the tiles we would need for the whole screen and just manipulate those
   // we can now just adjust the texture rectangles to update for high performance and visual effects per tile
-  generateTileSprites() {
+  generateTileSprites(json) {
+    this.tileMap = json;
     for (var i = 0; i < this.tileSprites; i++) {
       // todo: destroy old sprites
     }

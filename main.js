@@ -1,19 +1,11 @@
-async function main() {
+async function setup() {
   let scratchbeam = new ScratchBeam();
   await scratchbeam.loadTextures();
-
-  await window
-    .fetch("assets/maps/exitAction2x.tmj")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (json) {
-      scratchbeam.loadMap(json);
-    });
-
+  await scratchbeam.loadMapFile('assets/maps/exitAction2x.tmj')
   scratchbeam.render();
 }
-main();
+
+setup();
 // let _rainbowEffect = true;
 // function onKeyDown(key) {
 //   if (key.keyCode === 65) {
