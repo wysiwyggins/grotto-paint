@@ -2,16 +2,7 @@ let _tileMap;
 let _tileTextures = [];
 let _tileSprites = [];
 let _frameIndex = 0;
-let _rainbowEffect = false;
-
-let app = new PIXI.Application({
-  width: 4096,
-  height: 4096,
-  backgroundColor: 0xffffff,
-});
-document.body.appendChild(app.view);
-document.addEventListener("keydown", onKeyDown);
-app.loader.add(["assets/tiles2x.png"]).load(setup);
+let _rainbowEffect = true;
 
 function onKeyDown(key) {
   if (key.keyCode === 65) {
@@ -120,9 +111,13 @@ function rainbowEffect(t) {
     var r = Math.sin(frequency * i + 0 + p + t) * w + c;
     var g = Math.sin(frequency * i + 2 + p + t) * w + c;
     var b = Math.sin(frequency * i + 4 + p + t) * w + c;
+    var rotate = Math.sin(frequency * i + 0 + p + t/16) * w + c;
 
     _tileSprites[i].tint = rgbToColor(0, g, b);
+
+    // _tileSprites[i].rotation = rotate;
     // _tileSprites[i].position.x = g*4; // cool twist from call with WW
+    _tileSprites[i].position.x = g*4; // cool twist from call with WW
   }
 }
 
