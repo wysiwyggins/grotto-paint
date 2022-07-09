@@ -30,11 +30,11 @@ async function setup() {
 }
 setup();
 
+scratchbeam.effect.enabled = false;
 scratchbeam.effect.type = 0;
 scratchbeam.effect.frequency = 0.62;  // interleave
 // scratchbeam.effect.frequency = 0.02;  // very a2600
 // scratchbeam.effect.frequency = 4.2;  // interleave like genesis visual work
-scratchbeam.effect.enabled = true;
 
 // scratchbeam.getTileData(0);
 // scratchbeam.setTileTint(24,24,0x0000FF);

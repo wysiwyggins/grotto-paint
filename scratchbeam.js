@@ -64,6 +64,10 @@ class ScratchBeam {
     // return this.tileMap[]
   }
 
+  setTileData(x, y, tile) {
+    this.tileMap.layers[this.currentLayer].data[this.xyToTile(x, y)] = tile;
+    // return this.tileMap[]
+  }
   // push animation from grotto side (can move responsibility however)
   previousFrame() {
     if (this.currentLayer == 0) {
@@ -83,9 +87,6 @@ class ScratchBeam {
     this.tileSprites[this.xyToTile(x, y)].tint = color;
   }
 
-  setTileBlendMode(x, y, mode) {
-    this.tileSprites[this.xyToTile(x, y)].blendMode = mode;
-  }
   renderTiles() {
     for (var i = 0; i < this.tileSprites.length; i++) {
       var tileIndex = this.tileMap.layers[this.currentLayer].data[i];
@@ -153,18 +154,25 @@ class ScratchBeam {
         ) *
           w +
         c;
-      var shift = Math.sin(this.effect.frequency * i + 4 + this.effect.phase + this.effect.time)*512 + 512;
+      var shift =
+        Math.sin(
+          this.effect.frequency * i + 4 + this.effect.phase + this.effect.time
+        ) *
+          512 +
+        512;
 
       if (this.effect.type == 0) {
         this.tileSprites[i].tint = this.rgbToColor(0, g, b); // rgb
       } else if (this.effect.type == 1) {
         this.tileSprites[i].x = shift;
       } else if (this.effect.type == 2) {
-        var alpha = Math.sin(this.effect.frequency * i + this.effect.phase + this.effect.time);
+        var alpha = Math.sin(
+          this.effect.frequency * i + this.effect.phase + this.effect.time
+        );
         this.tileSprites[i].x = shift;
         this.tileSprites[i].alpha = alpha;
       } else if (this.effect.type == 3) {
-        var alpha = Math.sin(this.effect.frequency * i%2);
+        var alpha = Math.sin((this.effect.frequency * i) % 2);
         this.tileSprites[i].x = shift;
         this.tileSprites[i].alpha = alpha;
       }
@@ -234,7 +242,8 @@ class ScratchBeam {
 
   // helper that returns the tile index based on current tilemap dimensions, should help clean up code
   xyToTile(x, y) {
-    return (x % this.tileMap.width) + parseInt(y / this.tileMap.width);
+    var calc = (x % this.tileMap.width) + (y * this.tileMap.width);
+    return calc;
   }
 
   rgbToColor(r, g, b) {
