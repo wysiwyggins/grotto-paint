@@ -21,15 +21,27 @@ class ScratchBeam {
     this.tileSprites = [];
     this.effect = new ScratchBeamEffect();
     this.currentLayer = 0;
-
-    // "new BaseTexture(imageBitmap)"
-    // "new BaseTexture(new PIXI.resources.ImageBitmapResource(imageBitmap))"
-    // PIXI.Texture.from('assets/tiles2x.png');
-    this.app.loader.add(["assets/tiles2x.png"]).load(this.createElement());
+    document.body.appendChild(this.app.view);
   }
 
+  // https://www.html5gamedevs.com/topic/39373-loader-is-async-right-so-not-sure-how-youd-structure-this/
+  loadTextures = async () => {
+    return new Promise((resolve, reject) => {
+      this.app.loader
+        .add('assets/tiles2x.png')
+        .load();
+  
+      this.app.loader.onComplete.add(() => {
+        resolve();
+      });
+  
+      this.app.loader.onError.add(() => {
+        reject();
+      });
+    });
+  };
+
   createElement() {
-    document.body.appendChild(this.app.view);
   }
 
   getEffects() {
@@ -81,7 +93,7 @@ class ScratchBeam {
         );
 
         var tileTexture = new PIXI.Texture(
-          this.app.loader.resources["assets/tiles2x.png"].texture,
+          this.app.loader.resources['assets/tiles2x.png'].texture,
           blitRectangle
         );
         tileTexture.rotate = rotateMode;
@@ -98,21 +110,19 @@ class ScratchBeam {
   }
 
   // having problems fetching inside of a class, just do it at top level and pass object
-  // loadMapFile(url) {
-  //   //   loadMap("assets/maps/exitAction2x.tmj");
-  //   // _tileMap = await response.json();
-  //   console.log(`fetching tilemap from url ${url}`);
-  //   window
-  //     .fetch(url)
-  //     .then(function (response) {
-  //       return response.json();
-  //     })
-  //     .then(function (json) {
-  //       debugger
-  //       this.tileMap = json;
-  //       this.generateTileSprites();
-  //     });
-  // }
+  async loadMapFile(url) {
+    //   loadMap('assets/maps/exitAction2x.tmj');
+    // _tileMap = await response.json();
+    // console.log(`fetching tilemap from url ${url}`);
+    window
+      .fetch(url)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (json) {
+        this.tileMap = json;
+      });
+  }
 
   // pre-cache all the tiles we would need for the whole screen and just manipulate those
   // we can now just adjust the texture rectangles to update for high performance and visual effects per tile
@@ -130,7 +140,7 @@ class ScratchBeam {
         this.app.loader.resources["assets/tiles2x.png"].texture
       );
 
-      var tileSprite = PIXI.Sprite.from(this.tileTexture);
+      var tileSprite = PIXI.Sprite.from(tileTexture);
       tileSprite.position.x = canvasX;
       tileSprite.position.y = canvasY;
       tileSprite.width = this.tileMap.tilewidth;
