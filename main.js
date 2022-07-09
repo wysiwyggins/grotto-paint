@@ -7,7 +7,7 @@ async function setup() {
   // can use requestanimationframe here instead if we want
   const ticker = new PIXI.Ticker();
   ticker.stop();
-  ticker.add((deltaTime) => {
+  ticker.add(() => {
     scratchbeam.effect.time = ticker.lastTime / 2048;
     scratchbeam.render(); // vblank
   });
@@ -19,9 +19,9 @@ async function setup() {
     } else if (key.keyCode === 68) {
       scratchbeam.nextFrame(); // d
     } else if (key.keyCode === 87) {
-      scratchbeam.effect.frequency += 0.1; // w
+      scratchbeam.effect.frequency += 0.02; // w
     } else if (key.keyCode === 83) {
-      scratchbeam.effect.frequency += -0.1; // s
+      scratchbeam.effect.frequency += -0.02; // s
     } else if (key.keyCode === 81) {
       scratchbeam.effect.enabled != scratchbeam.effect.enabled; // q
     }
@@ -30,9 +30,9 @@ async function setup() {
 }
 setup();
 
-// scratchbeam.effect.type = 0;
-// scratchbeam.effect.frequency = 0.3;
-// scratchbeam.effect.enabled = true;
+scratchbeam.effect.type = 3;
+scratchbeam.effect.frequency = 0.3;
+scratchbeam.effect.enabled = true;
 
 // scratchbeam.getTileData(0);
 // scratchbeam.setTileTint(24,24,0x0000FF);

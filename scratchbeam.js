@@ -1,5 +1,9 @@
 // andy reitano / wiley wiggins 2022
 
+// todo:
+// - figure out canvas size/width and pass it properly instead of instantiating in constructor
+// -
+
 class ScratchBeamEffect {
   constructor() {
     this.enabled = false;
@@ -18,14 +22,14 @@ class ScratchBeam {
 
     this.app = new PIXI.Application({
       width: 4096,
-      height: 4096,
+      height: 2048,
       backgroundColor: 0xffffff,
     });
 
     this.tileMap = [];
     this.tileTextures = [];
     this.tileSprites = [];
-    this.effect = new ScratchBeamEffect();
+    this.effect = new ScratchBeamEffect(); // just one effect type to keep things simple
     this.currentLayer = 0;
     document.body.appendChild(this.app.view);
   }
@@ -79,9 +83,10 @@ class ScratchBeam {
     this.tileSprites[this.xyToTile(x, y)].tint = color;
   }
 
-  // vsync / rerender all tiles based on map
-  render() {
-    // handle actual tile rerender
+  setTileBlendMode(x, y, mode) {
+    this.tileSprites[this.xyToTile(x, y)].blendMode = mode;
+  }
+  renderTiles() {
     for (var i = 0; i < this.tileSprites.length; i++) {
       var tileIndex = this.tileMap.layers[this.currentLayer].data[i];
       var tileFlipX = tileIndex & 0x80000000;
@@ -119,38 +124,60 @@ class ScratchBeam {
         this.tileSprites[i].texture = tileTexture;
       }
     }
+  }
 
-    // now apply post effects (color/twist/drunk room etc)
-    if (this.effect.enabled) {
-      for (var i = 0; i < this.tileSprites.length; i++) {
-        var w = 127;
-        var c = 128;
-        var p = 0;
-        // var r = Math.sin(frequency * i + 0 + t) * w + c;
-        // var g = Math.sin(frequency * i + 2) * w + c;
-        // var b = Math.sin(frequency * i + 4 + t) * w + c;
+  renderEffects() {
+    for (var i = 0; i < this.tileSprites.length; i++) {
+      var w = 127;
+      var c = 128;
+      var p = 0;
+      // var r = Math.sin(frequency * i + 0 + t) * w + c;
+      // var g = Math.sin(frequency * i + 2) * w + c;
+      // var b = Math.sin(frequency * i + 4 + t) * w + c;
 
-        var r =
-          Math.sin(
-            this.effect.frequency * i + 0 + this.effect.phase + this.effect.time
-          ) *
-            w +
-          c;
-        var g =
-          Math.sin(
-            this.effect.frequency * i + 2 + this.effect.phase + this.effect.time
-          ) *
-            w +
-          c;
-        var b =
-          Math.sin(
-            this.effect.frequency * i + 4 + this.effect.phase + this.effect.time
-          ) *
-            w +
-          c;
+      var r =
+        Math.sin(
+          this.effect.frequency * i + 0 + this.effect.phase + this.effect.time
+        ) *
+          w +
+        c;
+      var g =
+        Math.sin(
+          this.effect.frequency * i + 2 + this.effect.phase + this.effect.time
+        ) *
+          w +
+        c;
+      var b =
+        Math.sin(
+          this.effect.frequency * i + 4 + this.effect.phase + this.effect.time
+        ) *
+          w +
+        c;
+      var shift = Math.sin(this.effect.frequency * i + 4 + this.effect.phase + this.effect.time)*512 + 512;
 
-        this.tileSprites[i].tint = this.rgbToColor(0, g, b);
+      if (this.effect.type == 0) {
+        this.tileSprites[i].tint = this.rgbToColor(0, g, b); // rgb
+      } else if (this.effect.type == 1) {
+        this.tileSprites[i].x = shift;
+      } else if (this.effect.type == 2) {
+        var alpha = Math.sin(this.effect.frequency * i + this.effect.phase + this.effect.time);
+        this.tileSprites[i].x = shift;
+        this.tileSprites[i].alpha = alpha;
+      } else if (this.effect.type == 3) {
+        var alpha = Math.sin(this.effect.frequency * i%2);
+        this.tileSprites[i].x = shift;
+        this.tileSprites[i].alpha = alpha;
       }
+
+      // this.tileSprites[i].alpha = r;
+    }
+  }
+
+  // vsync / rerender all tiles based on map
+  render() {
+    this.renderTiles();
+    if (this.effect.enabled) {
+      this.renderEffects();
     }
   }
 
