@@ -1,5 +1,9 @@
+// andy reitano / wiley wiggins 2022
+
 class ScratchBeamEffect {
   constructor() {
+    this.enabled = false;
+    this.type = 0;
     this.speed = 0;
     this.frequency = 0;
   }
@@ -50,17 +54,18 @@ class ScratchBeam {
   }
 
   getTileData(x, y) {
-    return this.tileSprites[xyToTile(x, y)];
+    return this.tileMap.layers[this.currentLayer].data[this.xyToTile(x, y)];
     // return this.tileMap[]
   }
 
   // takes in hex color
   setTileTint(x, y, color) {
-    this.tileSprites[xyToTile(x, y)].tint = color;
+    this.tileSprites[this.xyToTile(x, y)].tint = color;
   }
 
-  // rerender all tiles based on map
+  // vsync / rerender all tiles based on map
   render() {
+    // handle actual tile rerender
     for (var i = 0; i < this.tileSprites.length; i++) {
       var tileIndex = this.tileMap.layers[this.currentLayer].data[i];
       var tileFlipX = tileIndex & 0x80000000;
@@ -98,6 +103,10 @@ class ScratchBeam {
         this.tileSprites[i].texture = tileTexture;
       }
     }
+
+    // now apply post effects (color/twist/drunk room etc)
+    
+
   }
 
   // load map .tmj and generate internal tile sprite array
@@ -152,11 +161,11 @@ class ScratchBeam {
   }
 
   // helper that returns the tile index based on current tilemap dimensions, should help clean up code
-  static xyToTile(x, y) {
+  xyToTile(x, y) {
     return (x % this.tileMap.width) + parseInt(y / this.tileMap.width);
   }
 
-  static rgbToColor(r, g, b) {
+  rgbToColor(r, g, b) {
     return (r << 16) + (g << 8) + b;
   }
 }

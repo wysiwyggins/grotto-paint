@@ -1,11 +1,17 @@
+const scratchbeam = new ScratchBeam();
+
 async function setup() {
-  let scratchbeam = new ScratchBeam();
   await scratchbeam.loadTextures();
   await scratchbeam.loadMapFile('assets/maps/exitAction2x.tmj')
   scratchbeam.render();
 }
-
 setup();
+
+scratchbeam.effect.type = 0;
+scratchbeam.effect.frequency = 0.3;
+scratchbeam.effect.enabled = true;
+scratchbeam.render();
+
 // let _rainbowEffect = true;
 // function onKeyDown(key) {
 //   if (key.keyCode === 65) {
