@@ -6,6 +6,8 @@ class ScratchBeamEffect {
     this.type = 0;
     this.speed = 0;
     this.frequency = 0;
+    this.phase = 0;
+    this.time = 0;
   }
 }
 
@@ -58,6 +60,20 @@ class ScratchBeam {
     // return this.tileMap[]
   }
 
+  // push animation from grotto side (can move responsibility however)
+  previousFrame() {
+    if (this.currentLayer == 0) {
+      this.currentLayer = this.tileMap.layers.length - 1;
+    } else {
+      this.currentLayer--;
+    }
+  }
+
+  nextFrame() {
+    this.currentLayer++;
+    this.currentLayer %= this.tileMap.layers.length;
+  }
+
   // takes in hex color
   setTileTint(x, y, color) {
     this.tileSprites[this.xyToTile(x, y)].tint = color;
@@ -105,8 +121,37 @@ class ScratchBeam {
     }
 
     // now apply post effects (color/twist/drunk room etc)
-    
+    if (this.effect.enabled) {
+      for (var i = 0; i < this.tileSprites.length; i++) {
+        var w = 127;
+        var c = 128;
+        var p = 0;
+        // var r = Math.sin(frequency * i + 0 + t) * w + c;
+        // var g = Math.sin(frequency * i + 2) * w + c;
+        // var b = Math.sin(frequency * i + 4 + t) * w + c;
 
+        var r =
+          Math.sin(
+            this.effect.frequency * i + 0 + this.effect.phase + this.effect.time
+          ) *
+            w +
+          c;
+        var g =
+          Math.sin(
+            this.effect.frequency * i + 2 + this.effect.phase + this.effect.time
+          ) *
+            w +
+          c;
+        var b =
+          Math.sin(
+            this.effect.frequency * i + 4 + this.effect.phase + this.effect.time
+          ) *
+            w +
+          c;
+
+        this.tileSprites[i].tint = this.rgbToColor(0, g, b);
+      }
+    }
   }
 
   // load map .tmj and generate internal tile sprite array
@@ -128,7 +173,7 @@ class ScratchBeam {
       .then(function (json) {
         return json;
       });
-    this.generateTileSprites(json)
+    this.generateTileSprites(json);
   }
 
   // pre-cache all the tiles we would need for the whole screen and just manipulate those

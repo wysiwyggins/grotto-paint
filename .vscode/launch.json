@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "scratchbeam-chrome",
+            "type": "pwa-chrome",
             "request": "launch",
             "name": "test scratchbeam from within vscode",
             "url": "http://localhost:5501",
