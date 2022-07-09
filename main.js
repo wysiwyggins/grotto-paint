@@ -11,7 +11,6 @@ async function main() {
       scratchbeam.loadMap(json);
     });
 
-  // scratchbeam.loadMapFile("assets/maps/exitAction2x.tmj");
   scratchbeam.render();
 }
 main();

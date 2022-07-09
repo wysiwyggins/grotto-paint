@@ -65,7 +65,7 @@ class ScratchBeam {
   // rerender all tiles based on map
   render() {
     for (var i = 0; i < this.tileSprites.length; i++) {
-      var tileIndex = this.tileMap.layers[layerIndex].data[i];
+      var tileIndex = this.tileMap.layers[this.currentLayer].data[i];
       var tileFlipX = tileIndex & 0x80000000;
       var tileFlipY = tileIndex & 0x40000000;
 
