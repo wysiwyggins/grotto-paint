@@ -37,7 +37,7 @@ class ScratchBeam {
   // https://www.html5gamedevs.com/topic/39373-loader-is-async-right-so-not-sure-how-youd-structure-this/
   loadTextures = async () => {
     return new Promise((resolve, reject) => {
-      this.app.loader.add("assets/tiles2x.png").load();
+      this.app.loader.add("assets/spritesheets/tiles2x.png").load();
 
       this.app.loader.onComplete.add(() => {
         resolve();
@@ -225,7 +225,7 @@ class ScratchBeam {
 
       // texture blit area
       var tileTexture = new PIXI.Texture(
-        this.app.loader.resources["assets/tiles2x.png"].texture
+        this.app.loader.resources["assets/spritesheets/tiles2x.png"].texture
       );
 
       var tileSprite = PIXI.Sprite.from(tileTexture);
