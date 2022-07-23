@@ -862,7 +862,7 @@
  "tilesets":[
         {
          "firstgid":1,
-         "source":"..\/..\/..\/..\/..\/Documents\/grotto2x.tsx"
+         "source":"..\/..\/..\/..\/Documents\/grotto2x.tsx"
         }],
  "tilewidth":40,
  "type":"map",
