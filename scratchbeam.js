@@ -117,7 +117,7 @@ class ScratchBeam {
         );
 
         var tileTexture = new PIXI.Texture(
-          this.app.loader.resources["assets/tiles2x.png"].texture,
+          this.app.loader.resources["assets/spritesheets/tiles2x.png"].texture,
           blitRectangle
         );
         tileTexture.rotate = rotateMode;
