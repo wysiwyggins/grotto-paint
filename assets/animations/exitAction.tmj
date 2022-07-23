@@ -48,7 +48,7 @@
          "name":"Tile Layer 1",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":60,
          "x":0,
          "y":0
@@ -150,7 +150,7 @@
          "name":"Tile Layer 3",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":60,
          "x":0,
          "y":0
@@ -201,7 +201,7 @@
          "name":"Tile Layer 4",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":60,
          "x":0,
          "y":0
@@ -252,7 +252,7 @@
          "name":"Tile Layer 5",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":60,
          "x":0,
          "y":0
@@ -303,7 +303,7 @@
          "name":"Tile Layer 6",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":60,
          "x":0,
          "y":0
@@ -354,7 +354,7 @@
          "name":"Tile Layer 7",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":60,
          "x":0,
          "y":0
@@ -405,7 +405,7 @@
          "name":"Tile Layer 8",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":60,
          "x":0,
          "y":0
@@ -456,7 +456,7 @@
          "name":"Tile Layer 9",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":60,
          "x":0,
          "y":0
@@ -507,7 +507,7 @@
          "name":"Tile Layer 10",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":60,
          "x":0,
          "y":0
@@ -558,7 +558,7 @@
          "name":"Tile Layer 11",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":60,
          "x":0,
          "y":0
@@ -609,7 +609,7 @@
          "name":"Tile Layer 12",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":60,
          "x":0,
          "y":0
@@ -623,7 +623,7 @@
  "tilesets":[
         {
          "firstgid":1,
-         "source":"grotto2x.tsx"
+         "source":"..\/maps\/tiles2x.tsj"
         }],
  "tilewidth":40,
  "type":"map",

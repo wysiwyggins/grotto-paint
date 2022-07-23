@@ -1,5 +1,5 @@
 { "columns":10,
- "image":"..\/tiles2x.png",
+ "image":"..\/spritesheets\/tiles2x.png",
  "imageheight":90,
  "imagewidth":400,
  "margin":0,
