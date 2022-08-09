@@ -2,7 +2,7 @@ const scratchbeam = new ScratchBeam();
 
 async function setup() {
   await scratchbeam.loadTextures();
-  await scratchbeam.loadMapFile("assets/maps/exitAction2x.tmj");
+  await scratchbeam.loadMapFile("assets/maps/exitAction.tmj");
 
   // can use requestanimationframe here instead if we want
   const ticker = new PIXI.Ticker();
