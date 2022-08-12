@@ -4852,12 +4852,21 @@
  "nextobjectid":1,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.9.0",
+ "tiledversion":"1.9.1",
  "tileheight":30,
  "tilesets":[
         {
+         "columns":11,
          "firstgid":1,
-         "source":"tiles2x.tsj"
+         "image":"..\/spritesheets\/tiles2x.png",
+         "imageheight":90,
+         "imagewidth":440,
+         "margin":0,
+         "name":"tiles2x",
+         "spacing":0,
+         "tilecount":33,
+         "tileheight":30,
+         "tilewidth":40
         }, 
         {
          "columns":46,

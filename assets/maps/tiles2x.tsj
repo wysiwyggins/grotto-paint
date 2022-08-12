@@ -1,0 +1,14 @@
+{ "columns":11,
+ "image":"..\/spritesheets\/tiles2x.png",
+ "imageheight":90,
+ "imagewidth":440,
+ "margin":0,
+ "name":"tiles2x",
+ "spacing":0,
+ "tilecount":33,
+ "tiledversion":"1.9.1",
+ "tileheight":30,
+ "tilewidth":40,
+ "type":"tileset",
+ "version":"1.8"
+}
