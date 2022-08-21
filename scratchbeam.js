@@ -249,4 +249,26 @@ class ScratchBeam {
   rgbToColor(r, g, b) {
     return (r << 16) + (g << 8) + b;
   }
+
+}
+//wiley's experiments
+//was going to try to get a 2darray for some kind of procedural map generation based on drawn maps
+
+class generateMap {
+  constructor(){
+    this.tileMap = [];
+    this.map2DArray = []
+  }
+
+  jsonTo2dArray(json) {
+    
+    this.currentLayer = 0;
+    this.tileMap = json;
+    
+    var arr = this.tileMap.layers[this.currentLayer].data;
+    while(arr.length) this.map2DArray.push(arr.splice(0,this.tileMap.width));
+        
+    console.log(this.map2DArray);
+  }
+
 }
