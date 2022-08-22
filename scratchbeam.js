@@ -107,8 +107,8 @@ class ScratchBeam {
 
       if (tileIndex) {
         tileIndex -= 1;
-        var tileSourceX = parseInt(tileIndex % 10) * this.tileMap.tilewidth;
-        var tileSourceY = parseInt(tileIndex / 10) * this.tileMap.tileheight;
+        var tileSourceX = parseInt(tileIndex % 12) * this.tileMap.tilewidth;
+        var tileSourceY = parseInt(tileIndex / 12) * this.tileMap.tileheight;
         var blitRectangle = new PIXI.Rectangle(
           tileSourceX,
           tileSourceY,
@@ -253,7 +253,7 @@ class ScratchBeam {
 }
 //wiley's experiments
 //was going to try to get a 2darray for some kind of procedural map generation based on drawn maps
-
+/* 
 class generateMap {
   constructor(){
     this.tileMap = [];
@@ -271,4 +271,4 @@ class generateMap {
     console.log(this.map2DArray);
   }
 
-}
+} */
