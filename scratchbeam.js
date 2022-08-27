@@ -249,7 +249,8 @@ class ScratchBeam {
   rgbToColor(r, g, b) {
     return (r << 16) + (g << 8) + b;
   }
-
+// this is wiley's attempt at getting map data in a format that could
+// potentially be used for procedural generation or cellular automata
   jsonTo2dArray() {
     this.currentLayer = 0;
     var arr = this.tileMap.layers[this.currentLayer].data;
