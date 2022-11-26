@@ -3,6 +3,7 @@
 // todo:
 // - figure out canvas size/width and pass it properly instead of instantiating in constructor
 // -
+// I found rendererOptions including hidpi res settings here- http://www.goodboydigital.com/pixi-js-v2-fastest-2d-webgl-renderer/ -wiley
 
 class ScratchBeamEffect {
   constructor() {
@@ -21,9 +22,10 @@ class ScratchBeam {
     this.canvas = canvas;
 
     this.app = new PIXI.Application({
-      width: 4096,
-      height: 2048,
+      width: 2048,
+      height: 1024,
       backgroundColor: 0xffffff,
+      resolution: 2,
     });
 
     this.tileMap = [];
