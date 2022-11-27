@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.9" tiledversion="1.9.2" name="objects" tilewidth="220" tileheight="150" tilecount="35" columns="0">
+<tileset version="1.9" tiledversion="1.9.2" name="objects" tilewidth="220" tileheight="150" tilecount="40" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image width="40" height="60" source="../../../../Documents/grotto_cp437/objects/animal-small.png"/>
@@ -105,5 +105,20 @@
  </tile>
  <tile id="34">
   <image width="120" height="88" source="../../../../Documents/grotto_cp437/objects/wumpus.png"/>
+ </tile>
+ <tile id="35">
+  <image width="40" height="60" source="../../../../Documents/grotto_cp437/objects/shield.png"/>
+ </tile>
+ <tile id="36">
+  <image width="40" height="60" source="../../../../Documents/grotto_cp437/objects/relic.png"/>
+ </tile>
+ <tile id="37">
+  <image width="120" height="120" source="../../../../Documents/grotto_cp437/objects/skelly-attack.png"/>
+ </tile>
+ <tile id="38">
+  <image width="120" height="120" source="../../../../Documents/grotto_cp437/objects/skelly.png"/>
+ </tile>
+ <tile id="39">
+  <image width="40" height="60" source="../../../../Documents/grotto_cp437/objects/unknown.png"/>
  </tile>
 </tileset>
