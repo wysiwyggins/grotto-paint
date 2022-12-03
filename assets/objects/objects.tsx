@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.9" tiledversion="1.9.2" name="objects" tilewidth="220" tileheight="150" tilecount="41" columns="0">
+<tileset version="1.9" tiledversion="1.9.2" name="objects" tilewidth="520" tileheight="240" tilecount="42" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image width="40" height="60" source="../../../../Documents/grotto_cp437/objects/animal-small.png"/>
@@ -123,5 +123,8 @@
  </tile>
  <tile id="40">
   <image width="40" height="60" source="../../../../Documents/grotto_cp437/objects/inverted human.png"/>
+ </tile>
+ <tile id="41">
+  <image width="520" height="240" source="../../../../Desktop/bridge.png"/>
  </tile>
 </tileset>
