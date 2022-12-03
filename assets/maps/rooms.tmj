@@ -4831,7 +4831,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 
@@ -9644,12 +9644,14 @@
                  "imagewidth":40
                 }, 
                 {
+                 "class":"fungus",
                  "id":15,
                  "image":"..\/..\/..\/..\/Documents\/grotto_cp437\/objects\/fungus-small.png",
                  "imageheight":60,
                  "imagewidth":40
                 }, 
                 {
+                 "class":"ghost",
                  "id":16,
                  "image":"..\/..\/..\/..\/Documents\/grotto_cp437\/objects\/ghost-small.png",
                  "imageheight":59,
@@ -9690,30 +9692,35 @@
                  "imagewidth":40
                 }, 
                 {
+                 "class":"monster",
                  "id":22,
                  "image":"..\/..\/..\/..\/Documents\/grotto_cp437\/objects\/monster1.png",
                  "imageheight":120,
                  "imagewidth":120
                 }, 
                 {
+                 "class":"monster",
                  "id":23,
                  "image":"..\/..\/..\/..\/Documents\/grotto_cp437\/objects\/monster2.png",
                  "imageheight":120,
                  "imagewidth":120
                 }, 
                 {
+                 "class":"monster",
                  "id":24,
                  "image":"..\/..\/..\/..\/Documents\/grotto_cp437\/objects\/monster3.png",
                  "imageheight":150,
                  "imagewidth":120
                 }, 
                 {
+                 "class":"monster",
                  "id":25,
                  "image":"..\/..\/..\/..\/Documents\/grotto_cp437\/objects\/monster4.png",
                  "imageheight":120,
                  "imagewidth":120
                 }, 
                 {
+                 "class":"monster",
                  "id":26,
                  "image":"..\/..\/..\/..\/Documents\/grotto_cp437\/objects\/monster5.png",
                  "imageheight":120,
@@ -9726,6 +9733,7 @@
                  "imagewidth":40
                 }, 
                 {
+                 "class":"organ",
                  "id":28,
                  "image":"..\/..\/..\/..\/Documents\/grotto_cp437\/objects\/organ-small.png",
                  "imageheight":60,
@@ -9738,6 +9746,7 @@
                  "imagewidth":80
                 }, 
                 {
+                 "class":"robot",
                  "id":30,
                  "image":"..\/..\/..\/..\/Documents\/grotto_cp437\/objects\/robot-small.png",
                  "imageheight":60,
@@ -9750,6 +9759,7 @@
                  "imagewidth":220
                 }, 
                 {
+                 "class":"vegetable",
                  "id":32,
                  "image":"..\/..\/..\/..\/Documents\/grotto_cp437\/objects\/vegetable-small.png",
                  "imageheight":60,
@@ -9775,7 +9785,7 @@
                  "imagewidth":40
                 }, 
                 {
-                 "class":"junk",
+                 "class":"relic",
                  "id":36,
                  "image":"..\/..\/..\/..\/Documents\/grotto_cp437\/objects\/relic.png",
                  "imageheight":60,
@@ -9796,6 +9806,7 @@
                  "imagewidth":120
                 }, 
                 {
+                 "class":"junk",
                  "id":39,
                  "image":"..\/..\/..\/..\/Documents\/grotto_cp437\/objects\/unknown.png",
                  "imageheight":60,
