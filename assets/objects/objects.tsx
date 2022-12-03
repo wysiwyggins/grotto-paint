@@ -125,6 +125,6 @@
   <image width="40" height="60" source="../../../../Documents/grotto_cp437/objects/inverted human.png"/>
  </tile>
  <tile id="41">
-  <image width="520" height="240" source="../../../../Desktop/bridge.png"/>
+  <image width="520" height="240" source="../../../../Pictures/bridge.png"/>
  </tile>
 </tileset>
