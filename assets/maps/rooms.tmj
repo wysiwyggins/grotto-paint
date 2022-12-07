@@ -520,7 +520,7 @@
          "objects":[
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":1,
                  "name":"",
@@ -735,7 +735,7 @@
          "name":"2-1",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":40,
          "x":0,
          "y":0
@@ -798,7 +798,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":308,
                  "name":"",
@@ -810,7 +810,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":309,
                  "name":"",
@@ -822,7 +822,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":false,
+         "visible":true,
          "x":0,
          "y":0
         }, 
@@ -1037,7 +1037,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":305,
                  "name":"",
@@ -1049,7 +1049,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":306,
                  "name":"",
@@ -1327,7 +1327,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":302,
                  "name":"",
@@ -1339,7 +1339,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":303,
                  "name":"",
@@ -1351,7 +1351,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":304,
                  "name":"",
@@ -1630,7 +1630,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":292,
                  "name":"",
@@ -1642,7 +1642,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":294,
                  "name":"",
@@ -1654,7 +1654,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":296,
                  "name":"",
@@ -1932,7 +1932,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":297,
                  "name":"",
@@ -1944,7 +1944,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":298,
                  "name":"",
@@ -1956,7 +1956,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":300,
                  "name":"",
@@ -1968,7 +1968,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":301,
                  "name":"",
@@ -2247,7 +2247,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":284,
                  "name":"",
@@ -2259,7 +2259,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":285,
                  "name":"",
@@ -2271,7 +2271,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":286,
                  "name":"",
@@ -2283,7 +2283,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":287,
                  "name":"",
@@ -2561,7 +2561,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":280,
                  "name":"",
@@ -2573,7 +2573,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":281,
                  "name":"",
@@ -2585,7 +2585,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":282,
                  "name":"",
@@ -2597,7 +2597,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":283,
                  "name":"",
@@ -2875,7 +2875,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":275,
                  "name":"",
@@ -2887,7 +2887,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":276,
                  "name":"",
@@ -2899,7 +2899,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":277,
                  "name":"",
@@ -2911,7 +2911,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":278,
                  "name":"",
@@ -2923,7 +2923,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":279,
                  "name":"",
@@ -3201,7 +3201,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":263,
                  "name":"",
@@ -3213,7 +3213,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":264,
                  "name":"",
@@ -3225,7 +3225,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":265,
                  "name":"",
@@ -3237,7 +3237,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":266,
                  "name":"",
@@ -3249,7 +3249,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":267,
                  "name":"",
@@ -3261,7 +3261,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":268,
                  "name":"",
@@ -3539,7 +3539,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":257,
                  "name":"",
@@ -3551,7 +3551,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":258,
                  "name":"",
@@ -3563,7 +3563,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":259,
                  "name":"",
@@ -3575,7 +3575,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":260,
                  "name":"",
@@ -3587,7 +3587,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":261,
                  "name":"",
@@ -3599,7 +3599,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":262,
                  "name":"",
@@ -3877,7 +3877,7 @@
          "objects":[
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":269,
                  "name":"",
@@ -3889,7 +3889,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":270,
                  "name":"",
@@ -3901,7 +3901,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":271,
                  "name":"",
@@ -3913,7 +3913,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":272,
                  "name":"",
@@ -3925,7 +3925,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":273,
                  "name":"",
@@ -3937,7 +3937,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":274,
                  "name":"",
@@ -4113,7 +4113,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":250,
                  "name":"",
@@ -4125,7 +4125,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":251,
                  "name":"",
@@ -4137,7 +4137,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":252,
                  "name":"",
@@ -4149,7 +4149,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":253,
                  "name":"",
@@ -4161,7 +4161,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":254,
                  "name":"",
@@ -4173,7 +4173,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":255,
                  "name":"",
@@ -4185,7 +4185,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":256,
                  "name":"",
@@ -4413,7 +4413,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":242,
                  "name":"",
@@ -4425,7 +4425,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":243,
                  "name":"",
@@ -4437,7 +4437,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":244,
                  "name":"",
@@ -4449,7 +4449,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":245,
                  "name":"",
@@ -4461,7 +4461,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":246,
                  "name":"",
@@ -4473,7 +4473,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":247,
                  "name":"",
@@ -4485,7 +4485,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":248,
                  "name":"",
@@ -4497,7 +4497,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":249,
                  "name":"",
@@ -4724,7 +4724,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":233,
                  "name":"",
@@ -4736,7 +4736,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":234,
                  "name":"",
@@ -4748,7 +4748,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":235,
                  "name":"",
@@ -4760,7 +4760,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":236,
                  "name":"",
@@ -4772,7 +4772,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":237,
                  "name":"",
@@ -4784,7 +4784,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":238,
                  "name":"",
@@ -4796,7 +4796,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":239,
                  "name":"",
@@ -4808,7 +4808,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":240,
                  "name":"",
@@ -4820,7 +4820,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":241,
                  "name":"",
@@ -5047,7 +5047,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":222,
                  "name":"",
@@ -5059,7 +5059,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":223,
                  "name":"",
@@ -5071,7 +5071,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":224,
                  "name":"",
@@ -5083,7 +5083,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":225,
                  "name":"",
@@ -5095,7 +5095,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":226,
                  "name":"",
@@ -5107,7 +5107,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":228,
                  "name":"",
@@ -5119,7 +5119,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":229,
                  "name":"",
@@ -5131,7 +5131,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":230,
                  "name":"",
@@ -5143,7 +5143,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":231,
                  "name":"",
@@ -5155,7 +5155,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":232,
                  "name":"",
@@ -5382,7 +5382,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":211,
                  "name":"",
@@ -5394,7 +5394,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":212,
                  "name":"",
@@ -5406,7 +5406,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":213,
                  "name":"",
@@ -5418,7 +5418,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":214,
                  "name":"",
@@ -5430,7 +5430,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":215,
                  "name":"",
@@ -5442,7 +5442,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":216,
                  "name":"",
@@ -5454,7 +5454,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":217,
                  "name":"",
@@ -5466,7 +5466,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":218,
                  "name":"",
@@ -5478,7 +5478,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":219,
                  "name":"",
@@ -5490,7 +5490,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":220,
                  "name":"",
@@ -5502,7 +5502,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":221,
                  "name":"",
@@ -5678,7 +5678,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":201,
                  "name":"",
@@ -5690,7 +5690,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":202,
                  "name":"",
@@ -5702,7 +5702,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":203,
                  "name":"",
@@ -5714,7 +5714,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":204,
                  "name":"",
@@ -5726,7 +5726,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":205,
                  "name":"",
@@ -5738,7 +5738,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":206,
                  "name":"",
@@ -5750,7 +5750,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":207,
                  "name":"",
@@ -5762,7 +5762,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":208,
                  "name":"",
@@ -5774,7 +5774,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":209,
                  "name":"",
@@ -5786,7 +5786,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":210,
                  "name":"",
@@ -5962,7 +5962,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":189,
                  "name":"",
@@ -5974,7 +5974,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":190,
                  "name":"",
@@ -5986,7 +5986,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":191,
                  "name":"",
@@ -5998,7 +5998,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":192,
                  "name":"",
@@ -6010,7 +6010,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":193,
                  "name":"",
@@ -6022,7 +6022,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":194,
                  "name":"",
@@ -6034,7 +6034,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":195,
                  "name":"",
@@ -6046,7 +6046,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":196,
                  "name":"",
@@ -6058,7 +6058,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":197,
                  "name":"",
@@ -6070,7 +6070,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":198,
                  "name":"",
@@ -6082,7 +6082,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":199,
                  "name":"",
@@ -6094,7 +6094,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":200,
                  "name":"",
@@ -6372,7 +6372,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":176,
                  "name":"",
@@ -6384,7 +6384,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":177,
                  "name":"",
@@ -6396,7 +6396,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":178,
                  "name":"",
@@ -6408,7 +6408,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":179,
                  "name":"",
@@ -6420,7 +6420,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":180,
                  "name":"",
@@ -6432,7 +6432,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":181,
                  "name":"",
@@ -6444,7 +6444,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":182,
                  "name":"",
@@ -6456,7 +6456,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":183,
                  "name":"",
@@ -6468,7 +6468,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":184,
                  "name":"",
@@ -6480,7 +6480,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":185,
                  "name":"",
@@ -6492,7 +6492,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":186,
                  "name":"",
@@ -6504,7 +6504,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":187,
                  "name":"",
@@ -6516,7 +6516,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":188,
                  "name":"",
@@ -6743,7 +6743,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":94,
                  "name":"",
@@ -6755,7 +6755,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":95,
                  "name":"",
@@ -6767,7 +6767,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":96,
                  "name":"",
@@ -6779,7 +6779,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":97,
                  "name":"",
@@ -6791,7 +6791,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":98,
                  "name":"",
@@ -6803,7 +6803,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":99,
                  "name":"",
@@ -6815,7 +6815,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":100,
                  "name":"",
@@ -6827,7 +6827,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":101,
                  "name":"",
@@ -6839,7 +6839,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":102,
                  "name":"",
@@ -6851,7 +6851,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":103,
                  "name":"",
@@ -6863,7 +6863,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":104,
                  "name":"",
@@ -6875,7 +6875,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":105,
                  "name":"",
@@ -6887,7 +6887,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":106,
                  "name":"",
@@ -6899,7 +6899,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":107,
                  "name":"",
@@ -7127,7 +7127,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":108,
                  "name":"",
@@ -7139,7 +7139,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":109,
                  "name":"",
@@ -7151,7 +7151,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":110,
                  "name":"",
@@ -7163,7 +7163,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":111,
                  "name":"",
@@ -7175,7 +7175,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":112,
                  "name":"",
@@ -7187,7 +7187,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":114,
                  "name":"",
@@ -7199,7 +7199,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":115,
                  "name":"",
@@ -7211,7 +7211,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":116,
                  "name":"",
@@ -7223,7 +7223,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":117,
                  "name":"",
@@ -7235,7 +7235,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":119,
                  "name":"",
@@ -7247,7 +7247,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":120,
                  "name":"",
@@ -7259,7 +7259,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":121,
                  "name":"",
@@ -7271,7 +7271,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":122,
                  "name":"",
@@ -7283,7 +7283,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":123,
                  "name":"",
@@ -7295,7 +7295,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":124,
                  "name":"",
@@ -7522,7 +7522,7 @@
          "objects":[
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":329,
                  "name":"",
@@ -7534,7 +7534,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":330,
                  "name":"",
@@ -7546,7 +7546,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":331,
                  "name":"",
@@ -7558,7 +7558,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":332,
                  "name":"",
@@ -7570,7 +7570,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":333,
                  "name":"",
@@ -7582,7 +7582,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":334,
                  "name":"",
@@ -7594,7 +7594,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":335,
                  "name":"",
@@ -7606,7 +7606,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":336,
                  "name":"",
@@ -7618,7 +7618,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":337,
                  "name":"",
@@ -7630,7 +7630,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":339,
                  "name":"",
@@ -7642,7 +7642,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":340,
                  "name":"",
@@ -7654,7 +7654,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":341,
                  "name":"",
@@ -7666,7 +7666,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":342,
                  "name":"",
@@ -7678,7 +7678,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":343,
                  "name":"",
@@ -7690,7 +7690,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":344,
                  "name":"",
@@ -7917,7 +7917,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":125,
                  "name":"",
@@ -7929,7 +7929,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":126,
                  "name":"",
@@ -7941,7 +7941,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":127,
                  "name":"",
@@ -7953,7 +7953,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":128,
                  "name":"",
@@ -7965,7 +7965,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":129,
                  "name":"",
@@ -7977,7 +7977,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":130,
                  "name":"",
@@ -7989,7 +7989,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":131,
                  "name":"",
@@ -8001,7 +8001,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":132,
                  "name":"",
@@ -8013,7 +8013,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":133,
                  "name":"",
@@ -8025,7 +8025,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":134,
                  "name":"",
@@ -8037,7 +8037,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":135,
                  "name":"",
@@ -8049,7 +8049,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":136,
                  "name":"",
@@ -8061,7 +8061,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":137,
                  "name":"",
@@ -8073,7 +8073,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":138,
                  "name":"",
@@ -8085,7 +8085,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":139,
                  "name":"",
@@ -8097,7 +8097,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":140,
                  "name":"",
@@ -8324,7 +8324,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":141,
                  "name":"",
@@ -8336,7 +8336,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":142,
                  "name":"",
@@ -8348,7 +8348,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":143,
                  "name":"",
@@ -8360,7 +8360,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":144,
                  "name":"",
@@ -8372,7 +8372,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":145,
                  "name":"",
@@ -8384,7 +8384,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":146,
                  "name":"",
@@ -8396,7 +8396,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":147,
                  "name":"",
@@ -8408,7 +8408,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":148,
                  "name":"",
@@ -8420,7 +8420,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":149,
                  "name":"",
@@ -8432,7 +8432,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":150,
                  "name":"",
@@ -8444,7 +8444,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":151,
                  "name":"",
@@ -8456,7 +8456,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":152,
                  "name":"",
@@ -8468,7 +8468,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":153,
                  "name":"",
@@ -8480,7 +8480,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":154,
                  "name":"",
@@ -8492,7 +8492,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":155,
                  "name":"",
@@ -8504,7 +8504,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":156,
                  "name":"",
@@ -8516,7 +8516,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":157,
                  "name":"",
@@ -8641,7 +8641,7 @@
          "objects":[
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":345,
                  "name":"",
@@ -8653,7 +8653,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":346,
                  "name":"",
@@ -8665,7 +8665,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":347,
                  "name":"",
@@ -8677,7 +8677,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":348,
                  "name":"",
@@ -8689,7 +8689,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":349,
                  "name":"",
@@ -8701,7 +8701,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":350,
                  "name":"",
@@ -8713,7 +8713,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":351,
                  "name":"",
@@ -8725,7 +8725,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":352,
                  "name":"",
@@ -8737,7 +8737,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":353,
                  "name":"",
@@ -8749,7 +8749,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":354,
                  "name":"",
@@ -8761,7 +8761,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":355,
                  "name":"",
@@ -8773,7 +8773,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":356,
                  "name":"",
@@ -8785,7 +8785,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":357,
                  "name":"",
@@ -8797,7 +8797,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":358,
                  "name":"",
@@ -8809,7 +8809,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":359,
                  "name":"",
@@ -8821,7 +8821,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":360,
                  "name":"",
@@ -8833,7 +8833,7 @@
                 }, 
                 {
                  "class":"",
-                 "gid":190,
+                 "gid":47,
                  "height":60,
                  "id":361,
                  "name":"",
@@ -9111,7 +9111,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":158,
                  "name":"",
@@ -9123,7 +9123,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":159,
                  "name":"",
@@ -9135,7 +9135,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":160,
                  "name":"",
@@ -9147,7 +9147,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":161,
                  "name":"",
@@ -9159,7 +9159,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":162,
                  "name":"",
@@ -9171,7 +9171,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":163,
                  "name":"",
@@ -9183,7 +9183,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":164,
                  "name":"",
@@ -9195,7 +9195,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":165,
                  "name":"",
@@ -9207,7 +9207,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":166,
                  "name":"",
@@ -9219,7 +9219,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":167,
                  "name":"",
@@ -9231,7 +9231,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":168,
                  "name":"",
@@ -9243,7 +9243,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":169,
                  "name":"",
@@ -9255,7 +9255,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":170,
                  "name":"",
@@ -9267,7 +9267,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":171,
                  "name":"",
@@ -9279,7 +9279,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":172,
                  "name":"",
@@ -9291,7 +9291,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":173,
                  "name":"",
@@ -9303,7 +9303,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":174,
                  "name":"",
@@ -9315,7 +9315,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":175,
                  "name":"",
@@ -9644,7 +9644,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":8,
                  "name":"",
@@ -9656,7 +9656,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":9,
                  "name":"",
@@ -9668,7 +9668,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":10,
                  "name":"",
@@ -9680,7 +9680,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":11,
                  "name":"",
@@ -9692,7 +9692,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":12,
                  "name":"",
@@ -9704,7 +9704,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":13,
                  "name":"",
@@ -9716,7 +9716,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":14,
                  "name":"",
@@ -9728,7 +9728,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":15,
                  "name":"",
@@ -9740,7 +9740,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":16,
                  "name":"",
@@ -9752,7 +9752,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":17,
                  "name":"",
@@ -9764,7 +9764,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":18,
                  "name":"",
@@ -9776,7 +9776,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":19,
                  "name":"",
@@ -9788,7 +9788,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":20,
                  "name":"",
@@ -9800,7 +9800,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":21,
                  "name":"",
@@ -9812,7 +9812,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":22,
                  "name":"",
@@ -9824,7 +9824,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":23,
                  "name":"",
@@ -9836,7 +9836,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":24,
                  "name":"",
@@ -9848,7 +9848,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":25,
                  "name":"",
@@ -10024,7 +10024,7 @@
          "objects":[
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":310,
                  "name":"",
@@ -10036,7 +10036,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":311,
                  "name":"",
@@ -10048,7 +10048,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":312,
                  "name":"",
@@ -10060,7 +10060,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":313,
                  "name":"",
@@ -10072,7 +10072,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":314,
                  "name":"",
@@ -10084,7 +10084,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":315,
                  "name":"",
@@ -10096,7 +10096,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":316,
                  "name":"",
@@ -10108,7 +10108,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":317,
                  "name":"",
@@ -10120,7 +10120,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":318,
                  "name":"",
@@ -10132,7 +10132,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":319,
                  "name":"",
@@ -10144,7 +10144,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":320,
                  "name":"",
@@ -10156,7 +10156,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":321,
                  "name":"",
@@ -10168,7 +10168,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":322,
                  "name":"",
@@ -10180,7 +10180,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":323,
                  "name":"",
@@ -10192,7 +10192,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":324,
                  "name":"",
@@ -10204,7 +10204,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":325,
                  "name":"",
@@ -10216,7 +10216,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":326,
                  "name":"",
@@ -10228,7 +10228,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":327,
                  "name":"",
@@ -10240,7 +10240,7 @@
                 }, 
                 {
                  "class":"door",
-                 "gid":193,
+                 "gid":50,
                  "height":60,
                  "id":328,
                  "name":"",
@@ -10279,7 +10279,7 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 3, 3, 3, 8, 25, 8, 8, 25, 8, 8, 25, 8, 8, 3, 3, 3, 3, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 3, 3, 3, 8, 26, 8, 8, 26, 8, 8, 26, 15, 8, 3, 3, 3, 3, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 3, 3, 2147483653, 11, 2147483658, 7, 7, 10, 32, 7, 10, 13, 7, 5, 3, 3, 3, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 3, 2147483653, 7, 110, 7, 7, 15, 7, 7, 7, 7, 2147483654, 7, 7, 5, 3, 3, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 3, 2147483653, 7, 0, 7, 7, 15, 7, 7, 7, 7, 2147483654, 7, 7, 5, 3, 3, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 3, 2147483653, 7, 7, 6, 7, 7, 25, 7, 7, 7, 7, 7, 7, 7, 7, 5, 3, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 2147483653, 7, 7, 7, 7, 7, 7, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 5, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -10317,11 +10317,11 @@
         {
          "columns":12,
          "firstgid":1,
-         "image":"..\/spritesheets\/tiles2x.png",
+         "image":"..\/spritesheets\/tiles@2x.png",
          "imageheight":90,
          "imagewidth":480,
          "margin":0,
-         "name":"tiles2x",
+         "name":"tiles@2x",
          "spacing":0,
          "tilecount":36,
          "tileheight":30,
@@ -10333,21 +10333,8 @@
          "tilewidth":40
         }, 
         {
-         "columns":13,
-         "firstgid":37,
-         "image":"..\/spritesheets\/cp437_2.png",
-         "imageheight":330,
-         "imagewidth":520,
-         "margin":0,
-         "name":"glyphs",
-         "spacing":0,
-         "tilecount":143,
-         "tileheight":30,
-         "tilewidth":40
-        }, 
-        {
          "columns":0,
-         "firstgid":180,
+         "firstgid":37,
          "grid":
             {
              "height":1,
@@ -10355,7 +10342,7 @@
              "width":1
             },
          "margin":0,
-         "name":"objects",
+         "name":"objects@2x",
          "spacing":0,
          "tilecount":42,
          "tileheight":240,
@@ -10647,6 +10634,19 @@
                  "imagewidth":520
                 }],
          "tilewidth":520
+        }, 
+        {
+         "columns":13,
+         "firstgid":79,
+         "image":"..\/spritesheets\/cp437@2x.png",
+         "imageheight":330,
+         "imagewidth":520,
+         "margin":0,
+         "name":"cp437@2x",
+         "spacing":0,
+         "tilecount":143,
+         "tileheight":30,
+         "tilewidth":40
         }],
  "tilewidth":40,
  "type":"map",
