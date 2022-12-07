@@ -10325,6 +10325,7 @@
          "spacing":0,
          "tilecount":36,
          "tileheight":30,
+         "tilerendersize":"grid",
          "tiles":[
                 {
                  "class":"walkable",
@@ -10646,6 +10647,7 @@
          "spacing":0,
          "tilecount":143,
          "tileheight":30,
+         "tilerendersize":"grid",
          "tilewidth":40
         }],
  "tilewidth":40,
