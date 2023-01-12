@@ -10,6 +10,7 @@
 
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
+    
   </head>
 
   <body>
@@ -31,37 +32,11 @@
       </div>
       tile palette
       <div class="palette">
-        <button onclick="setSwatch(0);" class="mini"><img srcset="/assets/macroblock/block1.png 2x"/></button>
-        <button onclick="setSwatch(1);" class="mini"><img srcset="/assets/macroblock/block2.png 2x"/></button>
-        <button onclick="setSwatch(2);" class="mini"><img srcset="/assets/macroblock/block3.png 2x"/></button>
-        <button onclick="setSwatch(3);" class="mini"><img srcset="/assets/macroblock/block4.png 2x"/></button>
-        <button onclick="setSwatch(4);" class="mini"><img srcset="/assets/macroblock/block5.png 2x"/></button>
-        <button onclick="setSwatch(5);" class="mini"><img srcset="/assets/macroblock/block6.png 2x"/></button>
-        <button onclick="setSwatch(6);" class="mini"><img srcset="/assets/macroblock/block7.png 2x"/></button>
-        <button onclick="setSwatch(7);" class="mini"><img srcset="/assets/macroblock/block8.png 2x"/></button>
-        <button onclick="setSwatch(8);" class="mini"><img srcset="/assets/macroblock/block0.png 2x"/></button>
-        <button onclick="setSwatch(9);" class="mini"><img srcset="/assets/macroblock/block9.png 2x"/></button>
-        <button onclick="setSwatch(10);" class="mini"><img srcset="/assets/macroblock/block10.png 2x"/></button>
-        <button onclick="setSwatch(11);" class="mini"><img srcset="/assets/macroblock/block11.png 2x"/></button>
-        <button onclick="setSwatch(12);" class="mini"><img srcset="/assets/macroblock/block12.png 2x"/></button>
-        <button onclick="setSwatch(13);" class="mini"><img srcset="/assets/macroblock/block13.png 2x"/></button>
-        <button onclick="setSwatch(14);" class="mini"><img srcset="/assets/macroblock/block14.png 2x"/></button>
-        <button onclick="setSwatch(15);" class="mini"><img srcset="/assets/macroblock/block15.png 2x"/></button>
-        <button onclick="setSwatch(16);" title="16" class="mini"><img srcset="/assets/macroblock/block16.png 2x"/></button>
-        <button onclick="setSwatch(17);" title="17" class="mini"><img srcset="/assets/macroblock/block17.png 2x"/></button>
-        <button onclick="setSwatch(18);" title="18" class="mini"><img srcset="/assets/macroblock/block18.png 2x"/></button>
-        <button onclick="setSwatch(19);" title="19" class="mini"><img srcset="/assets/macroblock/block19.png 2x"/></button>
-        <button onclick="setSwatch(20);" title="20" class="mini"><img srcset="/assets/macroblock/block20.png 2x"/></button>
-        <button onclick="setSwatch(21);" title="21" class="mini"><img srcset="/assets/macroblock/block21.png 2x"/></button>
-        <button onclick="setSwatch(22);" title="22" class="mini"><img srcset="/assets/macroblock/block22.png 2x"/></button>
-        <button onclick="setSwatch(23);" title="23" class="mini"><img srcset="/assets/macroblock/block23.png 2x"/></button>
-        <button onclick="setSwatch(24);" title="24" class="mini"><img srcset="/assets/macroblock/block24.png 2x"/></button>
-        <button onclick="setSwatch(25);" title="25" class="mini"><img srcset="/assets/macroblock/block25.png 2x"/></button>
-        <button onclick="setSwatch(26);" title="26" class="mini"><img srcset="/assets/macroblock/block26.png 2x"/></button>
-        <button onclick="setSwatch(27);" title="27" class="mini"><img srcset="/assets/macroblock/block27.png 2x"/></button>
-        <button onclick="setSwatch(28);" title="28" class="mini"><img srcset="/assets/macroblock/block28.png 2x"/></button>
-        <button onclick="setSwatch(29);" title="28" class="mini"><img srcset="/assets/macroblock/block29.png 2x"/></button>
+        <ul id="palette">
+          <!--<button onclick="setSwatch(0);" title="0" class="mini"><img srcset="/assets/macroblock/Block0.png"/></button>-->
+        </ul>
       </div>
+      
       <div class="row">
         <div id="frames-amount">frames: <span id="totalFramesText">1</span></div>
         <div class = "frames">current frame: <span id="currentFrameText">1</span></div>
@@ -102,5 +77,56 @@
       </div>
     </div> -->
 
+  <script>// Get the list element where the images will be appended
+    const list = document.getElementById("palette");
+
+    // The local path to the directory containing the images
+    const dir = "assets/macroblock";
+
+    let counter = 1;
+
+    // use XMLHttpRequest to get the list of images in the directory
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", dir);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        // parse response text as json
+        const files = JSON.parse(xhr.responseText);
+        // Loop through each file in the directory
+        files.forEach(file => {
+          // Check if the file is an image
+          if (file.type.match(/image.*/)) {
+            // Create a <li> element to hold the button
+            const li = document.createElement("li");
+            // Create a <button> element
+            const btn = document.createElement("button");
+            // Create an <img> element and set its src to the file path
+            const img = document.createElement("img");
+            img.src = dir + file.name;
+            // set the button title attribute with current counter 
+            btn.setAttribute("title", `${counter}`);
+            btn.setAttribute("onClick", `setSwatch(${counter});`);
+            btn.setAttribute("class", "mini");
+
+            // increment the counter 
+            counter++;
+            // Append the <img> element to the <button>
+            btn.appendChild(img);
+            // Append the <button> element to the <li>
+            li.appendChild(btn);
+            // Append the <li> element to the <ul>
+            list.appendChild(li);
+          }
+        });
+      } else {
+        console.error(xhr.statusText);
+      }
+    };
+    xhr.onerror = function(e) {
+      console.error(xhr.statusText);
+    };
+    xhr.send();
+
+  </script>
   </body>
 </html>

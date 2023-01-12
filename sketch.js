@@ -1,9 +1,8 @@
 let cols = 40;
 let rows = 30; //this ought to be set by the json save files probably
-//view icon is 20x20 I think
-//fight animation is 40x60
-//map is probably 40x30
-//map icon could be 3x3 but most icons would be 1x2 inside that
+
+//map is 40x30
+
 let blockWidth = 20;
 let blockHeight = 15;
 let swatches = [];
@@ -31,7 +30,7 @@ let sampleImage; // this is a resized version of the photo, where 1px = 1 block
 let resultImage; // this is a p5Graphics objects that contains the results of the process
 
 let swatchesPaths;
-swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png','assets/macroblock/Block9.png','assets/macroblock/Block10.png', 'assets/macroblock/Block11.png','assets/macroblock/Block12.png','assets/macroblock/Block13.png','assets/macroblock/Block14.png','assets/macroblock/Block15.png','assets/macroblock/Block16.png','assets/macroblock/Block17.png','assets/macroblock/Block18.png','assets/macroblock/Block19.png','assets/macroblock/Block20.png','assets/macroblock/Block21.png','assets/macroblock/Block22.png','assets/macroblock/Block23.png','assets/macroblock/Block24.png','assets/macroblock/Block25.png','assets/macroblock/Block26.png','assets/macroblock/Block27.png','assets/macroblock/Block28.png','assets/macroblock/Block29.png'];
+swatchesPaths = ['assets/macroblock/Block175.png','assets/macroblock/Block156.png','assets/macroblock/Block155.png','assets/macroblock/Block122.png','assets/macroblock/Block124.png','assets/macroblock/Block123.png','assets/macroblock/Block154.png','assets/macroblock/Block149.png',];
 let hoverX = 0;
 let hoverY = 0;
 
