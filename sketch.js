@@ -107,10 +107,16 @@ function saveAnim(){   /// JSON SAVING HERE
   // var output = JSON.stringify(frames);
   // save(output, "animation.json");
   let json = {}; // new  JSON Object
-  json.frameRate = 12;
-  json.name = 'Wileys animationnnnnn';
-  json.frameCount = frames.length;
-  json.framesData = frames;
+  //json.frameRate = 12;
+  //json.name = 'Wileys animationnnnnn';
+  json.compressionlevel = -1;
+  json.height= 30;
+  json.infinite = false;
+  //json.frameCount = frames.length;
+  json.layers = []
+  json.layers.push({data : frames});
+
+  //saveJSON(json, 'testSave.json');
   saveJSON(json, 'testSave.json');
 }
 
@@ -119,9 +125,9 @@ function parseJson(data){
   console.log("frame rate: " + data.frameRate );
   console.log("name: " + data.name );
   console.log("number of frames: " + data.frameCount);
-  console.log("data: " + data.framesData);
+  console.log("data: " + data.layers);
   frames = [];
-  frames = data.framesData;
+  frames = data.layers;
   currentFrame = 0;
   loadFrame(currentFrame);
   updateFramesUI();

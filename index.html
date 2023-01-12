@@ -19,17 +19,19 @@
 
     <div id="sketch"></div>
     <div class="ui" >
-      transforms
-      <div class="transforms">
+      
+      <!--<div class="transforms">
+        transforms
         <button onclick="cyclePalette();" class="mid" id="tool3-button">♽</button>
         <button onclick="flipFrameHorizontal();" class="mid" id="tool3-button">↔️</button>
-      </div>
-      tools
-      <div class="tools">
+      </div>-->
+      
+      <!--<div class="tools">
+        tools
         <button onclick="setTool(0);" class="mid" id="tool1-button">✏︎</button>
         <button onclick="setTool(1);" class="mid" id="tool2-button">◻︎</button>
         <button onclick="setTool(3);" class="mid" id="tool4-button">🪣</button>
-      </div>
+      </div>-->
       shaded tiles
       <div class="palette">
           <button onclick="setSwatch(0);" title="0" class="mini"><img srcset="/assets/macroblock/Block175.png"/></button>
@@ -41,12 +43,12 @@
           <button onclick="setSwatch(6);" title="6" class="mini"><img srcset="/assets/macroblock/Block149.png"/></button>
           <button onclick="setSwatch(7);" title="6" class="mini"><img srcset="/assets/macroblock/Block0.png"/></button>
       </div>
-      glyph tiles
+      <!--glyph tiles
       <div class="palette" >
         <ul id="glyphs">
-          
+
         </ul>
-      </div>
+      </div>-->
       
       <div class="row">
         <div id="frames-amount">frames: <span id="totalFramesText">1</span></div>
@@ -88,8 +90,9 @@
       </div>
     </div> -->
 
-  <script>// Get the list element where the images will be appended
-    const list = document.getElementById("palette");
+  <script>
+    // Get the list element where the images will be appended
+    const list = document.getElementById("glyphs");
 
     // The local path to the directory containing the images
     const dir = "assets/macroblock/";
