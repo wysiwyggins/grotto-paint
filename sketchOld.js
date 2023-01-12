@@ -24,7 +24,7 @@ let sampleImage; // this is a resized version of the photo, where 1px = 1 block
 let resultImage; // this is a p5Graphics objects that contains the results of the process
 
 let swatchesPaths;
-swatchesPaths = ['assets/macroblock/Block1.png','assets/macroblock/Block2.png','assets/macroblock/Block3.png','assets/macroblock/Block4.png','assets/macroblock/Block5.png','assets/macroblock/Block6.png','assets/macroblock/Block7.png','assets/macroblock/Block8.png','assets/macroblock/Block0.png','assets/macroblock/Block9.png','assets/macroblock/Block10.png', 'assets/macroblock/Block11.png','assets/macroblock/Block12.png','assets/macroblock/Block13.png','assets/macroblock/Block14.png','assets/macroblock/Block15.png','assets/macroblock/Block16.png','assets/macroblock/Block17.png','assets/macroblock/Block18.png','assets/macroblock/Block19.png','assets/macroblock/Block20.png','assets/macroblock/Block21.png','assets/macroblock/Block22.png'];
+swatchesPaths = ['assets/tiles/Block1.png','assets/tiles/Block2.png','assets/tiles/Block3.png','assets/tiles/Block4.png','assets/tiles/Block5.png','assets/tiles/Block6.png','assets/tiles/Block7.png','assets/tiles/Block8.png','assets/tiles/Block0.png','assets/tiles/Block9.png','assets/tiles/Block10.png', 'assets/tiles/Block11.png','assets/tiles/Block12.png','assets/tiles/Block13.png','assets/tiles/Block14.png','assets/tiles/Block15.png','assets/tiles/Block16.png','assets/tiles/Block17.png','assets/tiles/Block18.png','assets/tiles/Block19.png','assets/tiles/Block20.png','assets/tiles/Block21.png','assets/tiles/Block22.png'];
 let hoverX = 0;
 let hoverY = 0;
 

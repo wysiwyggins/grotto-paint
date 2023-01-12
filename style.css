@@ -100,5 +100,5 @@ ul.key li:before {
 }
 
 li.arrow:before {
-  background-image: url(/assets/macroblock/Block14.png), url(/assets/macroblock/Block19.png);
+  background-image: url(/assets/tiles/Block14.png), url(/assets/tiles/Block19.png);
 }/*# sourceMappingURL=style.css.map */
