@@ -18,7 +18,8 @@ canvas {
 .ui {
   display: flex;
   flex-direction: column;
-  max-height: 400px;
+  min-height: 450px;
+  height: 100%;
   border: 2px solid #ccc;
   border-radius: 5px;
   margin: 10px;

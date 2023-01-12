@@ -30,7 +30,7 @@ let sampleImage; // this is a resized version of the photo, where 1px = 1 block
 let resultImage; // this is a p5Graphics objects that contains the results of the process
 
 let swatchesPaths;
-swatchesPaths = ['assets/macroblock/Block175.png','assets/macroblock/Block156.png','assets/macroblock/Block155.png','assets/macroblock/Block123.png','assets/macroblock/Block124.png','assets/macroblock/Block154.png','assets/macroblock/Block149.png',];
+swatchesPaths = ['assets/macroblock/Block175.png','assets/macroblock/Block156.png','assets/macroblock/Block155.png','assets/macroblock/Block123.png','assets/macroblock/Block124.png','assets/macroblock/Block154.png','assets/macroblock/Block149.png','assets/macroblock/Block0.png',];
 let hoverX = 0;
 let hoverY = 0;
 
