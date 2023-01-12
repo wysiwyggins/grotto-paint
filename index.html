@@ -31,10 +31,14 @@
         <button onclick="setTool(3);" class="mid" id="tool4-button">🪣</button>
       </div>
       tile palette
-      <div class="palette">
-        <ul id="palette">
-          <!--<button onclick="setSwatch(0);" title="0" class="mini"><img srcset="/assets/macroblock/Block0.png"/></button>-->
-        </ul>
+      <div class="palette" id="palette">
+          <button onclick="setSwatch(0);" title="0" class="mini"><img srcset="/assets/macroblock/Block175.png"/></button>
+          <button onclick="setSwatch(1);" title="1" class="mini"><img srcset="/assets/macroblock/Block156.png"/></button>
+          <button onclick="setSwatch(2);" title="2" class="mini"><img srcset="/assets/macroblock/Block155.png"/></button>
+          <button onclick="setSwatch(3);" title="3" class="mini"><img srcset="/assets/macroblock/Block123.png"/></button>
+          <button onclick="setSwatch(4);" title="4" class="mini"><img srcset="/assets/macroblock/Block124.png"/></button>
+          <button onclick="setSwatch(5);" title="5" class="mini"><img srcset="/assets/macroblock/Block154.png"/></button>
+          <button onclick="setSwatch(6);" title="6" class="mini"><img srcset="/assets/macroblock/Block149.png"/></button>
       </div>
       
       <div class="row">
@@ -81,7 +85,7 @@
     const list = document.getElementById("palette");
 
     // The local path to the directory containing the images
-    const dir = "assets/macroblock";
+    const dir = "assets/macroblock/";
 
     let counter = 1;
 
@@ -91,13 +95,12 @@
     xhr.onload = function() {
       if (xhr.status === 200) {
         // parse response text as json
+        console.log(xhr.responseText);
         const files = JSON.parse(xhr.responseText);
         // Loop through each file in the directory
         files.forEach(file => {
           // Check if the file is an image
           if (file.type.match(/image.*/)) {
-            // Create a <li> element to hold the button
-            const li = document.createElement("li");
             // Create a <button> element
             const btn = document.createElement("button");
             // Create an <img> element and set its src to the file path
@@ -112,10 +115,8 @@
             counter++;
             // Append the <img> element to the <button>
             btn.appendChild(img);
-            // Append the <button> element to the <li>
-            li.appendChild(btn);
-            // Append the <li> element to the <ul>
-            list.appendChild(li);
+            // Append the <btn> element to the <div>
+            list.appendChild(btn);
           }
         });
       } else {
