@@ -14,6 +14,7 @@ let toolMode;
 //let frameMap = [];
 //frames is all the frames of frameMaps. These would all go into the json output
 let frames = [];
+let frames1d = [];
 
 let importButton;
 let frameAdvanceButton;
@@ -109,12 +110,14 @@ function saveAnim(){   /// JSON SAVING HERE
   let json = {}; // new  JSON Object
   //json.frameRate = 12;
   //json.name = 'Wileys animationnnnnn';
+  frames1d = convert2dArrayTo1dArray(frames);
   json.compressionlevel = -1;
   json.height= 30;
   json.infinite = false;
   //json.frameCount = frames.length;
   json.layers = []
-  json.layers.push({data : frames});
+  json.layers.push({data : frames}); //the old 2d one
+  //json.layers.push({data : frames1d}); //this still looked like the 2d array???
 
   //saveJSON(json, 'testSave.json');
   saveJSON(json, 'testSave.json');
@@ -311,6 +314,19 @@ function setTool(toolIndex){
 
 function saveFrame(){
   save(resultImage, "frame-"+currentFrame+".png");
+}
+
+function convert2dArrayTo1dArray(twoDimensionalArray){
+  //yes it's crazy that we are making a 2d array and then converting it to 
+  //1d w height instead of just making a 1d height array maybe refactor later
+  let oneDimensionalArray = [];
+  for (let i = 0; i < twoDimensionalArray.length; i++) {
+    for (let j = 0; j < twoDimensionalArray[i].length; j++) {
+        // Push the current element onto the one-dimensional array
+        oneDimensionalArray.push(twoDimensionalArray[i][j]);
+    }
+  }
+  return oneDimensionalArray;
 }
 
 
