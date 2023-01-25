@@ -50,7 +50,7 @@ function array2d(width, height, value = 8) {
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/graytest.png');
+  sourceImage = loadImage('assets/gray.png');
   
 }
 
@@ -103,25 +103,6 @@ function loadAnim(){
 }
 
 
-function saveAnim(){   /// JSON SAVING HERE
-  // let testObject = "{"
-  // var output = JSON.stringify(frames);
-  // save(output, "animation.json");
-  let json = {}; // new  JSON Object
-  //json.frameRate = 12;
-  //json.name = 'Wileys animationnnnnn';
-  frames1d = convert2dArrayTo1dArray(frames);
-  json.compressionlevel = -1;
-  json.height= 30;
-  json.infinite = false;
-  //json.frameCount = frames.length;
-  json.layers = []
-  json.layers.push({data : frames}); //the old 2d one
-  //json.layers.push({data : frames1d}); //this still looked like the 2d array???
-
-  //saveJSON(json, 'testSave.json');
-  saveJSON(json, 'testSave.json');
-}
 
 function parseJson(data){
   console.log("Json loaded succesfully");
@@ -316,18 +297,6 @@ function saveFrame(){
   save(resultImage, "frame-"+currentFrame+".png");
 }
 
-function convert2dArrayTo1dArray(twoDimensionalArray){
-  //yes it's crazy that we are making a 2d array and then converting it to 
-  //1d w height instead of just making a 1d height array maybe refactor later
-  let oneDimensionalArray = [];
-  for (let i = 0; i < twoDimensionalArray.length; i++) {
-    for (let j = 0; j < twoDimensionalArray[i].length; j++) {
-        // Push the current element onto the one-dimensional array
-        oneDimensionalArray.push(twoDimensionalArray[i][j]);
-    }
-  }
-  return oneDimensionalArray;
-}
 
 
 //unused
@@ -503,3 +472,53 @@ function processImage(){
   }
 
 }
+
+function saveAnim(){   /// JSON SAVING HERE
+  // let testObject = "{"
+  // var output = JSON.stringify(frames);
+  // save(output, "animation.json");
+  let json = {}; // new  JSON Object
+  //json.frameRate = 12;
+  //json.name = 'Wileys animationnnnnn';
+  //let frames1d = convert2dArrayTo1dArray(frames);
+ 
+  json.compressionlevel = -1;
+  json.height= 30;
+  json.infinite = false;
+  //json.frameCount = frames.length;
+  json.layers = []
+  //json.layers.push({data : frames}); //the old 2d one
+
+  for(let i = 0 ; i < frames.length ; i++){
+    let currentFrame = get1Frame(i, frames);
+    json.layers.push({data : currentFrame}); //this still looked like the 2d array???
+  }
+  //saveJSON(json, 'testSave.json');
+  saveJSON(json, 'testSave.json');
+}
+
+function get1Frame(index, frames){
+  let frameAs1dArray = convert2dArrayTo1dArray(frames[index]);
+  //console.log(frames[index]);
+  return(frameAs1dArray);
+
+}
+
+
+function convert2dArrayTo1dArray(twoDimensionalArray){ // twoDimensionalArray is "frames"
+  //yes it's crazy that we are making a 2d array and then converting it to 
+  //1d w height instead of just making a 1d height array maybe refactor later
+  let oneDimensionalArray = [];
+  console.log(twoDimensionalArray);
+ 
+  for (let y = 0; y < twoDimensionalArray[0].length; y++) {
+  for (let x = 0; x < twoDimensionalArray.length; x++) {
+     
+        // Push the current element onto the one-dimensional array
+        oneDimensionalArray.push(twoDimensionalArray[x][y]);
+        //console.log(twoDimensionalArray[i][j]);
+    }
+  }
+  return oneDimensionalArray;
+}
+
