@@ -492,6 +492,17 @@ function saveAnim(){   /// JSON SAVING HERE
   for(let i = 0 ; i < frames.length ; i++){
     let currentFrame = get1Frame(i, frames);
     json.layers.push({data : currentFrame}); //this still looked like the 2d array???
+    json.layers[i].height = rows;
+    json.layers[i].id = i;
+    json.layers[i].name = "frame " + i;
+    json.layers[i].opacity = 1;
+    json.layers[i].type = "tilelayer";
+    json.layers[i].visible = true;
+    json.layers[i].width = cols;
+    json.layers[i].x = 0;
+    json.layers[i].y = 0;
+
+
   }
   //saveJSON(json, 'testSave.json');
   saveJSON(json, 'testSave.json');
