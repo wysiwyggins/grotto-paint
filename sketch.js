@@ -40,6 +40,8 @@ let snapY;
 
 let frameTimer;
 
+let extraMetaData;
+
 function array2d(width, height, value = 8) {
   //this was loren's way of filling a 2d array, swatch 8 is a white tile
   let array = Array.from(Array(width), () => new Array(height).fill(value))
@@ -51,6 +53,7 @@ function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
   sourceImage = loadImage('assets/gray.png');
+  extraMetaData = loadJSON('assets/junk.json');
   
 }
 
@@ -481,6 +484,8 @@ function saveAnim(){   /// JSON SAVING HERE
   //json.frameRate = 12;
   //json.name = 'Wileys animationnnnnn';
   //let frames1d = convert2dArrayTo1dArray(frames);
+
+  json = extraMetaData;
  
   json.compressionlevel = -1;
   json.height= 30;
@@ -505,6 +510,7 @@ function saveAnim(){   /// JSON SAVING HERE
 
   }
   //saveJSON(json, 'testSave.json');
+ 
   saveJSON(json, 'testSave.json');
 }
 
@@ -532,4 +538,5 @@ function convert2dArrayTo1dArray(twoDimensionalArray){ // twoDimensionalArray is
   }
   return oneDimensionalArray;
 }
+
 

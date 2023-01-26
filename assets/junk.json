@@ -1,0 +1,32 @@
+{
+ "nextlayerid":20,
+ "nextobjectid":1,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.9.2",
+ "tileheight":30,
+ "tilesets":[
+        {
+         "columns":23,
+         "firstgid":1,
+         "image":"..\/spritesheets\/grotto40x30-cp437@1x.png",
+         "imageheight":330,
+         "imagewidth":920,
+         "margin":0,
+         "name":"grotto40x30-cp437@1x",
+         "spacing":0,
+         "tilecount":253,
+         "tileheight":30,
+         "tilerendersize":"grid",
+         "tiles":[
+                {
+                 "class":"walkable",
+                 "id":19
+                }],
+         "tilewidth":40
+        }],
+ "tilewidth":40,
+ "type":"map",
+ "version":"1.9",
+ "width":40
+}
