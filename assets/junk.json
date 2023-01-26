@@ -9,7 +9,7 @@
         {
          "columns":23,
          "firstgid":1,
-         "image":"..\/spritesheets\/grotto40x30-cp437@1x.png",
+         "image":"~\/Development\/Grotto\/src\/static\/grottopaint/spritesheets\/grotto40x30-cp437@1x.png",
          "imageheight":330,
          "imagewidth":920,
          "margin":0,

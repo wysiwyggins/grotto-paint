@@ -41,6 +41,7 @@ let snapY;
 let frameTimer;
 
 let extraMetaData;
+let tileMappings;
 
 function array2d(width, height, value = 8) {
   //this was loren's way of filling a 2d array, swatch 8 is a white tile
@@ -54,11 +55,14 @@ function preload(){
   loadSwatches();
   sourceImage = loadImage('assets/gray.png');
   extraMetaData = loadJSON('assets/junk.json');
+  tileMappings = loadStrings('assets/tileMappings.txt');
   
 }
 
 
 function setup() {
+
+  //console.log(tileMappings);
    
   canvas = createCanvas(cols * blockWidth, rows * blockHeight);
   
@@ -532,7 +536,11 @@ function convert2dArrayTo1dArray(twoDimensionalArray){ // twoDimensionalArray is
   for (let x = 0; x < twoDimensionalArray.length; x++) {
      
         // Push the current element onto the one-dimensional array
-        oneDimensionalArray.push(twoDimensionalArray[x][y]);
+        let unMappedTile = twoDimensionalArray[x][y];
+        console.log(unMappedTile);
+        let row = split(tileMappings[unMappedTile], ",");
+        let mappedTile = row[1];
+        oneDimensionalArray.push(mappedTile);
         //console.log(twoDimensionalArray[i][j]);
     }
   }
