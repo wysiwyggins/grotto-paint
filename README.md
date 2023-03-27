@@ -1,3 +1,5 @@
+[!tilemapped image](https://wileywiggins.com/images/grotto-title.png)
+
 # Grotto Paint
 
 This started as a tile-painting program for making art for the game [Grotto](https://grotto.wileywiggins.com)
