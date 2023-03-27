@@ -1,4 +1,4 @@
-[!tilemapped image](https://wileywiggins.com/images/grotto-title.png)
+![tilemapped image](https://wileywiggins.com/images/grotto-title.png)
 
 # Grotto Paint
 
