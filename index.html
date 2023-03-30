@@ -33,7 +33,7 @@
         <button onclick="setTool(3);" class="mid" id="tool4-button">🪣</button>
       </div>-->
       shaded tiles
-      <div class="palette">
+      <div class="palette shades">
           <button onclick="setSwatch(0);" title="0" class="mini"><img srcset="/assets/tiles/Block175.png"/></button>
           <button onclick="setSwatch(1);" title="1" class="mini"><img srcset="/assets/tiles/Block156.png"/></button>
           <button onclick="setSwatch(2);" title="2" class="mini"><img srcset="/assets/tiles/Block155.png"/></button>
@@ -43,13 +43,68 @@
           <button onclick="setSwatch(6);" title="6" class="mini"><img srcset="/assets/tiles/Block149.png"/></button>
           <button onclick="setSwatch(7);" title="6" class="mini"><img srcset="/assets/tiles/Block0.png"/></button>
       </div>
-      <!--glyph tiles
-      <div class="palette" >
+      glyph tiles
+      <div class="palette glyphs" >
         <ul id="glyphs">
 
         </ul>
-      </div>-->
-      
+      </div>
+      rules
+      <div class="rules">
+        <div class="input1 rule-grid">
+          <button class="mini"></button>
+          <button class="mini"></button>
+          <button class="mini"></button>
+          <button class="mini"></button>
+          <button class="mini"></button>
+          <button class="mini"></button>
+          <button class="mini"></button>
+          <button class="mini"></button>
+          <button class="mini"></button>
+        </div>
+        <div class="rule-divider">
+          =>
+        </div>
+        <div class="output1 rule-grid">
+          <button class="mini"></button>
+          <button class="mini"></button>
+          <button class="mini"></button>
+          <button class="mini"></button>
+          <button class="mini"></button>
+          <button class="mini"></button>
+          <button class="mini"></button>
+          <button class="mini"></button>
+          <button class="mini"></button>
+        </div>
+      </div>
+      <div class="rules">
+        <div class="input2 rule-grid">
+          <button class="mini when1"  data-index="0"></button>
+          <button class="mini when1"  data-index="1"></button>
+          <button class="mini when1"  data-index="2"></button>
+          <button class="mini when1"  data-index="3"></button>
+          <button class="mini when1"  data-index="4"></button>
+          <button class="mini when1"  data-index="5"></button>
+          <button class="mini when1"  data-index="6"></button>
+          <button class="mini when1"  data-index="7"></button>
+          <button class="mini when1"  data-index="8"></button>
+        </div>
+        <div class="rule-divider">
+          =>
+        </div>
+        <div class="output2 rule-grid">
+          <button class="mini then1"  data-index="0"></button>
+          <button class="mini then1"  data-index="1"></button>
+          <button class="mini then1"  data-index="2"></button>
+          <button class="mini then1"  data-index="3"></button>
+          <button class="mini then1"  data-index="4"></button>
+          <button class="mini then1"  data-index="5"></button>
+          <button class="mini then1"  data-index="6"></button>
+          <button class="mini then1"  data-index="7"></button>
+          <button class="mini then1"  data-index="8"></button>
+        </div>
+      </div>
+
       <div class="row">
         <div id="frames-amount">frames: <span id="totalFramesText">1</span></div>
         <div class = "frames">current frame: <span id="currentFrameText">1</span></div>

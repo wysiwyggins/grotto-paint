@@ -43,6 +43,7 @@ let frameTimer;
 let extraMetaData;
 let tileMappings;
 
+
 function array2d(width, height, value = 8) {
   //this was loren's way of filling a 2d array, swatch 8 is a white tile
   let array = Array.from(Array(width), () => new Array(height).fill(value))
@@ -77,6 +78,26 @@ function setup() {
   toolMode = 0;
   
   //frames[currentFrame] = frameMap;
+
+  const whenButtons1 = document.querySelectorAll('.when1');
+  const thenButtons1 = document.querySelectorAll('.then1');
+
+  whenButtons1.forEach(button => {
+    button.addEventListener('click', function() {
+      let index = this.dataset.index;
+      this.style.backgroundImage = `url("Block${index}.png")`;
+      console.log("I tried changing a button background");
+    });
+  });
+
+  thenButtons1.forEach(button => {
+    button.addEventListener('click', function() {
+      let index = this.dataset.index;
+      this.style.backgroundImage = `url("Block${index}.png")`;
+      console.log("I tried changing a button background");
+    });
+  });
+
 }
 
 function mouseClicked() {
@@ -161,62 +182,6 @@ function updateFramesUI(){
   
 }
 
-function drawroom(exits, roomColor){
-  //the simplest version of this would draw a square big enough to have the right number of exit paths
-  //see https://wileywiggins.com//images/grotto/smallroom.png for an example
-  //we probably need three layers going forward, the background tiles, color blocks under that, and a sprite layer on top?
-  var wallTopTile = 7;
-  var wallInnerFrontTile = 3;
-  var wallOuterFrontTile = 0;
-  var floorTile = 18;
-  var doorTopTile = 21;
-  var doorBottomTile = 22;
-
-  //* figure out how many doors per side, and how long each side is
-  var doorsPerSide = Math.ceil(doorsPerSide);
-  var wallLength = (doorsPerSide *2)+1;
-
-  //* figure out what the center column and row are
-  var originX = cols/2;
-  var originY = rows/2;
-  
-  //* space the doors apart from one another
-  var gapValue = wallLength/(doorsPerSide +1)
-
-  //try drawing
-  //* begin drawing in the top left corner of the room, half of x subtracted from the center col
-
-
-  console.log("drew a room");
-}
-
-function cyclePalette(){
-  //addFrame();
-  // I don't know why this isn't working yet and hopefully fixing it will lead to a more
-  // usable add tile function that I need for room drawing etc.
-  for(var i = 0; i < currentFrame.length; i++) {
-    var thisCol = currentFrame[i];
-    for(var j = 0; j < thisCol.length; j++) {
-      var thisFrameTile = frames[currentFrame][thisCol][j];
-      if(thisFrameTile < swatches.length){
-        //frames[currentFrame][thisCol][j] +=1; 
-        addTileToArray(thisFrameTile + 1, (thisCol), (j));
-        resultImage.updatePixels();
-      } else {
-        //frames[currentFrame][thisCol][j] = 0;
-        addTileToArray(0, (thisCol), (j));
-        resultImage.updatePixels();
-      }
-    }
-  }
-  loadFrame(currentFrame);
-}
-
-
-function flipFrameHorizontal(){
-  console.log("flip frame");
-  //it will probably be useful to have a horizontal flip function for animation
-}
 
 function advanceFrame(){
   console.log("next");
@@ -366,7 +331,7 @@ function draw() {
   hoverX = mouseX / blockWidth;
   hoverY = mouseY / blockHeight;
   handleBrush();
- 
+
 }
 
 
@@ -546,5 +511,6 @@ function convert2dArrayTo1dArray(twoDimensionalArray){ // twoDimensionalArray is
   }
   return oneDimensionalArray;
 }
+
 
 

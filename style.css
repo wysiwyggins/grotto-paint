@@ -38,6 +38,16 @@ canvas {
   display: grid;
   grid-template-columns: repeat(10, auto);
 }
+.rules {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  background-color: #ccc;
+  border-radius: 4px;
+  margin: 4px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
 
 button.mini {
   width: 20px;
@@ -54,6 +64,20 @@ button.mini {
 button.mini img {
   width: 20px;
   height: 15px;
+}
+
+.rule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 20px);
+  grid-template-rows: repeat(3, 15px);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.rule-divider {
+  padding-top: 10px;
+}
+.rule-grid button:hover {
+  background-color: #bbb;
 }
 
 button.mid {
