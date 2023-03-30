@@ -79,13 +79,15 @@ function setup() {
   
   //frames[currentFrame] = frameMap;
 
-  const whenButtons1 = document.querySelectorAll('.when1');
-  const thenButtons1 = document.querySelectorAll('.then1');
+  const whenButtons1 = document.querySelectorAll('.when');
+  const thenButtons1 = document.querySelectorAll('.then');
+
+  const spriteGrid = select('.sprite-grid');
 
   whenButtons1.forEach(button => {
     button.addEventListener('click', function() {
       let index = this.dataset.index;
-      this.style.backgroundImage = `url("Block${index}.png")`;
+      this.style.backgroundImage = `url("/assets/tiles/Block${activeSwatch}.png")`;
       console.log("I tried changing a button background");
     });
   });
@@ -93,10 +95,12 @@ function setup() {
   thenButtons1.forEach(button => {
     button.addEventListener('click', function() {
       let index = this.dataset.index;
-      this.style.backgroundImage = `url("Block${index}.png")`;
+      this.style.backgroundImage = `url("/assets/tiles/Block${activeSwatch}.png")`;
       console.log("I tried changing a button background");
     });
   });
+
+  
 
 }
 

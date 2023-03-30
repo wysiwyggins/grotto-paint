@@ -1,17 +1,31 @@
+@charset "UTF-8";
+
+$grid-width: 920px;
+$grid-height: 330px;
+$button-width: 20px;
+$button-height: 15px;
+$button-count: 276;
+$spritesheet-width: 920px;
+$spritesheet-height: 330px;
+$spritesheet-cell-width: 40px;
+$spritesheet-cell-height: 30px;
+
+
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: auto;
   padding: 0;
   display: flex;
   flex-direction: row;
-}
 
-canvas {
-  display: block;
-  /*cursor: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px'><text y='20'>✏️</text></svg>"), crosshair;*/
+  canvas {
+    display: block;
+    //cursor: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px'><text y='20'>✏️</text></svg>"), crosshair;
+  }
 }
 
 .ui {
@@ -23,59 +37,112 @@ canvas {
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
-}
 
-.palette, .tools, .frames {
-  padding: 4px;
-  background-color: #ccc;
-  border-radius: 4px;
-  margin: 4px;
-  flex-wrap: wrap;
-}
+  .palette,
+  .tools,
+  .frames {
+    padding: 4px;
+    background-color: #ccc;
+    border-radius: 4px;
+    margin: 4px;
+    flex-wrap: wrap;
+  }
+  .palette {
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+  }
 
-.palette {
-  display: grid;
-  grid-template-columns: repeat(10, auto);
-}
+  .rules {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ccc;
+    border-radius: 4px;
+    margin: 4px;
+    flex-wrap: wrap;
+    padding: 20px;
 
+    .rule-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 20px);
+      grid-template-rows: repeat(3, 15px);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
 
-button.mini{
-  width: 20px;
-  height: 15px;
-  display: block;
-  padding: 0;
-  border-radius: 0;
-  border: none;
-  margin: 2px;
-  box-sizing: border-box;
-  line-height: 22px;
-  text-align: center;
-  img {
+      button:hover {
+        background-color: #bbb;
+      }
+    }
+
+    .rule-divider {
+      padding-top: 10px;
+    }
+  }
+
+  button.mini {
     width: 20px;
     height: 15px;
-  }
-}
+    display: block;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    margin: 2px;
+    box-sizing: border-box;
+    line-height: 22px;
+    text-align: center;
+    background-size: contain;
 
-button.mid {
-  width: 34px;
-  height: 34px;
-  padding: 0;
-  border: 0px;
-  border-radius: 4px;
-  margin: 2px;
-  font-size: 30px;
-  line-height: 34px;
-  text-align: center;
-  &:active {
-    background-color: rgb(225, 225, 40);
+    img {
+      width: 20px;
+      height: 15px;
+    }
   }
-  &.current {
-    background-color: rgb(158, 185, 188);
-  }
-}
 
-.row {
-  margin: 5px;
+  button.mid {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 0px;
+    border-radius: 4px;
+    margin: 2px;
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+
+    &:active {
+      background-color: rgb(225, 225, 40);
+    }
+
+    &.current {
+      background-color: rgb(158, 185, 188);
+    }
+  }
+
+  .sprite-grid {
+    display: grid;
+    grid-template-columns: repeat(23, 1fr);
+    gap: 0px;
+
+    button {
+      width: $button-width;
+      height: $button-height;
+      background-image: url('/assets/grotto40x30-cp437@2x.png');
+      @for $i from 1 through ($button-count) {
+        &:nth-child(#{$i}) {
+          $col: ceil($i / 23);
+          $row: $i - (($col - 1) * 23);
+          $x: ($row - 1) * ($spritesheet-cell-width);
+          $y: ($col - 1) * ($spritesheet-cell-height);
+          background-position: -$x - $y;
+          background-size: $spritesheet-width/2 $spritesheet-height/2;
+        }
+      }
+    }
+  }
+
+  .row {
+    margin: 5px;
+  }
 }
 
 ul.key {
