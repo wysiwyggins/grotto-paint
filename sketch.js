@@ -31,7 +31,7 @@ let sampleImage; // this is a resized version of the photo, where 1px = 1 block
 let resultImage; // this is a p5Graphics objects that contains the results of the process
 
 let swatchesPaths;
-swatchesPaths = ['assets/tiles/Block175.png','assets/tiles/Block156.png','assets/tiles/Block155.png','assets/tiles/Block123.png','assets/tiles/Block124.png','assets/tiles/Block154.png','assets/tiles/Block149.png','assets/tiles/Block0.png',];
+swatchesPaths = ['assets/tiles/Block216.png','assets/tiles/Block127.png','assets/tiles/Block177.png','assets/tiles/Block176.png','assets/tiles/Block130.png','assets/tiles/Block175.png','assets/tiles/Block133.png','assets/tiles/Block0.png',];
 let hoverX = 0;
 let hoverY = 0;
 

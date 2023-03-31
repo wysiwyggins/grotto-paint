@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 $grid-width: 920px;
 $grid-height: 330px;
 $button-width: 20px;
@@ -9,7 +10,8 @@ $spritesheet-width: 920px;
 $spritesheet-height: 330px;
 $spritesheet-cell-width: 40px;
 $spritesheet-cell-height: 30px;
-
+$spritesheet-cols: 23;
+$spritesheet-rows: 12;
 
 * {
   box-sizing: border-box;
@@ -124,17 +126,10 @@ body {
     gap: 0px;
 
     button {
-      width: $button-width;
-      height: $button-height;
-      background-image: url('/assets/grotto40x30-cp437@2x.png');
-      @for $i from 1 through ($button-count) {
-        &:nth-child(#{$i}) {
-          $col: ceil($i / 23);
-          $row: $i - (($col - 1) * 23);
-          $x: ($row - 1) * ($spritesheet-cell-width);
-          $y: ($col - 1) * ($spritesheet-cell-height);
-          background-position: -$x - $y;
-          background-size: $spritesheet-width/2 $spritesheet-height/2;
+      background-size: 20px 15px;
+      @for $i from 0 through 275 {
+        &:nth-child(#{$i + 1}) {
+          background-image: url('/assets/tiles/Block#{$i}.png');
         }
       }
     }

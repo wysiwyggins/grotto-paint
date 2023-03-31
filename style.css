@@ -100,1113 +100,835 @@ body canvas {
   gap: 0px;
 }
 .ui .sprite-grid button {
-  width: 20px;
-  height: 15px;
-  background-image: url("/assets/grotto40x30-cp437@2x.png");
+  background-size: 20px 15px;
 }
 .ui .sprite-grid button:nth-child(1) {
-  background-position: 0px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block0.png");
 }
 .ui .sprite-grid button:nth-child(2) {
-  background-position: -40px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block1.png");
 }
 .ui .sprite-grid button:nth-child(3) {
-  background-position: -80px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block2.png");
 }
 .ui .sprite-grid button:nth-child(4) {
-  background-position: -120px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block3.png");
 }
 .ui .sprite-grid button:nth-child(5) {
-  background-position: -160px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block4.png");
 }
 .ui .sprite-grid button:nth-child(6) {
-  background-position: -200px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block5.png");
 }
 .ui .sprite-grid button:nth-child(7) {
-  background-position: -240px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block6.png");
 }
 .ui .sprite-grid button:nth-child(8) {
-  background-position: -280px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block7.png");
 }
 .ui .sprite-grid button:nth-child(9) {
-  background-position: -320px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block8.png");
 }
 .ui .sprite-grid button:nth-child(10) {
-  background-position: -360px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block9.png");
 }
 .ui .sprite-grid button:nth-child(11) {
-  background-position: -400px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block10.png");
 }
 .ui .sprite-grid button:nth-child(12) {
-  background-position: -440px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block11.png");
 }
 .ui .sprite-grid button:nth-child(13) {
-  background-position: -480px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block12.png");
 }
 .ui .sprite-grid button:nth-child(14) {
-  background-position: -520px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block13.png");
 }
 .ui .sprite-grid button:nth-child(15) {
-  background-position: -560px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block14.png");
 }
 .ui .sprite-grid button:nth-child(16) {
-  background-position: -600px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block15.png");
 }
 .ui .sprite-grid button:nth-child(17) {
-  background-position: -640px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block16.png");
 }
 .ui .sprite-grid button:nth-child(18) {
-  background-position: -680px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block17.png");
 }
 .ui .sprite-grid button:nth-child(19) {
-  background-position: -720px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block18.png");
 }
 .ui .sprite-grid button:nth-child(20) {
-  background-position: -760px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block19.png");
 }
 .ui .sprite-grid button:nth-child(21) {
-  background-position: -800px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block20.png");
 }
 .ui .sprite-grid button:nth-child(22) {
-  background-position: -840px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block21.png");
 }
 .ui .sprite-grid button:nth-child(23) {
-  background-position: -880px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block22.png");
 }
 .ui .sprite-grid button:nth-child(24) {
-  background-position: -30px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block23.png");
 }
 .ui .sprite-grid button:nth-child(25) {
-  background-position: -70px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block24.png");
 }
 .ui .sprite-grid button:nth-child(26) {
-  background-position: -110px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block25.png");
 }
 .ui .sprite-grid button:nth-child(27) {
-  background-position: -150px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block26.png");
 }
 .ui .sprite-grid button:nth-child(28) {
-  background-position: -190px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block27.png");
 }
 .ui .sprite-grid button:nth-child(29) {
-  background-position: -230px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block28.png");
 }
 .ui .sprite-grid button:nth-child(30) {
-  background-position: -270px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block29.png");
 }
 .ui .sprite-grid button:nth-child(31) {
-  background-position: -310px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block30.png");
 }
 .ui .sprite-grid button:nth-child(32) {
-  background-position: -350px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block31.png");
 }
 .ui .sprite-grid button:nth-child(33) {
-  background-position: -390px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block32.png");
 }
 .ui .sprite-grid button:nth-child(34) {
-  background-position: -430px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block33.png");
 }
 .ui .sprite-grid button:nth-child(35) {
-  background-position: -470px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block34.png");
 }
 .ui .sprite-grid button:nth-child(36) {
-  background-position: -510px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block35.png");
 }
 .ui .sprite-grid button:nth-child(37) {
-  background-position: -550px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block36.png");
 }
 .ui .sprite-grid button:nth-child(38) {
-  background-position: -590px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block37.png");
 }
 .ui .sprite-grid button:nth-child(39) {
-  background-position: -630px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block38.png");
 }
 .ui .sprite-grid button:nth-child(40) {
-  background-position: -670px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block39.png");
 }
 .ui .sprite-grid button:nth-child(41) {
-  background-position: -710px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block40.png");
 }
 .ui .sprite-grid button:nth-child(42) {
-  background-position: -750px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block41.png");
 }
 .ui .sprite-grid button:nth-child(43) {
-  background-position: -790px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block42.png");
 }
 .ui .sprite-grid button:nth-child(44) {
-  background-position: -830px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block43.png");
 }
 .ui .sprite-grid button:nth-child(45) {
-  background-position: -870px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block44.png");
 }
 .ui .sprite-grid button:nth-child(46) {
-  background-position: -910px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block45.png");
 }
 .ui .sprite-grid button:nth-child(47) {
-  background-position: -60px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block46.png");
 }
 .ui .sprite-grid button:nth-child(48) {
-  background-position: -100px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block47.png");
 }
 .ui .sprite-grid button:nth-child(49) {
-  background-position: -140px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block48.png");
 }
 .ui .sprite-grid button:nth-child(50) {
-  background-position: -180px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block49.png");
 }
 .ui .sprite-grid button:nth-child(51) {
-  background-position: -220px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block50.png");
 }
 .ui .sprite-grid button:nth-child(52) {
-  background-position: -260px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block51.png");
 }
 .ui .sprite-grid button:nth-child(53) {
-  background-position: -300px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block52.png");
 }
 .ui .sprite-grid button:nth-child(54) {
-  background-position: -340px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block53.png");
 }
 .ui .sprite-grid button:nth-child(55) {
-  background-position: -380px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block54.png");
 }
 .ui .sprite-grid button:nth-child(56) {
-  background-position: -420px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block55.png");
 }
 .ui .sprite-grid button:nth-child(57) {
-  background-position: -460px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block56.png");
 }
 .ui .sprite-grid button:nth-child(58) {
-  background-position: -500px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block57.png");
 }
 .ui .sprite-grid button:nth-child(59) {
-  background-position: -540px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block58.png");
 }
 .ui .sprite-grid button:nth-child(60) {
-  background-position: -580px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block59.png");
 }
 .ui .sprite-grid button:nth-child(61) {
-  background-position: -620px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block60.png");
 }
 .ui .sprite-grid button:nth-child(62) {
-  background-position: -660px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block61.png");
 }
 .ui .sprite-grid button:nth-child(63) {
-  background-position: -700px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block62.png");
 }
 .ui .sprite-grid button:nth-child(64) {
-  background-position: -740px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block63.png");
 }
 .ui .sprite-grid button:nth-child(65) {
-  background-position: -780px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block64.png");
 }
 .ui .sprite-grid button:nth-child(66) {
-  background-position: -820px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block65.png");
 }
 .ui .sprite-grid button:nth-child(67) {
-  background-position: -860px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block66.png");
 }
 .ui .sprite-grid button:nth-child(68) {
-  background-position: -900px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block67.png");
 }
 .ui .sprite-grid button:nth-child(69) {
-  background-position: -940px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block68.png");
 }
 .ui .sprite-grid button:nth-child(70) {
-  background-position: -90px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block69.png");
 }
 .ui .sprite-grid button:nth-child(71) {
-  background-position: -130px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block70.png");
 }
 .ui .sprite-grid button:nth-child(72) {
-  background-position: -170px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block71.png");
 }
 .ui .sprite-grid button:nth-child(73) {
-  background-position: -210px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block72.png");
 }
 .ui .sprite-grid button:nth-child(74) {
-  background-position: -250px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block73.png");
 }
 .ui .sprite-grid button:nth-child(75) {
-  background-position: -290px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block74.png");
 }
 .ui .sprite-grid button:nth-child(76) {
-  background-position: -330px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block75.png");
 }
 .ui .sprite-grid button:nth-child(77) {
-  background-position: -370px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block76.png");
 }
 .ui .sprite-grid button:nth-child(78) {
-  background-position: -410px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block77.png");
 }
 .ui .sprite-grid button:nth-child(79) {
-  background-position: -450px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block78.png");
 }
 .ui .sprite-grid button:nth-child(80) {
-  background-position: -490px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block79.png");
 }
 .ui .sprite-grid button:nth-child(81) {
-  background-position: -530px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block80.png");
 }
 .ui .sprite-grid button:nth-child(82) {
-  background-position: -570px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block81.png");
 }
 .ui .sprite-grid button:nth-child(83) {
-  background-position: -610px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block82.png");
 }
 .ui .sprite-grid button:nth-child(84) {
-  background-position: -650px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block83.png");
 }
 .ui .sprite-grid button:nth-child(85) {
-  background-position: -690px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block84.png");
 }
 .ui .sprite-grid button:nth-child(86) {
-  background-position: -730px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block85.png");
 }
 .ui .sprite-grid button:nth-child(87) {
-  background-position: -770px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block86.png");
 }
 .ui .sprite-grid button:nth-child(88) {
-  background-position: -810px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block87.png");
 }
 .ui .sprite-grid button:nth-child(89) {
-  background-position: -850px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block88.png");
 }
 .ui .sprite-grid button:nth-child(90) {
-  background-position: -890px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block89.png");
 }
 .ui .sprite-grid button:nth-child(91) {
-  background-position: -930px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block90.png");
 }
 .ui .sprite-grid button:nth-child(92) {
-  background-position: -970px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block91.png");
 }
 .ui .sprite-grid button:nth-child(93) {
-  background-position: -120px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block92.png");
 }
 .ui .sprite-grid button:nth-child(94) {
-  background-position: -160px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block93.png");
 }
 .ui .sprite-grid button:nth-child(95) {
-  background-position: -200px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block94.png");
 }
 .ui .sprite-grid button:nth-child(96) {
-  background-position: -240px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block95.png");
 }
 .ui .sprite-grid button:nth-child(97) {
-  background-position: -280px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block96.png");
 }
 .ui .sprite-grid button:nth-child(98) {
-  background-position: -320px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block97.png");
 }
 .ui .sprite-grid button:nth-child(99) {
-  background-position: -360px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block98.png");
 }
 .ui .sprite-grid button:nth-child(100) {
-  background-position: -400px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block99.png");
 }
 .ui .sprite-grid button:nth-child(101) {
-  background-position: -440px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block100.png");
 }
 .ui .sprite-grid button:nth-child(102) {
-  background-position: -480px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block101.png");
 }
 .ui .sprite-grid button:nth-child(103) {
-  background-position: -520px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block102.png");
 }
 .ui .sprite-grid button:nth-child(104) {
-  background-position: -560px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block103.png");
 }
 .ui .sprite-grid button:nth-child(105) {
-  background-position: -600px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block104.png");
 }
 .ui .sprite-grid button:nth-child(106) {
-  background-position: -640px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block105.png");
 }
 .ui .sprite-grid button:nth-child(107) {
-  background-position: -680px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block106.png");
 }
 .ui .sprite-grid button:nth-child(108) {
-  background-position: -720px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block107.png");
 }
 .ui .sprite-grid button:nth-child(109) {
-  background-position: -760px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block108.png");
 }
 .ui .sprite-grid button:nth-child(110) {
-  background-position: -800px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block109.png");
 }
 .ui .sprite-grid button:nth-child(111) {
-  background-position: -840px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block110.png");
 }
 .ui .sprite-grid button:nth-child(112) {
-  background-position: -880px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block111.png");
 }
 .ui .sprite-grid button:nth-child(113) {
-  background-position: -920px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block112.png");
 }
 .ui .sprite-grid button:nth-child(114) {
-  background-position: -960px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block113.png");
 }
 .ui .sprite-grid button:nth-child(115) {
-  background-position: -1000px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block114.png");
 }
 .ui .sprite-grid button:nth-child(116) {
-  background-position: -150px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block115.png");
 }
 .ui .sprite-grid button:nth-child(117) {
-  background-position: -190px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block116.png");
 }
 .ui .sprite-grid button:nth-child(118) {
-  background-position: -230px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block117.png");
 }
 .ui .sprite-grid button:nth-child(119) {
-  background-position: -270px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block118.png");
 }
 .ui .sprite-grid button:nth-child(120) {
-  background-position: -310px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block119.png");
 }
 .ui .sprite-grid button:nth-child(121) {
-  background-position: -350px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block120.png");
 }
 .ui .sprite-grid button:nth-child(122) {
-  background-position: -390px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block121.png");
 }
 .ui .sprite-grid button:nth-child(123) {
-  background-position: -430px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block122.png");
 }
 .ui .sprite-grid button:nth-child(124) {
-  background-position: -470px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block123.png");
 }
 .ui .sprite-grid button:nth-child(125) {
-  background-position: -510px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block124.png");
 }
 .ui .sprite-grid button:nth-child(126) {
-  background-position: -550px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block125.png");
 }
 .ui .sprite-grid button:nth-child(127) {
-  background-position: -590px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block126.png");
 }
 .ui .sprite-grid button:nth-child(128) {
-  background-position: -630px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block127.png");
 }
 .ui .sprite-grid button:nth-child(129) {
-  background-position: -670px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block128.png");
 }
 .ui .sprite-grid button:nth-child(130) {
-  background-position: -710px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block129.png");
 }
 .ui .sprite-grid button:nth-child(131) {
-  background-position: -750px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block130.png");
 }
 .ui .sprite-grid button:nth-child(132) {
-  background-position: -790px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block131.png");
 }
 .ui .sprite-grid button:nth-child(133) {
-  background-position: -830px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block132.png");
 }
 .ui .sprite-grid button:nth-child(134) {
-  background-position: -870px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block133.png");
 }
 .ui .sprite-grid button:nth-child(135) {
-  background-position: -910px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block134.png");
 }
 .ui .sprite-grid button:nth-child(136) {
-  background-position: -950px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block135.png");
 }
 .ui .sprite-grid button:nth-child(137) {
-  background-position: -990px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block136.png");
 }
 .ui .sprite-grid button:nth-child(138) {
-  background-position: -1030px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block137.png");
 }
 .ui .sprite-grid button:nth-child(139) {
-  background-position: -180px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block138.png");
 }
 .ui .sprite-grid button:nth-child(140) {
-  background-position: -220px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block139.png");
 }
 .ui .sprite-grid button:nth-child(141) {
-  background-position: -260px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block140.png");
 }
 .ui .sprite-grid button:nth-child(142) {
-  background-position: -300px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block141.png");
 }
 .ui .sprite-grid button:nth-child(143) {
-  background-position: -340px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block142.png");
 }
 .ui .sprite-grid button:nth-child(144) {
-  background-position: -380px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block143.png");
 }
 .ui .sprite-grid button:nth-child(145) {
-  background-position: -420px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block144.png");
 }
 .ui .sprite-grid button:nth-child(146) {
-  background-position: -460px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block145.png");
 }
 .ui .sprite-grid button:nth-child(147) {
-  background-position: -500px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block146.png");
 }
 .ui .sprite-grid button:nth-child(148) {
-  background-position: -540px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block147.png");
 }
 .ui .sprite-grid button:nth-child(149) {
-  background-position: -580px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block148.png");
 }
 .ui .sprite-grid button:nth-child(150) {
-  background-position: -620px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block149.png");
 }
 .ui .sprite-grid button:nth-child(151) {
-  background-position: -660px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block150.png");
 }
 .ui .sprite-grid button:nth-child(152) {
-  background-position: -700px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block151.png");
 }
 .ui .sprite-grid button:nth-child(153) {
-  background-position: -740px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block152.png");
 }
 .ui .sprite-grid button:nth-child(154) {
-  background-position: -780px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block153.png");
 }
 .ui .sprite-grid button:nth-child(155) {
-  background-position: -820px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block154.png");
 }
 .ui .sprite-grid button:nth-child(156) {
-  background-position: -860px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block155.png");
 }
 .ui .sprite-grid button:nth-child(157) {
-  background-position: -900px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block156.png");
 }
 .ui .sprite-grid button:nth-child(158) {
-  background-position: -940px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block157.png");
 }
 .ui .sprite-grid button:nth-child(159) {
-  background-position: -980px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block158.png");
 }
 .ui .sprite-grid button:nth-child(160) {
-  background-position: -1020px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block159.png");
 }
 .ui .sprite-grid button:nth-child(161) {
-  background-position: -1060px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block160.png");
 }
 .ui .sprite-grid button:nth-child(162) {
-  background-position: -210px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block161.png");
 }
 .ui .sprite-grid button:nth-child(163) {
-  background-position: -250px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block162.png");
 }
 .ui .sprite-grid button:nth-child(164) {
-  background-position: -290px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block163.png");
 }
 .ui .sprite-grid button:nth-child(165) {
-  background-position: -330px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block164.png");
 }
 .ui .sprite-grid button:nth-child(166) {
-  background-position: -370px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block165.png");
 }
 .ui .sprite-grid button:nth-child(167) {
-  background-position: -410px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block166.png");
 }
 .ui .sprite-grid button:nth-child(168) {
-  background-position: -450px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block167.png");
 }
 .ui .sprite-grid button:nth-child(169) {
-  background-position: -490px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block168.png");
 }
 .ui .sprite-grid button:nth-child(170) {
-  background-position: -530px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block169.png");
 }
 .ui .sprite-grid button:nth-child(171) {
-  background-position: -570px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block170.png");
 }
 .ui .sprite-grid button:nth-child(172) {
-  background-position: -610px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block171.png");
 }
 .ui .sprite-grid button:nth-child(173) {
-  background-position: -650px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block172.png");
 }
 .ui .sprite-grid button:nth-child(174) {
-  background-position: -690px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block173.png");
 }
 .ui .sprite-grid button:nth-child(175) {
-  background-position: -730px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block174.png");
 }
 .ui .sprite-grid button:nth-child(176) {
-  background-position: -770px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block175.png");
 }
 .ui .sprite-grid button:nth-child(177) {
-  background-position: -810px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block176.png");
 }
 .ui .sprite-grid button:nth-child(178) {
-  background-position: -850px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block177.png");
 }
 .ui .sprite-grid button:nth-child(179) {
-  background-position: -890px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block178.png");
 }
 .ui .sprite-grid button:nth-child(180) {
-  background-position: -930px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block179.png");
 }
 .ui .sprite-grid button:nth-child(181) {
-  background-position: -970px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block180.png");
 }
 .ui .sprite-grid button:nth-child(182) {
-  background-position: -1010px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block181.png");
 }
 .ui .sprite-grid button:nth-child(183) {
-  background-position: -1050px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block182.png");
 }
 .ui .sprite-grid button:nth-child(184) {
-  background-position: -1090px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block183.png");
 }
 .ui .sprite-grid button:nth-child(185) {
-  background-position: -240px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block184.png");
 }
 .ui .sprite-grid button:nth-child(186) {
-  background-position: -280px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block185.png");
 }
 .ui .sprite-grid button:nth-child(187) {
-  background-position: -320px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block186.png");
 }
 .ui .sprite-grid button:nth-child(188) {
-  background-position: -360px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block187.png");
 }
 .ui .sprite-grid button:nth-child(189) {
-  background-position: -400px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block188.png");
 }
 .ui .sprite-grid button:nth-child(190) {
-  background-position: -440px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block189.png");
 }
 .ui .sprite-grid button:nth-child(191) {
-  background-position: -480px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block190.png");
 }
 .ui .sprite-grid button:nth-child(192) {
-  background-position: -520px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block191.png");
 }
 .ui .sprite-grid button:nth-child(193) {
-  background-position: -560px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block192.png");
 }
 .ui .sprite-grid button:nth-child(194) {
-  background-position: -600px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block193.png");
 }
 .ui .sprite-grid button:nth-child(195) {
-  background-position: -640px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block194.png");
 }
 .ui .sprite-grid button:nth-child(196) {
-  background-position: -680px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block195.png");
 }
 .ui .sprite-grid button:nth-child(197) {
-  background-position: -720px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block196.png");
 }
 .ui .sprite-grid button:nth-child(198) {
-  background-position: -760px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block197.png");
 }
 .ui .sprite-grid button:nth-child(199) {
-  background-position: -800px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block198.png");
 }
 .ui .sprite-grid button:nth-child(200) {
-  background-position: -840px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block199.png");
 }
 .ui .sprite-grid button:nth-child(201) {
-  background-position: -880px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block200.png");
 }
 .ui .sprite-grid button:nth-child(202) {
-  background-position: -920px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block201.png");
 }
 .ui .sprite-grid button:nth-child(203) {
-  background-position: -960px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block202.png");
 }
 .ui .sprite-grid button:nth-child(204) {
-  background-position: -1000px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block203.png");
 }
 .ui .sprite-grid button:nth-child(205) {
-  background-position: -1040px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block204.png");
 }
 .ui .sprite-grid button:nth-child(206) {
-  background-position: -1080px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block205.png");
 }
 .ui .sprite-grid button:nth-child(207) {
-  background-position: -1120px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block206.png");
 }
 .ui .sprite-grid button:nth-child(208) {
-  background-position: -270px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block207.png");
 }
 .ui .sprite-grid button:nth-child(209) {
-  background-position: -310px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block208.png");
 }
 .ui .sprite-grid button:nth-child(210) {
-  background-position: -350px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block209.png");
 }
 .ui .sprite-grid button:nth-child(211) {
-  background-position: -390px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block210.png");
 }
 .ui .sprite-grid button:nth-child(212) {
-  background-position: -430px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block211.png");
 }
 .ui .sprite-grid button:nth-child(213) {
-  background-position: -470px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block212.png");
 }
 .ui .sprite-grid button:nth-child(214) {
-  background-position: -510px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block213.png");
 }
 .ui .sprite-grid button:nth-child(215) {
-  background-position: -550px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block214.png");
 }
 .ui .sprite-grid button:nth-child(216) {
-  background-position: -590px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block215.png");
 }
 .ui .sprite-grid button:nth-child(217) {
-  background-position: -630px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block216.png");
 }
 .ui .sprite-grid button:nth-child(218) {
-  background-position: -670px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block217.png");
 }
 .ui .sprite-grid button:nth-child(219) {
-  background-position: -710px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block218.png");
 }
 .ui .sprite-grid button:nth-child(220) {
-  background-position: -750px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block219.png");
 }
 .ui .sprite-grid button:nth-child(221) {
-  background-position: -790px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block220.png");
 }
 .ui .sprite-grid button:nth-child(222) {
-  background-position: -830px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block221.png");
 }
 .ui .sprite-grid button:nth-child(223) {
-  background-position: -870px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block222.png");
 }
 .ui .sprite-grid button:nth-child(224) {
-  background-position: -910px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block223.png");
 }
 .ui .sprite-grid button:nth-child(225) {
-  background-position: -950px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block224.png");
 }
 .ui .sprite-grid button:nth-child(226) {
-  background-position: -990px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block225.png");
 }
 .ui .sprite-grid button:nth-child(227) {
-  background-position: -1030px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block226.png");
 }
 .ui .sprite-grid button:nth-child(228) {
-  background-position: -1070px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block227.png");
 }
 .ui .sprite-grid button:nth-child(229) {
-  background-position: -1110px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block228.png");
 }
 .ui .sprite-grid button:nth-child(230) {
-  background-position: -1150px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block229.png");
 }
 .ui .sprite-grid button:nth-child(231) {
-  background-position: -300px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block230.png");
 }
 .ui .sprite-grid button:nth-child(232) {
-  background-position: -340px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block231.png");
 }
 .ui .sprite-grid button:nth-child(233) {
-  background-position: -380px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block232.png");
 }
 .ui .sprite-grid button:nth-child(234) {
-  background-position: -420px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block233.png");
 }
 .ui .sprite-grid button:nth-child(235) {
-  background-position: -460px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block234.png");
 }
 .ui .sprite-grid button:nth-child(236) {
-  background-position: -500px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block235.png");
 }
 .ui .sprite-grid button:nth-child(237) {
-  background-position: -540px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block236.png");
 }
 .ui .sprite-grid button:nth-child(238) {
-  background-position: -580px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block237.png");
 }
 .ui .sprite-grid button:nth-child(239) {
-  background-position: -620px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block238.png");
 }
 .ui .sprite-grid button:nth-child(240) {
-  background-position: -660px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block239.png");
 }
 .ui .sprite-grid button:nth-child(241) {
-  background-position: -700px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block240.png");
 }
 .ui .sprite-grid button:nth-child(242) {
-  background-position: -740px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block241.png");
 }
 .ui .sprite-grid button:nth-child(243) {
-  background-position: -780px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block242.png");
 }
 .ui .sprite-grid button:nth-child(244) {
-  background-position: -820px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block243.png");
 }
 .ui .sprite-grid button:nth-child(245) {
-  background-position: -860px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block244.png");
 }
 .ui .sprite-grid button:nth-child(246) {
-  background-position: -900px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block245.png");
 }
 .ui .sprite-grid button:nth-child(247) {
-  background-position: -940px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block246.png");
 }
 .ui .sprite-grid button:nth-child(248) {
-  background-position: -980px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block247.png");
 }
 .ui .sprite-grid button:nth-child(249) {
-  background-position: -1020px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block248.png");
 }
 .ui .sprite-grid button:nth-child(250) {
-  background-position: -1060px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block249.png");
 }
 .ui .sprite-grid button:nth-child(251) {
-  background-position: -1100px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block250.png");
 }
 .ui .sprite-grid button:nth-child(252) {
-  background-position: -1140px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block251.png");
 }
 .ui .sprite-grid button:nth-child(253) {
-  background-position: -1180px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block252.png");
 }
 .ui .sprite-grid button:nth-child(254) {
-  background-position: -330px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block253.png");
 }
 .ui .sprite-grid button:nth-child(255) {
-  background-position: -370px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block254.png");
 }
 .ui .sprite-grid button:nth-child(256) {
-  background-position: -410px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block255.png");
 }
 .ui .sprite-grid button:nth-child(257) {
-  background-position: -450px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block256.png");
 }
 .ui .sprite-grid button:nth-child(258) {
-  background-position: -490px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block257.png");
 }
 .ui .sprite-grid button:nth-child(259) {
-  background-position: -530px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block258.png");
 }
 .ui .sprite-grid button:nth-child(260) {
-  background-position: -570px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block259.png");
 }
 .ui .sprite-grid button:nth-child(261) {
-  background-position: -610px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block260.png");
 }
 .ui .sprite-grid button:nth-child(262) {
-  background-position: -650px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block261.png");
 }
 .ui .sprite-grid button:nth-child(263) {
-  background-position: -690px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block262.png");
 }
 .ui .sprite-grid button:nth-child(264) {
-  background-position: -730px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block263.png");
 }
 .ui .sprite-grid button:nth-child(265) {
-  background-position: -770px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block264.png");
 }
 .ui .sprite-grid button:nth-child(266) {
-  background-position: -810px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block265.png");
 }
 .ui .sprite-grid button:nth-child(267) {
-  background-position: -850px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block266.png");
 }
 .ui .sprite-grid button:nth-child(268) {
-  background-position: -890px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block267.png");
 }
 .ui .sprite-grid button:nth-child(269) {
-  background-position: -930px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block268.png");
 }
 .ui .sprite-grid button:nth-child(270) {
-  background-position: -970px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block269.png");
 }
 .ui .sprite-grid button:nth-child(271) {
-  background-position: -1010px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block270.png");
 }
 .ui .sprite-grid button:nth-child(272) {
-  background-position: -1050px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block271.png");
 }
 .ui .sprite-grid button:nth-child(273) {
-  background-position: -1090px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block272.png");
 }
 .ui .sprite-grid button:nth-child(274) {
-  background-position: -1130px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block273.png");
 }
 .ui .sprite-grid button:nth-child(275) {
-  background-position: -1170px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block274.png");
 }
 .ui .sprite-grid button:nth-child(276) {
-  background-position: -1210px;
-  background-size: 460px 165px;
+  background-image: url("/assets/tiles/Block275.png");
 }
 .ui .row {
   margin: 5px;
