@@ -6,6 +6,7 @@ let rows = 30; //this ought to be set by the json save files probably
 let blockWidth = 20;
 let blockHeight = 15;
 let swatches = [];
+let shadedSwatches = [];
 let activeSwatch = 0;
 
 let toolMode;
@@ -37,11 +38,7 @@ let shadedSwatchesPaths;
 shadedSwatchesPaths = ['assets/tiles/Block216.png','assets/tiles/Block127.png','assets/tiles/Block177.png','assets/tiles/Block176.png','assets/tiles/Block130.png','assets/tiles/Block175.png','assets/tiles/Block133.png','assets/tiles/Block0.png',];
 
 // why does this bomb the script?
-/* let glyphSwatchesPaths =[];
-  for (let i = 0; i <= 252; i++) {
-  let glyphImagePath = 'assets/tiles/Block${i}.png';
-  glyphImagePath.push(glyphSwatchesPaths);
-} */
+
 
 let hoverX = 0;
 let hoverY = 0;
@@ -64,7 +61,7 @@ function array2d(width, height, value = 8) {
 
 function preload(){
   // load all the swatches and the image we want to process
-  loadSwatches();
+  loadShadedSwatches();
   sourceImage = loadImage('assets/graytest.png');
   extraMetaData = loadJSON('assets/junk.json');
   tileMappings = loadStrings('assets/tileMappings.txt');
@@ -111,7 +108,11 @@ function setup() {
     });
   });
 
-  
+  let glyphSwatchesPaths =[];
+  for (let i = 0; i <= 252; i++) {
+  let glyphImagePath = 'assets/tiles/Block${i}.png';
+  glyphSwatchesPaths.push(glyphSwatchesPaths);
+} 
 
 }
 
@@ -182,7 +183,7 @@ function loadFrame(thisFrameIndex){
     var thisCol = thisFrame[i];
     for(var j = 0; j < thisCol.length; j++) {
        //paint a tile here
-       resultImage.image(swatches[thisCol[j]], i * blockWidth, j * blockHeight, blockWidth, blockHeight );
+       resultImage.image(shadedSwatches[thisCol[j]], i * blockWidth, j * blockHeight, blockWidth, blockHeight );
     }
   }
 }
@@ -317,7 +318,7 @@ function keyPressed(){
 
 function nextSwatch(){
   activeSwatch ++;
-  if(activeSwatch > swatches.length - 1){
+  if(activeSwatch > shadedSwatches.length - 1){
     activeSwatch = 0;
   }
 }
@@ -325,7 +326,7 @@ function nextSwatch(){
 function prevSwatch(){
   activeSwatch --;
   if(activeSwatch < 0){
-    activeSwatch = swatches.length - 1;
+    activeSwatch = shadedSwatches.length - 1;
   }
 }
 
@@ -363,7 +364,7 @@ function handleBrush(){
         }
       }
       resultImage.updatePixels();
-      resultImage.image(swatches[activeSwatch], snapX, snapY, blockWidth, blockHeight);
+      resultImage.image(shadedSwatches[activeSwatch], snapX, snapY, blockWidth, blockHeight);
       addTileToArray(activeSwatch, (snapX/blockWidth), (snapY/blockHeight));
     }else{
       push();
@@ -376,7 +377,7 @@ function handleBrush(){
       noStroke();
       rect(snapX, snapY, blockWidth, blockHeight);
       // new tile preview
-      image(swatches[activeSwatch], snapX, snapY, blockWidth, blockHeight );
+      image(shadedSwatches[activeSwatch], snapX, snapY, blockWidth, blockHeight );
       pop();
     }
   }
@@ -397,11 +398,11 @@ function setSwatch(swatchNumber) {
   console.log("new swatch " + swatchNumber  );
 }
 
-function loadSwatches(){
+function loadShadedSwatches(){
  for(let i = 0 ; i < shadedSwatchesPaths.length ; i++){
-    swatches[i] = loadImage(shadedSwatchesPaths[i]);
+    shadedSwatches[i] = loadImage(shadedSwatchesPaths[i]);
   }
-  console.log("LOADED " + swatches.length + " TILES");
+  console.log("LOADED " + shadedSwatches.length + " TILES");
   
 }
 
@@ -444,11 +445,11 @@ function processImage(){
       // figure out which swatch to use
       let swatchIndex = int(map(bri, 0, 100, 0, 8));
       // make sure I'm within the bounds of the swatches array
-      swatchIndex = constrain(swatchIndex, 0, swatches.length-1);
+      swatchIndex = constrain(swatchIndex, 0, shadedSwatches.length-1);
 
 
       // draw selected swatch onto the result graphics object at the correct position
-      resultImage.image(swatches[swatchIndex], x * blockWidth, y * blockHeight, blockWidth, blockHeight );
+      resultImage.image(shadedSwatches[swatchIndex], x * blockWidth, y * blockHeight, blockWidth, blockHeight );
 
       // figure out what column and row this is
       // store swatchIndex at that position

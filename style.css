@@ -47,6 +47,7 @@ body canvas {
   margin: 4px;
   flex-wrap: wrap;
   padding: 20px;
+  width: 50%;
 }
 .ui .rules .rule-grid {
   display: grid;
