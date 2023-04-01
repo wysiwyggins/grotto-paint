@@ -7,7 +7,9 @@ let blockWidth = 20;
 let blockHeight = 15;
 let swatches = [];
 let shadedSwatches = [];
+let glyphSwatches = [];
 let activeSwatch = 0;
+let activePalette = 1;
 
 let toolMode;
 
@@ -34,10 +36,9 @@ let resultImage; // this is a p5Graphics objects that contains the results of th
 
 
 let shadedSwatchesPaths;
-
+let glyphSwatchesPaths =[];
 shadedSwatchesPaths = ['assets/tiles/Block216.png','assets/tiles/Block127.png','assets/tiles/Block177.png','assets/tiles/Block176.png','assets/tiles/Block130.png','assets/tiles/Block175.png','assets/tiles/Block133.png','assets/tiles/Block0.png',];
 
-// why does this bomb the script?
 
 
 let hoverX = 0;
@@ -62,6 +63,7 @@ function array2d(width, height, value = 8) {
 function preload(){
   // load all the swatches and the image we want to process
   loadShadedSwatches();
+  loadGlyphSwatches();
   sourceImage = loadImage('assets/graytest.png');
   extraMetaData = loadJSON('assets/junk.json');
   tileMappings = loadStrings('assets/tileMappings.txt');
@@ -107,12 +109,6 @@ function setup() {
       console.log("I tried changing a button background");
     });
   });
-
-  let glyphSwatchesPaths =[];
-  for (let i = 0; i <= 252; i++) {
-  let glyphImagePath = 'assets/tiles/Block${i}.png';
-  glyphSwatchesPaths.push(glyphSwatchesPaths);
-} 
 
 }
 
@@ -364,7 +360,12 @@ function handleBrush(){
         }
       }
       resultImage.updatePixels();
-      resultImage.image(shadedSwatches[activeSwatch], snapX, snapY, blockWidth, blockHeight);
+      if (paletteNumber == 1){
+        resultImage.image(shadedSwatches[activeSwatch], snapX, snapY, blockWidth, blockHeight);
+      } else {
+        resultImage.image(glyphSwatches[activeSwatch], snapX, snapY, blockWidth, blockHeight);
+      
+      }
       addTileToArray(activeSwatch, (snapX/blockWidth), (snapY/blockHeight));
     }else{
       push();
@@ -393,9 +394,10 @@ function addTileToArray(swatchIndex, col, row){
 }
 
 
-function setSwatch(swatchNumber) {
+function setSwatch(swatchNumber, paletteNumber) {
   activeSwatch = swatchNumber;
-  console.log("new swatch " + swatchNumber  );
+  activePalette = paletteNumber
+  console.log("new swatch " + swatchNumber +" from palette" + paletteNumber );
 }
 
 function loadShadedSwatches(){
@@ -405,6 +407,18 @@ function loadShadedSwatches(){
   console.log("LOADED " + shadedSwatches.length + " TILES");
   
 }
+
+function loadGlyphSwatches(){
+  for (let i = 0; i <= 252; i++) {
+    let glyphImagePath = `assets/tiles/Block${i}.png`;
+    glyphSwatchesPaths.push(glyphImagePath);
+  } 
+  for(let i = 0 ; i < shadedSwatchesPaths.length ; i++){
+     glyphSwatches[i] = loadImage(glyphSwatchesPaths[i]);
+   }
+   console.log("LOADED " + glyphSwatches.length + " TILES");
+   
+ }
 
 
 
