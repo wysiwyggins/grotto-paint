@@ -30,8 +30,19 @@ let sourceImage; // this is the original photo/image we want to process
 let sampleImage; // this is a resized version of the photo, where 1px = 1 block
 let resultImage; // this is a p5Graphics objects that contains the results of the process
 
-let swatchesPaths;
-swatchesPaths = ['assets/tiles/Block216.png','assets/tiles/Block127.png','assets/tiles/Block177.png','assets/tiles/Block176.png','assets/tiles/Block130.png','assets/tiles/Block175.png','assets/tiles/Block133.png','assets/tiles/Block0.png',];
+
+
+let shadedSwatchesPaths;
+
+shadedSwatchesPaths = ['assets/tiles/Block216.png','assets/tiles/Block127.png','assets/tiles/Block177.png','assets/tiles/Block176.png','assets/tiles/Block130.png','assets/tiles/Block175.png','assets/tiles/Block133.png','assets/tiles/Block0.png',];
+
+// why does this bomb the script?
+/* let glyphSwatchesPaths =[];
+  for (let i = 0; i <= 252; i++) {
+  let glyphImagePath = 'assets/tiles/Block${i}.png';
+  glyphImagePath.push(glyphSwatchesPaths);
+} */
+
 let hoverX = 0;
 let hoverY = 0;
 
@@ -45,7 +56,7 @@ let tileMappings;
 
 
 function array2d(width, height, value = 8) {
-  //this was loren's way of filling a 2d array, swatch 8 is a white tile
+  //this was loren's way of filling a 2d array, swatch 8 was a white tile
   let array = Array.from(Array(width), () => new Array(height).fill(value))
   array.width = cols; array.height = rows;
   return array
@@ -54,7 +65,7 @@ function array2d(width, height, value = 8) {
 function preload(){
   // load all the swatches and the image we want to process
   loadSwatches();
-  sourceImage = loadImage('assets/gray.png');
+  sourceImage = loadImage('assets/graytest.png');
   extraMetaData = loadJSON('assets/junk.json');
   tileMappings = loadStrings('assets/tileMappings.txt');
   
@@ -387,10 +398,11 @@ function setSwatch(swatchNumber) {
 }
 
 function loadSwatches(){
-  for(let i = 0 ; i < swatchesPaths.length ; i++){
-    swatches[i] = loadImage(swatchesPaths[i]);
+ for(let i = 0 ; i < shadedSwatchesPaths.length ; i++){
+    swatches[i] = loadImage(shadedSwatchesPaths[i]);
   }
   console.log("LOADED " + swatches.length + " TILES");
+  
 }
 
 
