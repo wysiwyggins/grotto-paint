@@ -52,6 +52,8 @@ let frameTimer;
 let extraMetaData;
 let tileMappings;
 
+const input1Values = [];
+const output1Values = [];
 
 function array2d(width, height, value = 8) {
   //this was loren's way of filling a 2d array, swatch 8 was a white tile
@@ -99,6 +101,7 @@ function setup() {
       let index = this.dataset.index;
       this.style.backgroundImage = `url("/assets/tiles/Block${activeSwatch}.png")`;
       console.log("I tried changing a button background");
+      input1Values[index]=activeSwatch;
     });
   });
 
@@ -107,6 +110,7 @@ function setup() {
       let index = this.dataset.index;
       this.style.backgroundImage = `url("/assets/tiles/Block${activeSwatch}.png")`;
       console.log("I tried changing a button background");
+      output1Values[index]=activeSwatch;
     });
   });
 
