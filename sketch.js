@@ -360,7 +360,7 @@ function handleBrush(){
         }
       }
       resultImage.updatePixels();
-      if (paletteNumber == 1){
+      if (activePalette == 1){
         resultImage.image(shadedSwatches[activeSwatch], snapX, snapY, blockWidth, blockHeight);
       } else {
         resultImage.image(glyphSwatches[activeSwatch], snapX, snapY, blockWidth, blockHeight);
@@ -378,7 +378,12 @@ function handleBrush(){
       noStroke();
       rect(snapX, snapY, blockWidth, blockHeight);
       // new tile preview
-      image(shadedSwatches[activeSwatch], snapX, snapY, blockWidth, blockHeight );
+      if (activePalette == 1){
+        image(shadedSwatches[activeSwatch], snapX, snapY, blockWidth, blockHeight );
+      } else {
+        image(glyphSwatches[activeSwatch], snapX, snapY, blockWidth, blockHeight );
+      }
+      
       pop();
     }
   }
@@ -413,7 +418,8 @@ function loadGlyphSwatches(){
     let glyphImagePath = `assets/tiles/Block${i}.png`;
     glyphSwatchesPaths.push(glyphImagePath);
   } 
-  for(let i = 0 ; i < shadedSwatchesPaths.length ; i++){
+
+  for(let i = 0 ; i < glyphSwatchesPaths.length ; i++){
      glyphSwatches[i] = loadImage(glyphSwatchesPaths[i]);
    }
    console.log("LOADED " + glyphSwatches.length + " TILES");
