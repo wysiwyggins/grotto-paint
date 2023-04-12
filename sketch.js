@@ -116,6 +116,44 @@ function setup() {
 
 }
 
+function applyCellularAutomata() {
+  let newFrame = array2d(cols, rows);
+
+  for (let x = 0; x < cols - 2; x++) {
+    for (let y = 0; y < rows - 2; y++) {
+      let inputMatch = true;
+
+      for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+          if (frames[currentFrame][x + i][y + j] !== input1Values[i * 3 + j]) {
+            inputMatch = false;
+          }
+        }
+      }
+
+      if (inputMatch) {
+        for (let i = 0; i < 3; i++) {
+          for (let j = 0; j < 3; j++) {
+            newFrame[x + i][y + j] = output1Values[i * 3 + j];
+          }
+        }
+      } else {
+        for (let i = 0; i < 3; i++) {
+          for (let j = 0; j < 3; j++) {
+            newFrame[x + i][y + j] = frames[currentFrame][x + i][y + j];
+          }
+        }
+      }
+    }
+  }
+
+  frames.splice(currentFrame + 1, 0, newFrame);
+  currentFrame++;
+  loadFrame(currentFrame);
+  updateFramesUI();
+}
+
+
 function mouseClicked() {
  // resultImage.image(swatches[activeSwatch], mouseX * blockWidth, mouseY * blockHeight, blockWidth, blockHeight )
   
@@ -175,15 +213,28 @@ function newSourceImage(){
 
 
 
-function loadFrame(thisFrameIndex){
+function loadFrame(thisFrameIndex) {
+  if (thisFrameIndex < 0 || thisFrameIndex >= frames.length) {
+    console.error('Invalid frame index:', thisFrameIndex);
+    return;
+  }
   let thisFrame = frames[thisFrameIndex];
   console.log("loadingFrame " + thisFrameIndex);
+  console.log('thisCol[j]:', thisCol[j]);
+  console.log('shadedSwatches:', shadedSwatches);
+  
   resultImage.clear();
+
   for(var i = 0; i < thisFrame.length; i++) {
     var thisCol = thisFrame[i];
     for(var j = 0; j < thisCol.length; j++) {
-       //paint a tile here
-       resultImage.image(shadedSwatches[thisCol[j]], i * blockWidth, j * blockHeight, blockWidth, blockHeight );
+      //paint a tile here
+      if (shadedSwatches[thisCol[j]]) {
+        resultImage.image(shadedSwatches[thisCol[j]], i * blockWidth, j * blockHeight, blockWidth, blockHeight);
+      } else {
+        console.error('shadedSwatches[' + thisCol[j] + '] is undefined');
+      }
+      
     }
   }
 }
@@ -255,6 +306,7 @@ function addFrame(){
   frames.splice(currentFrame+1,0,tempFrame);
 
   currentFrame +=1;
+  applyCellularAutomata();
   loadFrame(currentFrame);
   updateFramesUI()
 }
